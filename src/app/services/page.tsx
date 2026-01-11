@@ -18,7 +18,44 @@ import {
 } from '@/components/ui/select';
 import { Search } from 'lucide-react';
 
-const allServices: any[] = [];
+const allServices = [
+  {
+    title: 'Book accommodation',
+    description: 'Find the perfect place to stay.',
+    category: 'Lodging',
+    image: PlaceHolderImages.find(p => p.id === 'service-lodging'),
+  },
+  {
+    title: 'Tour guide vehicle',
+    description: 'Explore with a private vehicle.',
+    category: 'Transport',
+    image: PlaceHolderImages.find(p => p.id === 'service-guides'),
+  },
+  {
+    title: 'Book a flight ticket',
+    description: 'Get the best deals on flights.',
+    category: 'Transport',
+    image: PlaceHolderImages.find(p => p.id === 'hero-1'), // Using a generic travel image
+  },
+  {
+    title: 'Book a train ticket',
+    description: 'Travel by rail with ease.',
+    category: 'Transport',
+    image: PlaceHolderImages.find(p => p.id === 'service-transport'),
+  },
+  {
+    title: 'Activity services',
+    description: 'Book exciting tours and activities.',
+    category: 'Tours',
+    image: PlaceHolderImages.find(p => p.id === 'service-group-tours'),
+  },
+  {
+    title: 'Halal food service',
+    description: 'Enjoy delicious Halal meals.',
+    category: 'Specialty',
+    image: PlaceHolderImages.find(p => p.id === 'service-halal'),
+  },
+];
 
 export default function ServicesPage() {
   return (
