@@ -7,13 +7,15 @@ import {
   Map,
   Users,
   Plane,
-  UserCheck,
   ShieldCheck,
   HeartHandshake,
   Shield,
   Eye,
   Globe,
   Star,
+  Mail,
+  Phone,
+  MapPin,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
@@ -36,25 +38,6 @@ const services = [
     description: 'Reliable airport pickups, car rentals, and comfortable transfers.',
     color: 'from-blue-500 to-blue-600 shadow-blue-500/20',
   },
-  {
-    icon: <UserCheck className="w-7 h-7 text-white" />,
-    title: 'Expert Local Guides',
-    description: 'Knowledgeable guides sharing authentic cultural experiences.',
-    color: 'from-purple-500 to-purple-600 shadow-purple-500/20',
-  },
-  {
-    icon: <ShieldCheck className="w-7 h-7 text-white" />,
-    title: 'Halal-Friendly Options',
-    description: 'Muslim-friendly accommodations, dining, and prayer facilities.',
-    color: 'from-emerald-500 to-green-600 shadow-emerald-500/20',
-  },
-];
-
-const values = [
-  { icon: <HeartHandshake className="w-6 h-6 text-primary" />, title: 'Trust', description: 'Honest & reliable service' },
-  { icon: <Shield className="w-6 h-6 text-accent" />, title: 'Safety', description: 'Your wellbeing first' },
-  { icon: <Eye className="w-6 h-6 text-blue-600" />, title: 'Transparency', description: 'Clear pricing always' },
-  { icon: <Globe className="w-6 h-6 text-purple-600" />, title: 'Respect', description: 'Honoring cultures' },
 ];
 
 const strengths = [
@@ -68,6 +51,8 @@ const strengths = [
 
 export default function Home() {
   const heroImage = PlaceHolderImages.find(p => p.id === "hero-1");
+  const halalTourImage = PlaceHolderImages.find(p => p.id === "service-halal");
+
 
   return (
     <div className="bg-background text-foreground">
@@ -95,13 +80,45 @@ export default function Home() {
             <div className="w-12 h-px bg-gradient-to-l from-transparent to-accent"></div>
           </div>
           <div className="mt-16 animate-bounce">
-            <ArrowDown className="w-8 h-8 mx-auto text-white" />
+            <a href="#about" aria-label="Scroll down">
+                <ArrowDown className="w-8 h-8 mx-auto text-white" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-20 px-4 bg-card">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-headline text-4xl font-bold text-foreground mb-3">About Lao Hug Travel</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
+              Lao Hug Travel is your trusted partner for unforgettable journeys in Laos. We specialize in crafting personalized travel experiences, with a special focus on Halal-friendly services. Our local expertise and commitment to quality ensure you a seamless and authentic adventure.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Vision Section */}
+      <section id="vision" className="py-20 px-4 bg-background">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="inline-block px-4 py-1.5 bg-accent/10 text-accent-foreground text-sm font-medium rounded-full mb-4">
+              Our Purpose
+            </span>
+            <h2 id="vision-title" className="font-headline text-4xl font-bold text-foreground mb-6">Our Vision</h2>
+            <div className="relative bg-card rounded-2xl p-8 shadow-lg shadow-black/5 border border-border/50 max-w-2xl mx-auto">
+               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-card p-2 rounded-full border">
+                <Star className="w-6 h-6 text-accent" />
+              </div>
+              <p id="vision-text" className="text-muted-foreground text-lg leading-relaxed italic">"To inspire and empower travelers to explore the world responsibly, creating meaningful connections between cultures while delivering exceptional, personalized experiences."</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 px-4 bg-card">
+      <section id="what-we-do" className="py-20 px-4 bg-card">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">
@@ -111,7 +128,7 @@ export default function Home() {
             <p className="text-muted-foreground max-w-lg mx-auto">Comprehensive travel solutions tailored to your dreams</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.slice(0, 3).map((service) => (
+            {services.map((service) => (
               <Card key={service.title} className="bg-background/70 border hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1">
                 <CardHeader className="flex flex-row items-center gap-4 pb-4">
                   <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center flex-shrink-0 shadow-lg`}>
@@ -133,40 +150,52 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Vision & Values Section */}
-      <section id="vision" className="py-20 px-4 bg-background">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <span className="inline-block px-4 py-1.5 bg-accent/10 text-accent-foreground text-sm font-medium rounded-full mb-4">
-              Our Purpose
-            </span>
-            <h2 id="vision-title" className="font-headline text-4xl font-bold text-foreground mb-6">Our Vision</h2>
-            <div className="relative bg-card rounded-2xl p-8 shadow-lg shadow-black/5 border border-border/50 max-w-2xl mx-auto">
-               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-card p-2 rounded-full border">
-                <Star className="w-6 h-6 text-accent" />
-              </div>
-              <p id="vision-text" className="text-muted-foreground text-lg leading-relaxed italic">"To inspire and empower travelers to explore the world responsibly, creating meaningful connections between cultures while delivering exceptional, personalized experiences."</p>
+      {/* Halal Tour Package Section */}
+      <section id="halal-package" className="py-20 px-4 bg-background">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div className="text-center md:text-left">
+                <span className="inline-block px-4 py-1.5 bg-emerald-500/10 text-emerald-600 text-sm font-medium rounded-full mb-4">
+                    Specialty Tours
+                </span>
+                <h2 className="font-headline text-4xl font-bold text-foreground mb-4">Our Halal Tour Packages</h2>
+                <p className="text-muted-foreground text-lg mb-6">
+                    Travel with peace of mind. Our Halal tour packages are designed to cater to your needs, including Halal-certified meals, prayer facilities, and Muslim-friendly accommodations.
+                </p>
+                <ul className="space-y-3 text-left mb-8">
+                    <li className="flex items-center gap-3">
+                        <ShieldCheck className="w-5 h-5 text-primary" />
+                        <span>Certified Halal restaurants and caterers.</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                        <ShieldCheck className="w-5 h-5 text-primary" />
+                        <span>Prayer times and facilities provided.</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                        <ShieldCheck className="w-5 h-5 text-primary" />
+                        <span>Female-only guides available upon request.</span>
+                    </li>
+                </ul>
+                <Button asChild size="lg">
+                    <Link href="/services">Explore Halal Tours</Link>
+                </Button>
             </div>
-          </div>
-          <div className="mt-16">
-            <h3 className="font-headline text-3xl font-bold text-foreground text-center mb-8">Core Values</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {values.map((value, index) => (
-                <div key={value.title} className="value-item bg-card rounded-2xl p-6 text-center shadow-md hover:shadow-xl transition-shadow border">
-                  <div className="w-14 h-14 rounded-full bg-secondary flex items-center justify-center mx-auto mb-4">
-                    {value.icon}
-                  </div>
-                  <h4 className="font-semibold text-foreground mb-1 font-headline">{value.title}</h4>
-                  <p className="text-muted-foreground text-sm">{value.description}</p>
-                </div>
-              ))}
+            <div>
+                {halalTourImage && (
+                    <Image
+                        src={halalTourImage.imageUrl}
+                        alt={halalTourImage.description}
+                        width={600}
+                        height={600}
+                        className="rounded-2xl shadow-xl object-cover aspect-square"
+                        data-ai-hint={halalTourImage.imageHint}
+                    />
+                )}
             </div>
-          </div>
         </div>
       </section>
 
       {/* Why Choose Us Section */}
-      <section id="why-us" className="py-20 px-4 bg-card">
+      <section id="why-choose-us" className="py-20 px-4 bg-card">
          <div className="max-w-2xl mx-auto">
              <div className="text-center mb-12">
                 <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">Our Promise</span>
@@ -185,6 +214,39 @@ export default function Home() {
                 ))}
              </div>
          </div>
+      </section>
+      
+      {/* Contact Us Section */}
+      <section id="contact-us" className="py-20 px-4 bg-background">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-headline text-4xl font-bold text-foreground mb-3">Contact Us</h2>
+            <p className="text-muted-foreground max-w-lg mx-auto">Have questions? We'd love to hear from you.</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <Phone className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="font-headline text-xl font-semibold mb-2">Phone</h3>
+              <p className="text-muted-foreground">+856 20 55 123 456</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <Mail className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="font-headline text-xl font-semibold mb-2">Email</h3>
+              <a href="mailto:info@laohugtravel.com" className="text-muted-foreground hover:text-primary">info@laohugtravel.com</a>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <MapPin className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="font-headline text-xl font-semibold mb-2">Address</h3>
+              <p className="text-muted-foreground">123 Main Street, Vientiane, Laos</p>
+            </div>
+          </div>
+        </div>
       </section>
 
     </div>

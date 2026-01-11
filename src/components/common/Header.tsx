@@ -8,7 +8,11 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
-  { href: '/services', label: 'Services' },
+  { href: '/#about', label: 'About' },
+  { href: '/#what-we-do', label: 'Services' },
+  { href: '/#halal-package', label: 'Halal Tours' },
+  { href: '/#why-choose-us', label: 'Why Us' },
+  { href: '/#contact-us', label: 'Contact' },
   { href: '/itinerary', label: 'Plan a Trip' },
 ];
 
@@ -29,15 +33,13 @@ export default function Header() {
               href={link.href}
               className={cn(
                 'text-sm font-medium transition-colors hover:text-primary',
-                pathname === link.href ? 'text-primary' : 'text-muted-foreground'
+                (pathname + (link.href.includes('#') ? '' : '/')) === (link.href + (link.href.endsWith('/') ? '' : '/')) ? 'text-primary' : 'text-muted-foreground'
               )}
             >
               {link.label}
             </Link>
           ))}
         </nav>
-        <div className="hidden md:flex items-center gap-2">
-        </div>
         <div className="md:hidden">
           <Sheet>
             <SheetTrigger asChild>
@@ -53,14 +55,12 @@ export default function Header() {
                     href={link.href}
                     className={cn(
                         'text-lg font-medium transition-colors hover:text-primary',
-                        pathname === link.href ? 'text-primary' : 'text-foreground'
+                        (pathname + (link.href.includes('#') ? '' : '/')) === (link.href + (link.href.endsWith('/') ? '' : '/')) ? 'text-primary' : 'text-foreground'
                     )}
                   >
                     {link.label}
                   </Link>
                 ))}
-                <div className="border-t pt-6 flex flex-col gap-4">
-                </div>
               </div>
             </SheetContent>
           </Sheet>
