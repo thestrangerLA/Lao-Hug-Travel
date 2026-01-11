@@ -281,9 +281,14 @@ export default function Home({ lang }: { lang: 'en' | 'th' | 'lao' }) {
                         <span>Female-only guides available upon request.</span>
                     </li>
                 </ul>
-                <Button asChild size="lg">
-                    <Link href="/services">Explore Halal Tours</Link>
-                </Button>
+                 <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+                    <Button asChild size="lg">
+                        <Link href="/services">Explore Halal Tours</Link>
+                    </Button>
+                    <Button asChild size="lg" variant="outline">
+                        <Link href="/services">See All Packages</Link>
+                    </Button>
+                </div>
             </div>
             <div>
                 {halalTourImage && (
