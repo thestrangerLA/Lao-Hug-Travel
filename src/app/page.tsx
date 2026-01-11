@@ -16,27 +16,51 @@ import {
   Mail,
   Phone,
   MapPin,
+  BedDouble,
+  Car,
+  Ticket,
+  Train,
+  Activity,
+  UtensilsCrossed,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const services = [
   {
-    icon: <Map className="w-7 h-7 text-white" />,
-    title: 'Custom Tour Packages',
-    description: 'Personalized itineraries crafted to match your interests and budget.',
+    icon: <BedDouble className="w-7 h-7 text-white" />,
+    title: 'ຈອງທີ່ພັກ',
+    description: 'Book accommodation',
     color: 'from-teal-500 to-teal-600 shadow-teal-500/20',
   },
   {
-    icon: <Users className="w-7 h-7 text-white" />,
-    title: 'Group Adventures',
-    description: 'Join like-minded travelers on exciting group expeditions.',
+    icon: <Car className="w-7 h-7 text-white" />,
+    title: 'ລົດນຳທ່ຽວ',
+    description: 'Tour guide vehicle',
     color: 'from-amber-500 to-orange-500 shadow-amber-500/20',
   },
   {
     icon: <Plane className="w-7 h-7 text-white" />,
-    title: 'Transport & Transfers',
-    description: 'Reliable airport pickups, car rentals, and comfortable transfers.',
+    title: 'ຈອງປີ້ຍົນ',
+    description: 'Book a flight ticket',
     color: 'from-blue-500 to-blue-600 shadow-blue-500/20',
+  },
+  {
+    icon: <Train className="w-7 h-7 text-white" />,
+    title: 'ຈອງປີ້ລົດໄຟ',
+    description: 'Book a train ticket',
+    color: 'from-purple-500 to-purple-600 shadow-purple-500/20',
+  },
+  {
+    icon: <Activity className="w-7 h-7 text-white" />,
+    title: 'ບໍລິການກິດຈະກຳ',
+    description: 'Activity services',
+    color: 'from-pink-500 to-pink-600 shadow-pink-500/20',
+  },
+  {
+    icon: <UtensilsCrossed className="w-7 h-7 text-white" />,
+    title: 'ບໍລິການອາຫານຮາລາລ',
+    description: 'Halal food service',
+    color: 'from-green-500 to-green-600 shadow-green-500/20',
   },
 ];
 
