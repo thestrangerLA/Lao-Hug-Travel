@@ -228,9 +228,9 @@ export default function Home({ lang }: { lang: 'en' | 'th' | 'lao' }) {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">
-              Our Services
+              What We Do
             </span>
-            <h2 className="font-headline text-4xl font-bold text-foreground mb-3">What We Do</h2>
+            <h2 className="font-headline text-4xl font-bold text-foreground mb-3">Our Services</h2>
             <p className="text-muted-foreground max-w-lg mx-auto">Comprehensive travel solutions tailored to your dreams</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
