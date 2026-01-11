@@ -87,16 +87,13 @@ export default function Home() {
         <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center">
           <h1 className="font-headline text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight">Lao Hug Travel</h1>
           <p className="text-xl md:text-2xl text-primary-foreground/90 font-light mb-8 leading-relaxed">
-            Discover the World, Create Memories Forever
+            BEST CHOICE HALAL SERVICE
           </p>
           <div className="flex items-center justify-center gap-3 mb-8">
             <div className="w-12 h-px bg-gradient-to-r from-transparent to-accent"></div>
             <Star className="w-5 h-5 text-accent" />
             <div className="w-12 h-px bg-gradient-to-l from-transparent to-accent"></div>
           </div>
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full text-lg px-8 py-6">
-            <Link href="/itinerary">Plan Your Next Adventure</Link>
-          </Button>
           <div className="mt-16 animate-bounce">
             <ArrowDown className="w-8 h-8 mx-auto text-white" />
           </div>
