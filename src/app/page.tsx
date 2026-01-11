@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -25,44 +27,122 @@ import {
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
-const services = [
-  {
-    icon: <BedDouble className="w-7 h-7 text-white" />,
-    title: 'ຈອງທີ່ພັກ',
-    description: 'Book accommodation',
-    color: 'from-teal-500 to-teal-600 shadow-teal-500/20',
-  },
-  {
-    icon: <Car className="w-7 h-7 text-white" />,
-    title: 'ລົດນຳທ່ຽວ',
-    description: 'Tour guide vehicle',
-    color: 'from-amber-500 to-orange-500 shadow-amber-500/20',
-  },
-  {
-    icon: <Plane className="w-7 h-7 text-white" />,
-    title: 'ຈອງປີ້ຍົນ',
-    description: 'Book a flight ticket',
-    color: 'from-blue-500 to-blue-600 shadow-blue-500/20',
-  },
-  {
-    icon: <Train className="w-7 h-7 text-white" />,
-    title: 'ຈອງປີ້ລົດໄຟ',
-    description: 'Book a train ticket',
-    color: 'from-purple-500 to-purple-600 shadow-purple-500/20',
-  },
-  {
-    icon: <Activity className="w-7 h-7 text-white" />,
-    title: 'ບໍລິການກິດຈະກຳ',
-    description: 'Activity services',
-    color: 'from-pink-500 to-pink-600 shadow-pink-500/20',
-  },
-  {
-    icon: <UtensilsCrossed className="w-7 h-7 text-white" />,
-    title: 'ບໍລິການອາຫານຮາລາລ',
-    description: 'Halal food service',
-    color: 'from-green-500 to-green-600 shadow-green-500/20',
-  },
-];
+const servicesData = {
+  en: [
+    {
+      icon: <BedDouble className="w-7 h-7 text-white" />,
+      title: 'Book accommodation',
+      description: 'Find the perfect place to stay.',
+      color: 'from-teal-500 to-teal-600 shadow-teal-500/20',
+    },
+    {
+      icon: <Car className="w-7 h-7 text-white" />,
+      title: 'Tour guide vehicle',
+      description: 'Explore with a private vehicle.',
+      color: 'from-amber-500 to-orange-500 shadow-amber-500/20',
+    },
+    {
+      icon: <Plane className="w-7 h-7 text-white" />,
+      title: 'Book a flight ticket',
+      description: 'Get the best deals on flights.',
+      color: 'from-blue-500 to-blue-600 shadow-blue-500/20',
+    },
+    {
+      icon: <Train className="w-7 h-7 text-white" />,
+      title: 'Book a train ticket',
+      description: 'Travel by rail with ease.',
+      color: 'from-purple-500 to-purple-600 shadow-purple-500/20',
+    },
+    {
+      icon: <Activity className="w-7 h-7 text-white" />,
+      title: 'Activity services',
+      description: 'Book exciting tours and activities.',
+      color: 'from-pink-500 to-pink-600 shadow-pink-500/20',
+    },
+    {
+      icon: <UtensilsCrossed className="w-7 h-7 text-white" />,
+      title: 'Halal food service',
+      description: 'Enjoy delicious Halal meals.',
+      color: 'from-green-500 to-green-600 shadow-green-500/20',
+    },
+  ],
+  th: [
+    {
+      icon: <BedDouble className="w-7 h-7 text-white" />,
+      title: 'จองที่พัก',
+      description: 'ค้นหาที่พักที่สมบูรณ์แบบ',
+      color: 'from-teal-500 to-teal-600 shadow-teal-500/20',
+    },
+    {
+      icon: <Car className="w-7 h-7 text-white" />,
+      title: 'รถนำเที่ยว',
+      description: 'ท่องเที่ยวไปกับรถส่วนตัว',
+      color: 'from-amber-500 to-orange-500 shadow-amber-500/20',
+    },
+    {
+      icon: <Plane className="w-7 h-7 text-white" />,
+      title: 'จองตั๋วเครื่องบิน',
+      description: 'รับข้อเสนอที่ดีที่สุดสำหรับเที่ยวบิน',
+      color: 'from-blue-500 to-blue-600 shadow-blue-500/20',
+    },
+    {
+      icon: <Train className="w-7 h-7 text-white" />,
+      title: 'จองตั๋วรถไฟ',
+      description: 'เดินทางโดยรถไฟอย่างง่ายดาย',
+      color: 'from-purple-500 to-purple-600 shadow-purple-500/20',
+    },
+    {
+      icon: <Activity className="w-7 h-7 text-white" />,
+      title: 'บริการกิจกรรม',
+      description: 'จองทัวร์และกิจกรรมที่น่าตื่นเต้น',
+      color: 'from-pink-500 to-pink-600 shadow-pink-500/20',
+    },
+    {
+      icon: <UtensilsCrossed className="w-7 h-7 text-white" />,
+      title: 'บริการอาหารฮาลาล',
+      description: 'เพลิดเพลินกับอาหารฮาลาลแสนอร่อย',
+      color: 'from-green-500 to-green-600 shadow-green-500/20',
+    },
+  ],
+  lao: [
+      {
+        icon: <BedDouble className="w-7 h-7 text-white" />,
+        title: 'ຈອງທີ່ພັກ',
+        description: 'Book accommodation',
+        color: 'from-teal-500 to-teal-600 shadow-teal-500/20',
+      },
+      {
+        icon: <Car className="w-7 h-7 text-white" />,
+        title: 'ລົດນຳທ່ຽວ',
+        description: 'Tour guide vehicle',
+        color: 'from-amber-500 to-orange-500 shadow-amber-500/20',
+      },
+      {
+        icon: <Plane className="w-7 h-7 text-white" />,
+        title: 'ຈອງປີ້ຍົນ',
+        description: 'Book a flight ticket',
+        color: 'from-blue-500 to-blue-600 shadow-blue-500/20',
+      },
+      {
+        icon: <Train className="w-7 h-7 text-white" />,
+        title: 'ຈອງປີ້ລົດໄຟ',
+        description: 'Book a train ticket',
+        color: 'from-purple-500 to-purple-600 shadow-purple-500/20',
+      },
+      {
+        icon: <Activity className="w-7 h-7 text-white" />,
+        title: 'ບໍລິການກິດຈະກຳ',
+        description: 'Activity services',
+        color: 'from-pink-500 to-pink-600 shadow-pink-500/20',
+      },
+      {
+        icon: <UtensilsCrossed className="w-7 h-7 text-white" />,
+        title: 'ບໍລິການອາຫານຮາລາລ',
+        description: 'Halal food service',
+        color: 'from-green-500 to-green-600 shadow-green-500/20',
+      },
+  ]
+};
 
 const strengths = [
     { number: '01', title: '10+ Years of Excellence', description: 'A decade of creating unforgettable travel experiences with thousands of happy customers.', color: 'border-primary' },
@@ -73,9 +153,11 @@ const strengths = [
 ];
 
 
-export default function Home() {
+export default function Home({ lang }: { lang: 'en' | 'th' | 'lao' }) {
   const heroImage = PlaceHolderImages.find(p => p.id === "hero-1");
   const halalTourImage = PlaceHolderImages.find(p => p.id === "service-halal");
+
+  const services = servicesData[lang] || servicesData.en;
 
 
   return (
