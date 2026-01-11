@@ -18,44 +18,7 @@ import {
 } from '@/components/ui/select';
 import { Search } from 'lucide-react';
 
-const allServices = [
-  {
-    title: 'Custom Tour Packages',
-    description: 'Personalized itineraries crafted to match your interests and budget. From historical deep-dives to culinary adventures, we build the perfect trip for you.',
-    category: 'Tours',
-    image: PlaceHolderImages.find(p => p.id === 'service-custom-tours'),
-  },
-  {
-    title: 'Group Adventures',
-    description: 'Join like-minded travelers on exciting group expeditions. Perfect for solo travelers or those looking to make new friends.',
-    category: 'Tours',
-    image: PlaceHolderImages.find(p => p.id === 'service-group-tours'),
-  },
-  {
-    title: 'Transport & Transfers',
-    description: 'Reliable airport pickups, car rentals, and comfortable transfers. We ensure you get to your destination safely and on time.',
-    category: 'Transport',
-    image: PlaceHolderImages.find(p => p.id === 'service-transport'),
-  },
-  {
-    title: 'Expert Local Guides',
-    description: 'Knowledgeable guides sharing authentic cultural experiences. Discover hidden gems and local secrets with our team.',
-    category: 'Guides',
-    image: PlaceHolderImages.find(p => p.id === 'service-guides'),
-  },
-  {
-    title: 'Halal-Friendly Options',
-    description: 'Muslim-friendly accommodations, dining, and prayer facilities to ensure a comfortable and worry-free journey.',
-    category: 'Specialty',
-    image: PlaceHolderImages.find(p => p.id === 'service-halal'),
-  },
-  {
-    title: 'Luxury Lodging',
-    description: 'Handpicked selection of the finest hotels and resorts. Experience ultimate comfort and exceptional service.',
-    category: 'Lodging',
-    image: PlaceHolderImages.find(p => p.id === 'service-lodging'),
-  },
-];
+const allServices: any[] = [];
 
 export default function ServicesPage() {
   return (
