@@ -6,6 +6,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Globe } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import { useEffect, useState } from 'react';
 
 const navLinks = [
   { href: '/#about', label: 'About' },
@@ -18,6 +19,31 @@ const navLinks = [
 
 export default function Header() {
   const pathname = usePathname();
+  const [activeHash, setActiveHash] = useState('');
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      setActiveHash(window.location.hash);
+    };
+    
+    // Set initial hash
+    handleHashChange();
+
+    window.addEventListener('hashchange', handleHashChange);
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
+
+  const isLinkActive = (href: string) => {
+    if (href.startsWith('/#')) {
+      if(pathname === '/') {
+        return activeHash === href.substring(1);
+      }
+      return false;
+    }
+    return pathname === href;
+  }
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -33,7 +59,7 @@ export default function Header() {
               href={link.href}
               className={cn(
                 'text-sm font-medium transition-colors hover:text-primary',
-                (pathname + (link.href.includes('#') ? '' : '/')) === (link.href + (link.href.endsWith('/') ? '' : '/')) ? 'text-primary' : 'text-muted-foreground'
+                isLinkActive(link.href) ? 'text-primary' : 'text-muted-foreground'
               )}
             >
               {link.label}
@@ -55,7 +81,7 @@ export default function Header() {
                     href={link.href}
                     className={cn(
                         'text-lg font-medium transition-colors hover:text-primary',
-                        (pathname + (link.href.includes('#') ? '' : '/')) === (link.href + (link.href.endsWith('/') ? '' : '/')) ? 'text-primary' : 'text-foreground'
+                        isLinkActive(link.href) ? 'text-primary' : 'text-foreground'
                     )}
                   >
                     {link.label}
