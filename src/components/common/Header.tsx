@@ -8,7 +8,6 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
-  { href: '/', label: 'Home' },
   { href: '/services', label: 'Services' },
   { href: '/itinerary', label: 'Plan a Trip' },
 ];
@@ -21,7 +20,7 @@ export default function Header() {
       <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <Globe className="h-7 w-7 text-primary" />
-          <span className="text-xl font-bold font-headline">Voyager</span>
+          <span className="text-xl font-bold font-headline">Lao Hug Travel</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
@@ -38,12 +37,6 @@ export default function Header() {
           ))}
         </nav>
         <div className="hidden md:flex items-center gap-2">
-          <Button variant="ghost" asChild>
-            <Link href="/login">Log In</Link>
-          </Button>
-          <Button asChild>
-            <Link href="/signup">Sign Up</Link>
-          </Button>
         </div>
         <div className="md:hidden">
           <Sheet>
@@ -67,12 +60,6 @@ export default function Header() {
                   </Link>
                 ))}
                 <div className="border-t pt-6 flex flex-col gap-4">
-                    <Button variant="outline" asChild>
-                        <Link href="/login">Log In</Link>
-                    </Button>
-                    <Button asChild>
-                        <Link href="/signup">Sign Up</Link>
-                    </Button>
                 </div>
               </div>
             </SheetContent>

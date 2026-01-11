@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <Link href="/" className="flex items-center gap-2">
             <Globe className="h-6 w-6 text-primary" />
-            <span className="text-lg font-bold font-headline">Voyager</span>
+            <span className="text-lg font-bold font-headline">Lao Hug Travel</span>
           </Link>
           <div className="flex items-center gap-4">
             {socialLinks.map((social, index) => (
@@ -30,7 +30,7 @@ export default function Footer() {
             ))}
           </div>
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Voyager. All rights reserved.
+            © {new Date().getFullYear()} Lao Hug Travel. All rights reserved.
           </p>
         </div>
       </div>

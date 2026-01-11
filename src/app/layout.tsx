@@ -5,7 +5,7 @@ import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
 
 export const metadata: Metadata = {
-  title: 'Voyager',
+  title: 'Lao Hug Travel',
   description: 'Your trusted partner for unforgettable journeys.',
 };
 

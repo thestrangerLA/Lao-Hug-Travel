@@ -13,7 +13,7 @@ export default function ItineraryDisplay({ itinerary }: ItineraryDisplayProps) {
   const { toast } = useToast();
   
   const shareOnTwitter = () => {
-    const text = "Check out my amazing trip plan from Voyager!";
+    const text = "Check out my amazing trip plan from Lao Hug Travel!";
     const url = window.location.href;
     const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
     window.open(twitterUrl, '_blank');

@@ -85,7 +85,7 @@ export default function Home() {
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
         <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center">
-          <h1 className="font-headline text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight">Voyager</h1>
+          <h1 className="font-headline text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight">Lao Hug Travel</h1>
           <p className="text-xl md:text-2xl text-primary-foreground/90 font-light mb-8 leading-relaxed">
             Discover the World, Create Memories Forever
           </p>
