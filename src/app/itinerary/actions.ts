@@ -26,8 +26,20 @@ export async function generateItinerary(
   });
 
   if (!validatedFields.success) {
+    const fieldErrors = validatedFields.error.flatten().fieldErrors;
+    const errorKeys = Object.keys(fieldErrors) as (keyof typeof fieldErrors)[];
+    
+    let errorMessage = "Invalid input. Please check the fields.";
+    if (errorKeys.length > 0) {
+      const firstErrorKey = errorKeys[0];
+      const firstErrorMessages = fieldErrors[firstErrorKey];
+      if (firstErrorMessages && firstErrorMessages.length > 0) {
+        errorMessage = firstErrorMessages[0];
+      }
+    }
+
     return {
-      message: validatedFields.error.flatten().fieldErrors[Object.keys(validatedFields.error.flatten().fieldErrors)[0] as string][0] || "Invalid input",
+      message: errorMessage,
       itinerary: null,
       success: false,
     };
