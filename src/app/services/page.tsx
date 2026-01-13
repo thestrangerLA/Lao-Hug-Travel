@@ -67,42 +67,6 @@ export default function ServicesPage() {
         </p>
       </div>
 
-      <div className="mb-8 p-4 bg-card rounded-lg shadow-sm border">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
-            <div className="relative">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-                <Input placeholder="Search services..." className="pl-10" />
-            </div>
-            <div>
-                <Select>
-                    <SelectTrigger>
-                        <SelectValue placeholder="Filter by category" />
-                    </SelectTrigger>
-                    <SelectContent>
-                        <SelectItem value="all">All Categories</SelectItem>
-                        <SelectItem value="tours">Tours</SelectItem>
-                        <SelectItem value="transport">Transport</SelectItem>
-                        <SelectItem value="guides">Guides</SelectItem>
-                        <SelectItem value="lodging">Lodging</SelectItem>
-                         <SelectItem value="specialty">Specialty</SelectItem>
-                    </SelectContent>
-                </Select>
-            </div>
-            <div>
-                <Select>
-                    <SelectTrigger>
-                        <SelectValue placeholder="Sort by" />
-                    </SelectTrigger>
-                    <SelectContent>
-                        <SelectItem value="popularity">Popularity</SelectItem>
-                        <SelectItem value="newest">Newest</SelectItem>
-                        <SelectItem value="alphabetical">Alphabetical</SelectItem>
-                    </SelectContent>
-                </Select>
-            </div>
-        </div>
-      </div>
-
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {allServices.map((service) => (
           <Card key={service.title} className="overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
