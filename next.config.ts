@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -31,6 +32,10 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Allow specific development origins to prevent cross-origin request warnings
+  allowedDevOrigins: [
+      "https://*.cloudworkstations.dev",
+  ],
 };
 
 export default nextConfig;
