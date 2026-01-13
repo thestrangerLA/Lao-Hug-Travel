@@ -21,7 +21,6 @@ const navLinks = [
   { href: '/#halal-package', label: 'Halal Tours' },
   { href: '/#why-choose-us', label: 'Why Us' },
   { href: '/#contact-us', label: 'Contact' },
-  { href: '/itinerary', label: 'Plan a Trip' },
 ];
 
 export default function Header() {
