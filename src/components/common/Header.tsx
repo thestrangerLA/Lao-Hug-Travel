@@ -13,6 +13,7 @@ import { Menu, Globe, ChevronDown } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { useEffect, useState } from 'react';
+import { useLang } from '@/context/LangContext';
 
 const navLinks = [
   { href: '/#about', label: 'About' },
@@ -23,7 +24,8 @@ const navLinks = [
   { href: '/itinerary', label: 'Plan a Trip' },
 ];
 
-export default function Header({ currentLang, setCurrentLang }: { currentLang: 'en' | 'th' | 'lao', setCurrentLang: (lang: 'en' | 'th' | 'lao') => void }) {
+export default function Header() {
+  const { lang, setLang } = useLang();
   const pathname = usePathname();
   const [activeHash, setActiveHash] = useState('');
   const [isMounted, setIsMounted] = useState(false);
@@ -140,18 +142,18 @@ export default function Header({ currentLang, setCurrentLang }: { currentLang: '
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" className="hidden md:flex">
-                {langMap[currentLang]}
+                {langMap[lang]}
                 <ChevronDown className="ml-1 h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuItem onSelect={() => setCurrentLang('en')}>
+              <DropdownMenuItem onSelect={() => setLang('en')}>
                 English (EN)
               </DropdownMenuItem>
-              <DropdownMenuItem onSelect={() => setCurrentLang('th')}>
+              <DropdownMenuItem onSelect={() => setLang('th')}>
                 Thai (TH)
               </DropdownMenuItem>
-              <DropdownMenuItem onSelect={() => setCurrentLang('lao')}>
+              <DropdownMenuItem onSelect={() => setLang('lao')}>
                 Lao (LAO)
               </DropdownMenuItem>
             </DropdownMenuContent>
@@ -182,13 +184,13 @@ export default function Header({ currentLang, setCurrentLang }: { currentLang: '
                   ))}
                    <div className="border-t pt-6">
                      <h3 className="text-sm font-medium text-muted-foreground mb-2 px-4">Language</h3>
-                      <Button variant={currentLang === 'en' ? 'secondary' : 'ghost'} className="w-full justify-start" onClick={() => setCurrentLang('en')}>
+                      <Button variant={lang === 'en' ? 'secondary' : 'ghost'} className="w-full justify-start" onClick={() => setLang('en')}>
                         English (EN)
                       </Button>
-                      <Button variant={currentLang === 'th' ? 'secondary' : 'ghost'} className="w-full justify-start" onClick={() => setCurrentLang('th')}>
+                      <Button variant={lang === 'th' ? 'secondary' : 'ghost'} className="w-full justify-start" onClick={() => setLang('th')}>
                         Thai (TH)
                       </Button>
-                      <Button variant={currentLang === 'lao' ? 'secondary' : 'ghost'} className="w-full justify-start" onClick={() => setCurrentLang('lao')}>
+                      <Button variant={lang === 'lao' ? 'secondary' : 'ghost'} className="w-full justify-start" onClick={() => setLang('lao')}>
                         Lao (LAO)
                       </Button>
                    </div>

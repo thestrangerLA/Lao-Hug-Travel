@@ -26,6 +26,7 @@ import {
   UtensilsCrossed,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { useLang } from '@/context/LangContext';
 
 const servicesData = {
   en: [
@@ -153,7 +154,8 @@ const strengths = [
 ];
 
 
-export default function Home({ lang }: { lang: 'en' | 'th' | 'lao' }) {
+export default function Home() {
+  const { lang } = useLang();
   const heroImage = PlaceHolderImages.find(p => p.id === "hero-1");
   const halalTourImage = PlaceHolderImages.find(p => p.id === "service-halal");
 
