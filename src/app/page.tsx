@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -5,7 +6,6 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
-  ArrowDown,
   Map,
   Users,
   Plane,
@@ -24,6 +24,7 @@ import {
   Train,
   Activity,
   UtensilsCrossed,
+  Award,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { useLang } from '@/context/LangContext';
@@ -157,20 +158,75 @@ const strengths = [
 export default function Home() {
   const { lang } = useLang();
   const halalTourImage = PlaceHolderImages.find(p => p.id === "service-halal");
+  const chefImage = PlaceHolderImages.find((p) => p.id === 'gmhi-chef');
+  const hotelImage = PlaceHolderImages.find((p) => p.id === 'gmhi-hotel');
+  const buildingImage = PlaceHolderImages.find((p) => p.id === 'gmhi-building');
+  const corridorImage = PlaceHolderImages.find((p) => p.id === 'gmhi-corridor');
 
   const services = servicesData[lang] || servicesData.en;
 
 
   return (
     <div className="bg-background text-foreground">
-      {/* Hero Section */}
-      <section className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center text-center overflow-hidden px-4 bg-black">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
-        <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center">
-          <h1 className="font-headline text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight">Lao Hug Travel</h1>
-          <p className="text-xl md:text-2xl text-primary-foreground/90 font-light mb-8 leading-relaxed">
-            BEST CHOICE HALAL SERVICE
-          </p>
+      {/* GMHI Section */}
+      <section className="relative bg-primary text-primary-foreground">
+        <div className="container mx-auto px-4 py-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div className="flex flex-col text-center md:text-left">
+                    <div className="flex items-center gap-4 mb-4 justify-center md:justify-start">
+                        <Award className="w-12 h-12 text-accent" />
+                        <div>
+                            <p className="text-sm uppercase tracking-widest text-accent">TMTA</p>
+                            <h1 className="text-6xl md:text-8xl font-bold font-headline tracking-tighter text-white">
+                                GMHI
+                            </h1>
+                        </div>
+                    </div>
+                    <p className="text-lg md:text-xl font-light text-primary-foreground/90">
+                      Global Muslim-Friendly Hospitality Index
+                    </p>
+                    <div className="w-24 h-1 bg-accent my-6 mx-auto md:mx-0"></div>
+                    <h2 className="text-2xl md:text-3xl font-semibold font-headline text-white">
+                      GLOBAL MUSLIM-FRIENDLY HOSPITALITY INDEX BY TMTA
+                    </h2>
+                    <p className="mt-4 text-lg font-light italic text-primary-foreground/80">
+                      &quot;The Mark of Muslim-Friendly Excellence&quot;
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4">
+                    {chefImage && <div className="col-span-2 rounded-lg overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                    <Image
+                        src={chefImage.imageUrl}
+                        alt={chefImage.description}
+                        width={500}
+                        height={250}
+                        className="object-cover w-full h-full"
+                        data-ai-hint={chefImage.imageHint}
+                    />
+                    </div>}
+                    {hotelImage && <div className="rounded-lg overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                        <Image
+                        src={hotelImage.imageUrl}
+                        alt={hotelImage.description}
+                        width={250}
+                        height={250}
+                        className="object-cover w-full h-full aspect-square"
+                        data-ai-hint={hotelImage.imageHint}
+                    />
+                    </div>}
+                    {buildingImage && <div className="rounded-lg overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                    <Image
+                        src={buildingImage.imageUrl}
+                        alt={buildingImage.description}
+                        width={250}
+                        height={250}
+                        className="object-cover w-full h-full aspect-square"
+                        data-ai-hint={buildingImage.imageHint}
+                    />
+                    </div>}
+                </div>
+            </div>
         </div>
       </section>
 
