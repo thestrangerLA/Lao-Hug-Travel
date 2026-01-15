@@ -418,7 +418,7 @@ export default function Home() {
                         <Link href="/services">Explore Halal Tours</Link>
                     </Button>
                     <Button asChild size="lg" variant="outline">
-                        <Link href="/services">See All Packages</Link>
+                        <Link href="/packages">See All Packages</Link>
                     </Button>
                 </div>
             </div>
