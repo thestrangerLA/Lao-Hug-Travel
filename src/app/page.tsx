@@ -168,26 +168,24 @@ export default function Home() {
 
   return (
     <div className="bg-background text-foreground">
-      {/* GMHI Section */}
+      {/* Hero Section */}
       <section className="relative bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 py-20">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div className="flex flex-col text-center md:text-left">
                     <div className="flex items-center gap-4 mb-4 justify-center md:justify-start">
-                        <Award className="w-12 h-12 text-accent" />
                         <div>
-                            <p className="text-sm uppercase tracking-widest text-accent">TMTA</p>
                             <h1 className="text-6xl md:text-8xl font-bold font-headline tracking-tighter text-white">
-                                GMHI
+                                Lao Hug Travel
                             </h1>
                         </div>
                     </div>
                     <p className="text-lg md:text-xl font-light text-primary-foreground/90">
-                      Global Muslim-Friendly Hospitality Index
+                      Your partner for unforgettable journeys.
                     </p>
                     <div className="w-24 h-1 bg-accent my-6 mx-auto md:mx-0"></div>
                     <h2 className="text-2xl md:text-3xl font-semibold font-headline text-white">
-                      GLOBAL MUSLIM-FRIENDLY HOSPITALITY INDEX BY TMTA
+                      Your Trusted Partner for Unforgettable Journeys
                     </h2>
                     <p className="mt-4 text-lg font-light italic text-primary-foreground/80">
                       &quot;The Mark of Muslim-Friendly Excellence&quot;
