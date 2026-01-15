@@ -18,6 +18,7 @@ import { useLang } from '@/context/LangContext';
 const navLinks = [
   { href: '/#about', label: 'About' },
   { href: '/#what-we-do', label: 'Services' },
+  { href: '/gmhi', label: 'GMHI' },
   { href: '/#halal-package', label: 'Halal Tours' },
   { href: '/#why-choose-us', label: 'Why Us' },
   { href: '/#contact-us', label: 'Contact' },
@@ -101,8 +102,8 @@ export default function Header() {
       return activeHash === `#${hash}`;
     }
     // For other pages, just check the pathname
-    if (pathname !== '/' && path !== '/') {
-        return pathname === path;
+    if (path !== '/' && pathname.startsWith(path)) {
+        return true;
     }
     return false;
   };
