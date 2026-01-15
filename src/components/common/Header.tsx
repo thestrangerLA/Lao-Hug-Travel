@@ -18,7 +18,6 @@ import { useLang } from '@/context/LangContext';
 const navLinks = [
   { href: '/#about', label: 'About' },
   { href: '/#what-we-do', label: 'Services' },
-  { href: '/gmhi', label: 'GMHI' },
   { href: '/#halal-package', label: 'Halal Tours' },
   { href: '/#why-choose-us', label: 'Why Us' },
   { href: '/#contact-us', label: 'Contact' },
