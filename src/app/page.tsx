@@ -276,18 +276,14 @@ export default function Home() {
          </div>
         <div className="container mx-auto px-4 py-20">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div className="flex flex-col text-center md:text-left">
-                    <div className="flex items-center gap-4 mb-4 justify-center md:justify-start">
-                        <div>
-                            <h1 className="text-5xl md:text-8xl font-bold font-headline tracking-tighter text-white">
-                                LHT
-                            </h1>
-                        </div>
-                    </div>
+                <div className="flex flex-col text-left">
+                    <h1 className="text-5xl md:text-8xl font-bold font-headline tracking-tighter text-white mb-4">
+                        LHT
+                    </h1>
                     <p className="text-lg md:text-xl font-light text-primary-foreground/90">
                       Lao Hug Travel
                     </p>
-                    <div className="w-24 h-1 bg-accent my-6 mx-auto md:mx-0"></div>
+                    <div className="w-24 h-1 bg-accent my-6"></div>
                     <h2 className="text-xl md:text-3xl font-semibold font-headline text-white">
                       BEST CHOICE HALAL SERVICE
                     </h2>
@@ -502,5 +498,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
