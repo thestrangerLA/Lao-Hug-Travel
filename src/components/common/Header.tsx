@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -78,16 +79,9 @@ export default function Header() {
               <p className="text-xs text-primary font-medium tracking-wider">BEST CHOICE HALAL SERVICE</p>
             </Link>
             <div className="flex items-center gap-2">
-                <div className="hidden md:flex items-center gap-6">
-                    {/* Skeleton for nav links */}
-                    {Array.from({length: 5}).map((_, i) => <div key={i} className="h-4 w-20 bg-muted rounded-md" />)}
-                </div>
-                <div className="h-10 w-20 bg-muted rounded-md hidden md:flex" />
-                <div className="md:hidden">
-                    <Button variant="ghost" size="icon">
-                        <Menu className="h-6 w-6" />
-                    </Button>
-                </div>
+                <Button variant="ghost" size="icon">
+                    <Menu className="h-6 w-6" />
+                </Button>
             </div>
         </div>
        </header>
@@ -121,44 +115,8 @@ export default function Header() {
           <p className="text-xs text-primary font-medium tracking-wider">BEST CHOICE HALAL SERVICE</p>
         </Link>
         <div className="flex items-center gap-2">
-          <nav className="hidden md:flex items-center gap-6">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={cn(
-                  'text-sm font-medium transition-colors hover:text-primary',
-                  isLinkActive(link.href)
-                    ? 'text-primary'
-                    : 'text-muted-foreground'
-                )}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className="hidden md:flex">
-                {langMap[lang]}
-                <ChevronDown className="ml-1 h-4 w-4" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuItem onSelect={() => setLang('en')}>
-                English (EN)
-              </DropdownMenuItem>
-              <DropdownMenuItem onSelect={() => setLang('th')}>
-                Thai (TH)
-              </DropdownMenuItem>
-              <DropdownMenuItem onSelect={() => setLang('lao')}>
-                Lao (LAO)
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-
-          <div className="md:hidden">
+          
+          <div>
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
