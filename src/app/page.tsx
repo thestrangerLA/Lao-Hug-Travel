@@ -371,14 +371,11 @@ export default function Home() {
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service) => (
               <Card key={service.title} className="bg-background/70 border hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1">
-                <CardHeader className="flex flex-row items-center gap-4 pb-4">
-                  <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center flex-shrink-0 shadow-lg`}>
+                <CardContent className="flex flex-col items-center justify-center text-center p-6 gap-4">
+                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center flex-shrink-0 shadow-lg`}>
                     {service.icon}
                   </div>
-                  <CardTitle className="font-headline text-xl">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                  <h3 className="font-headline text-xl font-semibold h-12 flex items-center">{service.title}</h3>
                 </CardContent>
               </Card>
             ))}
@@ -498,6 +495,8 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
 
