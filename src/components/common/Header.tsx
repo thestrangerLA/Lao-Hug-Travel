@@ -9,7 +9,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Globe, ChevronDown } from 'lucide-react';
+import { Menu, ChevronDown } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { useEffect, useState } from 'react';
@@ -73,14 +73,14 @@ export default function Header() {
     return (
        <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-20 items-center justify-between">
-            <Link href="/" className="flex items-center gap-2">
-            <Globe className="h-7 w-7 text-primary" />
-            <span className="text-xl font-bold font-headline">Lao Hug Travel</span>
+            <Link href="/" className="flex flex-col">
+              <span className="text-xl font-bold font-headline">Lao Hug Travel</span>
+              <p className="text-xs text-primary font-medium tracking-wider">BEST CHOICE HALAL SERVICE</p>
             </Link>
             <div className="flex items-center gap-2">
                 <div className="hidden md:flex items-center gap-6">
                     {/* Skeleton for nav links */}
-                    {Array.from({length: 6}).map((_, i) => <div key={i} className="h-4 w-20 bg-muted rounded-md" />)}
+                    {Array.from({length: 5}).map((_, i) => <div key={i} className="h-4 w-20 bg-muted rounded-md" />)}
                 </div>
                 <div className="h-10 w-20 bg-muted rounded-md hidden md:flex" />
                 <div className="md:hidden">
@@ -116,9 +116,9 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-20 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <Globe className="h-7 w-7 text-primary" />
+        <Link href="/" className="flex flex-col">
           <span className="text-xl font-bold font-headline">Lao Hug Travel</span>
+          <p className="text-xs text-primary font-medium tracking-wider">BEST CHOICE HALAL SERVICE</p>
         </Link>
         <div className="flex items-center gap-2">
           <nav className="hidden md:flex items-center gap-6">
