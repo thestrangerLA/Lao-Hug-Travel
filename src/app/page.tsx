@@ -368,7 +368,7 @@ export default function Home() {
             <h2 className="font-headline text-4xl font-bold text-foreground mb-3">Our Services</h2>
             <p className="text-muted-foreground max-w-lg mx-auto">Comprehensive travel solutions tailored to your dreams</p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service) => (
               <Card key={service.title} className="bg-background/70 border hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1">
                 <CardHeader className="flex flex-row items-center gap-4 pb-4">
@@ -498,6 +498,8 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
 
