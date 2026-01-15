@@ -156,7 +156,6 @@ const strengths = [
 
 export default function Home() {
   const { lang } = useLang();
-  const heroImage = PlaceHolderImages.find(p => p.id === "hero-1");
   const halalTourImage = PlaceHolderImages.find(p => p.id === "service-halal");
 
   const services = servicesData[lang] || servicesData.en;
@@ -165,17 +164,7 @@ export default function Home() {
   return (
     <div className="bg-background text-foreground">
       {/* Hero Section */}
-      <section className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center text-center overflow-hidden px-4">
-        {heroImage && (
-            <Image
-              src={heroImage.imageUrl}
-              alt={heroImage.description}
-              fill
-              className="object-cover"
-              data-ai-hint={heroImage.imageHint}
-              priority
-            />
-        )}
+      <section className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center text-center overflow-hidden px-4 bg-black">
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
         <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center">
           <h1 className="font-headline text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight">Lao Hug Travel</h1>
