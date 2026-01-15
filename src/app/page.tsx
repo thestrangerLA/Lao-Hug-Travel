@@ -172,8 +172,8 @@ export default function Home() {
       <section className="relative bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 py-20">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div className="flex flex-col text-center md:text-left">
-                    <div className="flex items-center gap-4 mb-4 justify-center md:justify-start">
+                <div className="flex flex-col text-left">
+                    <div className="flex items-center gap-4 mb-4 justify-start">
                         <div>
                             <h1 className="text-5xl md:text-8xl font-bold font-headline tracking-tighter text-white">
                                 LHT
@@ -183,7 +183,7 @@ export default function Home() {
                     <p className="text-lg md:text-xl font-light text-primary-foreground/90">
                       Lao Hug Travel
                     </p>
-                    <div className="w-24 h-1 bg-accent my-6 mx-auto md:mx-0"></div>
+                    <div className="w-24 h-1 bg-accent my-6 mx-0"></div>
                     <h2 className="text-xl md:text-3xl font-semibold font-headline text-white">
                       BEST CHOICE HALAL SERVICE
                     </h2>
@@ -252,7 +252,7 @@ export default function Home() {
                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-card p-2 rounded-full border">
                 <Star className="w-6 h-6 text-accent" />
               </div>
-              <p id="vision-text" className="text-muted-foreground text-lg leading-relaxed italic">"To inspire and empower travelers to explore the world responsibly, creating meaningful connections between cultures while delivering exceptional, personalized experiences."</p>
+              <p id="vision-text" className="text-muted-foreground text-lg leading-relaxed italic">&quot;To inspire and empower travelers to explore the world responsibly, creating meaningful connections between cultures while delivering exceptional, personalized experiences.&quot;</p>
             </div>
           </div>
         </div>
