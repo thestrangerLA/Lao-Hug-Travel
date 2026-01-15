@@ -175,7 +175,7 @@ export default function Home() {
                 <div className="flex flex-col text-center md:text-left">
                     <div className="flex items-center gap-4 mb-4 justify-center md:justify-start">
                         <div>
-                            <h1 className="text-6xl md:text-8xl font-bold font-headline tracking-tighter text-white">
+                            <h1 className="text-5xl md:text-8xl font-bold font-headline tracking-tighter text-white">
                                 LHT
                             </h1>
                         </div>
@@ -184,7 +184,7 @@ export default function Home() {
                       Lao Hug Travel
                     </p>
                     <div className="w-24 h-1 bg-accent my-6 mx-auto md:mx-0"></div>
-                    <h2 className="text-2xl md:text-3xl font-semibold font-headline text-white">
+                    <h2 className="text-xl md:text-3xl font-semibold font-headline text-white">
                       BEST CHOICE HALAL SERVICE
                     </h2>
                     <p className="mt-4 text-lg font-light italic text-primary-foreground/80">
@@ -398,3 +398,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
