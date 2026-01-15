@@ -2,7 +2,6 @@
 
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
-import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
 import { LangProvider } from '@/context/LangContext';
 
@@ -22,7 +21,6 @@ export default function RootLayout({
           <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
         </head>
         <body className="font-body antialiased flex flex-col h-full">
-          <Header />
           <main className="flex-grow">
             {children}
           </main>

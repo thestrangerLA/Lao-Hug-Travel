@@ -25,9 +25,15 @@ import {
   Activity,
   UtensilsCrossed,
   Award,
+  Menu,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { useLang } from '@/context/LangContext';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { cn } from '@/lib/utils';
+import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
+
 
 const servicesData = {
   en: [
@@ -154,9 +160,17 @@ const strengths = [
     { number: '05', title: 'Flexible Bookings', description: 'Easy modifications and cancellations with our traveler-friendly policies.', color: 'border-emerald-500' },
 ];
 
+const navLinks = [
+  { href: '/#about', label: 'About' },
+  { href: '/#what-we-do', label: 'Services' },
+  { href: '/#halal-package', label: 'Halal Tours' },
+  { href: '/#why-choose-us', label: 'Why Us' },
+  { href: '/#contact-us', label: 'Contact' },
+];
+
 
 export default function Home() {
-  const { lang } = useLang();
+  const { lang, setLang } = useLang();
   const halalTourImage = PlaceHolderImages.find(p => p.id === "service-halal");
   const chefImage = PlaceHolderImages.find((p) => p.id === 'gmhi-chef');
   const hotelImage = PlaceHolderImages.find((p) => p.id === 'gmhi-hotel');
@@ -164,16 +178,106 @@ export default function Home() {
   const corridorImage = PlaceHolderImages.find((p) => p.id === 'gmhi-corridor');
 
   const services = servicesData[lang] || servicesData.en;
+  
+  const pathname = usePathname();
+  const [activeHash, setActiveHash] = useState('');
+  
+  useEffect(() => {
+    if (pathname === '/') {
+      const handleScroll = () => {
+        let currentHash = '';
+        const sections = navLinks
+          .map((link) => {
+            const parts = link.href.split('#');
+            return parts.length > 1 ? parts[1] : null;
+          })
+          .filter((id): id is string => id !== null);
+
+        for (const id of sections) {
+          const element = document.getElementById(id);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            if (rect.top <= 100 && rect.bottom >= 100) {
+              currentHash = `#${id}`;
+              break;
+            }
+          }
+        }
+        setActiveHash(currentHash);
+      };
+      
+      window.addEventListener('scroll', handleScroll);
+      handleScroll(); // Initial check
+
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    } else {
+        setActiveHash('');
+    }
+  }, [pathname]);
+
+  const isLinkActive = (href: string) => {
+    const [path, hash] = href.split('#');
+    // For the homepage, check the active hash
+    if (pathname === '/' && hash) {
+      return activeHash === `#${hash}`;
+    }
+    // For other pages, just check the pathname
+    if (path !== '/' && pathname.startsWith(path)) {
+        return true;
+    }
+    return false;
+  };
 
 
   return (
     <div className="bg-background text-foreground">
       {/* Hero Section */}
       <section className="relative bg-primary text-primary-foreground">
+         <div className="absolute top-4 right-4 z-10">
+             <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="text-white hover:text-white hover:bg-white/10">
+                  <Menu className="h-6 w-6" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right">
+                <div className="flex flex-col gap-6 pt-10">
+                  {navLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className={cn(
+                        'text-lg font-medium transition-colors hover:text-primary',
+                        isLinkActive(link.href)
+                          ? 'text-primary'
+                          : 'text-foreground'
+                      )}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                   <div className="border-t pt-6">
+                     <h3 className="text-sm font-medium text-muted-foreground mb-2 px-4">Language</h3>
+                      <Button variant={lang === 'en' ? 'secondary' : 'ghost'} className="w-full justify-start" onClick={() => setLang('en')}>
+                        English (EN)
+                      </Button>
+                      <Button variant={lang === 'th' ? 'secondary' : 'ghost'} className="w-full justify-start" onClick={() => setLang('th')}>
+                        Thai (TH)
+                      </Button>
+                      <Button variant={lang === 'lao' ? 'secondary' : 'ghost'} className="w-full justify-start" onClick={() => setLang('lao')}>
+                        Lao (LAO)
+                      </Button>
+                   </div>
+                </div>
+              </SheetContent>
+            </Sheet>
+         </div>
         <div className="container mx-auto px-4 py-20">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div className="flex flex-col text-left">
-                    <div className="flex items-center gap-4 mb-4 justify-start">
+                <div className="flex flex-col text-center md:text-left">
+                    <div className="flex items-center gap-4 mb-4 justify-center md:justify-start">
                         <div>
                             <h1 className="text-5xl md:text-8xl font-bold font-headline tracking-tighter text-white">
                                 LHT
@@ -183,7 +287,7 @@ export default function Home() {
                     <p className="text-lg md:text-xl font-light text-primary-foreground/90">
                       Lao Hug Travel
                     </p>
-                    <div className="w-24 h-1 bg-accent my-6 mx-0"></div>
+                    <div className="w-24 h-1 bg-accent my-6 mx-auto md:mx-0"></div>
                     <h2 className="text-xl md:text-3xl font-semibold font-headline text-white">
                       BEST CHOICE HALAL SERVICE
                     </h2>
