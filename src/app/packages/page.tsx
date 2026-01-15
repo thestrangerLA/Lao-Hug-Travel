@@ -28,24 +28,6 @@ const allPackages = [
     category: 'Transport',
     image: PlaceHolderImages.find(p => p.id === 'hero-1'), // Using a generic travel image
   },
-  {
-    title: 'Book a train ticket',
-    description: 'Travel by rail with ease.',
-    category: 'Transport',
-    image: PlaceHolderImages.find(p => p.id === 'service-transport'),
-  },
-  {
-    title: 'Activity services',
-    description: 'Book exciting tours and activities.',
-    category: 'Tours',
-    image: PlaceHolderImages.find(p => p.id === 'service-group-tours'),
-  },
-  {
-    title: 'Halal food service',
-    description: 'Enjoy delicious Halal meals.',
-    category: 'Specialty',
-    image: PlaceHolderImages.find(p => p.id === 'service-halal'),
-  },
 ];
 
 export default function PackagesPage() {
