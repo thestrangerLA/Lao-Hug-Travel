@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { ClipboardList, MapPin } from 'lucide-react';
+import { ClipboardList, MapPin, Utensils, UtensilsCrossed, XCircle } from 'lucide-react';
 
 
 const tourDetails = {
@@ -51,6 +51,12 @@ const tourDetails = {
     ]
   },
 };
+
+const mealData = [
+    { day: 1, schedule: "จะแจ้งให้ทราบเร็วๆนี้", breakfast: false, lunch: false, dinner: false },
+    { day: 2, schedule: "จะแจ้งให้ทราบเร็วๆนี้", breakfast: true, lunch: true, dinner: true },
+    { day: 3, schedule: "จะแจ้งให้ทราบเร็วๆนี้", breakfast: true, lunch: true, dinner: true },
+];
 
 export default function TourDetailPage({ params }: { params: { tourId: string } }) {
   const [currency, setCurrency] = useState('thb');
@@ -158,6 +164,40 @@ export default function TourDetailPage({ params }: { params: { tourId: string } 
             </Accordion>
         </div>
       )}
+
+      <div className="mt-12 bg-white p-6 rounded-lg shadow-md">
+        <h3 className="text-xl font-bold mb-6 flex items-center"><Utensils className="mr-3 text-primary" />แผนอาหาร</h3>
+        <div className="overflow-x-auto rounded-lg border">
+            <table className="w-full text-left">
+            <thead className="bg-primary/10">
+                <tr>
+                <th className="p-4 font-bold text-primary">วัน</th>
+                <th className="p-4 font-bold text-primary">กำหนดการ</th>
+                <th className="p-4 font-bold text-primary text-center">เช้า</th>
+                <th className="p-4 font-bold text-primary text-center">กลางวัน</th>
+                <th className="p-4 font-bold text-primary text-center">เย็น</th>
+                </tr>
+            </thead>
+            <tbody>
+                {mealData.map((meal) => (
+                <tr key={meal.day} className="border-t">
+                    <td className="p-4 font-semibold">{meal.day}</td>
+                    <td className="p-4 text-gray-600">{meal.schedule}</td>
+                    <td className="p-4 text-center">
+                    {meal.breakfast ? <UtensilsCrossed className="w-5 h-5 text-primary mx-auto" /> : <XCircle className="w-5 h-5 text-gray-300 mx-auto" />}
+                    </td>
+                    <td className="p-4 text-center">
+                    {meal.lunch ? <UtensilsCrossed className="w-5 h-5 text-primary mx-auto" /> : <XCircle className="w-5 h-5 text-gray-300 mx-auto" />}
+                    </td>
+                    <td className="p-4 text-center">
+                    {meal.dinner ? <UtensilsCrossed className="w-5 h-5 text-primary mx-auto" /> : <XCircle className="w-5 h-5 text-gray-300 mx-auto" />}
+                    </td>
+                </tr>
+                ))}
+            </tbody>
+            </table>
+        </div>
+      </div>
     </div>
   );
 }
