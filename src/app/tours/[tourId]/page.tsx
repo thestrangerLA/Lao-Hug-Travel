@@ -6,7 +6,8 @@ import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { ClipboardList, MapPin, Utensils, UtensilsCrossed, XCircle } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ClipboardList, MapPin, Utensils, UtensilsCrossed, XCircle, Info, CheckCircle, Check } from 'lucide-react';
 
 
 const tourDetails = {
@@ -48,6 +49,19 @@ const tourDetails = {
                 'ซื้อของฝากและเดินทางสู่สนามบิน'
             ]
         }
+    ],
+    inclusions: [
+        'รถรับส่ง VIP ตามโปรแกรม',
+        'โรงแรมที่พักพร้อมอาหารเช้า',
+        'อาหารฮาลาลตามที่ระบุในโปรแกรม',
+        'ค่าเข้าชมสถานที่ต่างๆ',
+        'ไกด์ท้องถิ่น (พูดไทย)'
+    ],
+    exclusions: [
+        'ค่าใช้จ่ายส่วนตัวนอกเหนือจากรายการ',
+        'ค่าทิปสำหรับไกด์และคนขับรถ',
+        'ค่าตั๋วเครื่องบินไป-กลับ',
+        'ภาษีมูลค่าเพิ่ม 7% และหัก ณ ที่จ่าย 3%'
     ]
   },
 };
@@ -198,6 +212,55 @@ export default function TourDetailPage({ params }: { params: { tourId: string } 
             </table>
         </div>
       </div>
+
+       <div className="mt-12 bg-white p-6 rounded-lg shadow-md">
+          <h3 className="text-xl font-bold mb-6 flex items-center"><Info className="mr-3 text-primary" />รายละเอียดและเงื่อนไข</h3>
+          <Tabs defaultValue="conditions" className="w-full">
+            <TabsList className="grid w-full grid-cols-3 bg-gray-100">
+              <TabsTrigger value="conditions">
+                <Info className="mr-2 h-4 w-4" />เงื่อนไข
+              </TabsTrigger>
+              <TabsTrigger value="included">
+                <CheckCircle className="mr-2 h-4 w-4" />รวม
+              </TabsTrigger>
+              <TabsTrigger value="excluded">
+                <XCircle className="mr-2 h-4 w-4" />ไม่รวม
+              </TabsTrigger>
+            </TabsList>
+            <TabsContent value="conditions" className="pt-6">
+                <ul className="list-decimal list-inside space-y-2 text-gray-600">
+                    <li>บริษัทขอสงวนสิทธิ์ในการเปลี่ยนแปลงโปรแกรม แต่จะคำนึงถึงผลประโยชน์ของลูกค้าเป็นหลัก</li>
+                    <li>บริษัทจะไม่รับผิดชอบต่อการถูกปฏิเสธเข้าเมืองหากท่านอยู่นอกเหนือข้อตกลง</li>
+                    <li>ราคาโปรแกรมทัวร์นี้
+                        <ul className="list-[lower-alpha] list-inside pl-6 mt-1">
+                            <li>ไม่รวมค่าทิปไกด์และคนขับรถ</li>
+                        </ul>
+                    </li>
+                </ul>
+            </TabsContent>
+            <TabsContent value="included" className="pt-6">
+                <ul className="space-y-2">
+                    {tour.inclusions.map((item, index) => (
+                        <li key={index} className="flex items-center text-gray-600">
+                            <Check className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                            <span>{item}</span>
+                        </li>
+                    ))}
+                </ul>
+            </TabsContent>
+            <TabsContent value="excluded" className="pt-6">
+                <ul className="space-y-2">
+                    {tour.exclusions.map((item, index) => (
+                         <li key={index} className="flex items-center text-gray-600">
+                            <XCircle className="w-4 h-4 text-red-500 mr-3 flex-shrink-0" />
+                            <span>{item}</span>
+                        </li>
+                    ))}
+                </ul>
+            </TabsContent>
+          </Tabs>
+        </div>
+
     </div>
   );
 }
