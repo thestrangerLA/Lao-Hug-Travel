@@ -484,28 +484,6 @@ export default function Home() {
                 <p className="font-bold text-lg text-foreground">@mushroomtour</p>
               </div>
             </div>
-            <div className="flex items-center justify-center w-full md:w-auto md:h-full">
-              <div className="w-full h-px md:w-px md:h-24 bg-border relative">
-                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-card px-2">
-                    <span className="text-muted-foreground font-medium">หรือ</span>
-                  </div>
-              </div>
-            </div>
-            <div className="flex items-center gap-4">
-              {qrMushroomTravel && (
-                <Image
-                  src={qrMushroomTravel.imageUrl}
-                  alt={qrMushroomTravel.description}
-                  width={150}
-                  height={150}
-                  data-ai-hint={qrMushroomTravel.imageHint}
-                />
-              )}
-              <div>
-                <p className="text-muted-foreground">ติดตามเราผ่านไลน์</p>
-                <p className="font-bold text-lg text-foreground">@mushroomtravel</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
