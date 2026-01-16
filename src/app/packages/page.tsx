@@ -11,6 +11,7 @@ import Link from 'next/link';
 
 const allPackages = [
     {
+        id: '1',
         title: 'ทัวร์เวียงจันทน์',
         description: '3 วัน 2 คืน',
         tourCode: 'VTE01',
