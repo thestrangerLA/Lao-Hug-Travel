@@ -1,9 +1,18 @@
-'use client';
+import type { Metadata } from "next";
+import { Noto_Sans_Thai } from "next/font/google";
+import "./globals.css";
+import { Toaster } from "@/components/ui/toaster";
+import { LangProvider } from "@/context/LangContext";
 
-import './globals.css';
-import { Toaster } from '@/components/ui/toaster';
-import Footer from '@/components/common/Footer';
-import { LangProvider } from '@/context/LangContext';
+const noto = Noto_Sans_Thai({ 
+  subsets: ["thai", "latin"],
+  weight: ['400', '700']
+});
+
+export const metadata: Metadata = {
+  title: "Lao Hug Travel",
+  description: "Explore Laos with Lao Hug Travel",
+};
 
 export default function RootLayout({
   children,
@@ -11,23 +20,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <LangProvider>
-      <html lang="en" className="h-full">
-        <head>
-          <title>Lao Hug Travel</title>
-          <meta name="description" content="Your trusted partner for unforgettable journeys." />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-          <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
-        </head>
-        <body className="font-body antialiased flex flex-col h-full">
-          <main className="flex-grow">
-            {children}
-          </main>
-          <Footer />
-          <Toaster />
-        </body>
-      </html>
-    </LangProvider>
+    <html lang="th">
+      <body className={noto.className}>
+        <LangProvider>
+          {children}
+        </LangProvider>
+        <Toaster />
+      </body>
+    </html>
   );
 }
