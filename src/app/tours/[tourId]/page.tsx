@@ -5,6 +5,9 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { ClipboardList, MapPin } from 'lucide-react';
+
 
 const tourDetails = {
   '1': {
@@ -17,6 +20,35 @@ const tourDetails = {
     priceThb: 6600,
     priceUsd: 180, // Example USD price
     image: PlaceHolderImages.find((p) => p.id === 'vientiane-tour'),
+    itinerary: [
+        {
+            day: 'วันที่ 1',
+            title: 'เดินทางถึงเวียงจันทน์',
+            details: [
+                'รับที่ด่าน, สนามบิน หรือสถานีรถไฟ - ทีมงานจะรอรับคุณเมื่อเดินทางมาถึง เพื่อความสะดวกและรวดเร็วในการเริ่มต้นทริป',
+                'ทำเนียบประธานาธิบดี - ชมสถาปัตยกรรมสไตล์ฝรั่งเศสอันสง่างาม และถ่ายภาพแลนด์มาร์กสำคัญของเมือง',
+                'มัสยิดจามิอะ - สัมผัสหนึ่งในมัสยิดที่เก่าแก่ที่สุด และเรียนรู้ประวัติชุมชนมุสลิมในเวียงจันทน์',
+                'พระธาตุหลวง - พระธาตุทองคู่บ้านคู่เมืองลาว',
+                'ตลาดกลางคืนริมแม่น้ำโขง - ตลาดที่เต็มไปด้วยสีสัน วัฒนธรรมท้องถิ่น อาหารและสินค้าหัตถกรรม เหมาะสำหรับเดินเล่นและช้อปปิ้งตอนเย็น'
+            ]
+        },
+        {
+            day: 'วันที่ 2',
+            title: 'Nampien Yorla Pa',
+            details: [
+                'เดินทางไป Nampien Yorla Pa',
+                'เยี่ยมชมสถานที่และเล่นกิจกรรม',
+                'รับประทานอาหารเย็นที่ Nampien Yorla Pa'
+            ]
+        },
+        {
+            day: 'วันที่ 3',
+            title: 'เดินทางกลับ',
+            details: [
+                'ซื้อของฝากและเดินทางสู่สนามบิน'
+            ]
+        }
+    ]
   },
 };
 
@@ -91,6 +123,41 @@ export default function TourDetailPage({ params }: { params: { tourId: string } 
           </div>
         </div>
       </div>
+
+      {tour.itinerary && (
+        <div className="mt-12 bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-bold mb-6 flex items-center">
+                <ClipboardList className="mr-3 text-primary" />
+                โปรแกรมประจำวัน (Premium)
+            </h3>
+            <Accordion type="single" collapsible className="w-full" defaultValue="item-0">
+                {tour.itinerary.map((item, index) => (
+                    <AccordionItem value={`item-${index}`} key={index}>
+                    <AccordionTrigger>
+                        <div className="flex items-center text-left">
+                        <div className="bg-primary text-primary-foreground font-bold py-1 px-3 rounded-md mr-4">
+                            {item.day}
+                        </div>
+                        <h4 className="font-bold text-gray-800">{item.title}</h4>
+                        </div>
+                    </AccordionTrigger>
+                    <AccordionContent>
+                        <div className="pl-12 pr-4 pt-2 pb-4">
+                        <ul className="space-y-2">
+                            {item.details.map((detail, i) => (
+                            <li key={i} className="flex items-start">
+                                <MapPin className="w-4 h-4 text-gray-400 mr-3 mt-1 shrink-0" />
+                                <span className="text-gray-600">{detail}</span>
+                            </li>
+                            ))}
+                        </ul>
+                        </div>
+                    </AccordionContent>
+                    </AccordionItem>
+                ))}
+            </Accordion>
+        </div>
+      )}
     </div>
   );
 }
