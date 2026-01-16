@@ -517,7 +517,7 @@ export default function Home() {
             <h2 className="font-headline text-4xl font-bold text-foreground mb-3">Contact Us</h2>
             <p className="text-muted-foreground max-w-lg mx-auto">Have questions? We'd love to hear from you.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+          <div className="grid grid-cols-3 gap-2 md:gap-8">
             <Card className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <CardHeader className="p-4 pb-2 md:p-6 md:pb-2">
                  <div className="flex justify-center mb-2">
@@ -566,3 +566,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
