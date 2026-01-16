@@ -517,28 +517,46 @@ export default function Home() {
             <h2 className="font-headline text-4xl font-bold text-foreground mb-3">Contact Us</h2>
             <p className="text-muted-foreground max-w-lg mx-auto">Have questions? We'd love to hear from you.</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="flex flex-col items-center">
-              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                <Phone className="w-8 h-8 text-primary" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="text-center p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <div className="flex justify-center mb-4">
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Phone className="w-8 h-8 text-primary" />
+                </div>
               </div>
-              <h3 className="font-headline text-xl font-semibold mb-2">Phone</h3>
-              <p className="text-muted-foreground">+856 20 55 123 456</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                <Mail className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="font-headline text-xl font-semibold mb-2">Email</h3>
-              <a href="mailto:info@laohugtravel.com" className="text-muted-foreground hover:text-primary">info@laohugtravel.com</a>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                <MapPin className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="font-headline text-xl font-semibold mb-2">Address</h3>
-              <p className="text-muted-foreground">123 Main Street, Vientiane, Laos</p>
-            </div>
+              <CardHeader>
+                <CardTitle className="font-headline text-xl">Phone</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">+856 20 55 123 456</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div className="flex justify-center mb-4">
+                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                        <Mail className="w-8 h-8 text-primary" />
+                    </div>
+                </div>
+                <CardHeader>
+                  <CardTitle className="font-headline text-xl">Email</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <a href="mailto:info@laohugtravel.com" className="text-muted-foreground hover:text-primary">info@laohugtravel.com</a>
+                </CardContent>
+            </Card>
+            <Card className="text-center p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div className="flex justify-center mb-4">
+                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                        <MapPin className="w-8 h-8 text-primary" />
+                    </div>
+                </div>
+                <CardHeader>
+                  <CardTitle className="font-headline text-xl">Address</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">123 Main Street, Vientiane, Laos</p>
+                </CardContent>
+            </Card>
           </div>
         </div>
       </section>
