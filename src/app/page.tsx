@@ -517,44 +517,46 @@ export default function Home() {
             <h2 className="font-headline text-4xl font-bold text-foreground mb-3">Contact Us</h2>
             <p className="text-muted-foreground max-w-lg mx-auto">Have questions? We'd love to hear from you.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Phone className="w-8 h-8 text-primary" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+            <Card className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <CardHeader className="p-4 pb-2 md:p-6 md:pb-2">
+                 <div className="flex justify-center mb-2">
+                    <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
+                        <Phone className="w-7 h-7 text-primary" />
+                    </div>
                 </div>
-              </div>
-              <CardHeader>
-                <CardTitle className="font-headline text-xl">Phone</CardTitle>
+                <CardTitle className="font-headline text-lg md:text-xl">Phone</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">+856 20 55 123 456</p>
+              <CardContent className="px-4 pb-4 pt-0 md:px-6 md:pb-6">
+                <p className="text-muted-foreground text-sm">+856 20 55 123 456</p>
               </CardContent>
             </Card>
-            <Card className="text-center p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <div className="flex justify-center mb-4">
-                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-                        <Mail className="w-8 h-8 text-primary" />
+
+            <Card className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <CardHeader className="p-4 pb-2 md:p-6 md:pb-2">
+                    <div className="flex justify-center mb-2">
+                        <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
+                            <Mail className="w-7 h-7 text-primary" />
+                        </div>
                     </div>
-                </div>
-                <CardHeader>
-                  <CardTitle className="font-headline text-xl">Email</CardTitle>
+                  <CardTitle className="font-headline text-lg md:text-xl">Email</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <a href="mailto:info@laohugtravel.com" className="text-muted-foreground hover:text-primary">info@laohugtravel.com</a>
+                <CardContent className="px-4 pb-4 pt-0 md:px-6 md:pb-6">
+                  <a href="mailto:info@laohugtravel.com" className="text-muted-foreground hover:text-primary text-sm">info@laohugtravel.com</a>
                 </CardContent>
             </Card>
-            <Card className="text-center p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <div className="flex justify-center mb-4">
-                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-                        <MapPin className="w-8 h-8 text-primary" />
+
+            <Card className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <CardHeader className="p-4 pb-2 md:p-6 md:pb-2">
+                    <div className="flex justify-center mb-2">
+                        <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
+                            <MapPin className="w-7 h-7 text-primary" />
+                        </div>
                     </div>
-                </div>
-                <CardHeader>
-                  <CardTitle className="font-headline text-xl">Address</CardTitle>
+                  <CardTitle className="font-headline text-lg md:text-xl">Address</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">123 Main Street, Vientiane, Laos</p>
+                <CardContent className="px-4 pb-4 pt-0 md:px-6 md:pb-6">
+                  <p className="text-muted-foreground text-sm">123 Main Street, Vientiane, Laos</p>
                 </CardContent>
             </Card>
           </div>
