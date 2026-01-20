@@ -355,7 +355,7 @@ export default function Home() {
                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-card p-2 rounded-full border">
                 <Star className="w-6 h-6 text-accent" />
               </div>
-              <p id="vision-text" className="text-muted-foreground text-lg leading-relaxed italic">&quot;To inspire and empower travelers to explore the world responsibly, creating meaningful connections between cultures while delivering exceptional, personalized experiences.&quot;</p>
+              <p id="vision-text" className="text-muted-foreground text-lg leading-relaxed italic">&quot;Exploring Laos is not just about seeing beautiful sights; it's about creating unforgettable memories that last a lifetime, connecting with locals, and immersing yourself in rich cultural experiences in the Halal Way.&quot;</p>
             </div>
           </div>
         </div>
@@ -544,5 +544,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
