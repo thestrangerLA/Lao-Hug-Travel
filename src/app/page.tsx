@@ -366,13 +366,13 @@ export default function Home() {
       </section>
 
       {/* Vision Section */}
-      <section id="vision" className="py-20 px-4 bg-background">
+      <section id="vision" className="py-20 px-4 bg-primary">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <span className="inline-block px-4 py-1.5 bg-accent/10 text-accent-foreground text-sm font-medium rounded-full mb-4">
               Our Purpose
             </span>
-            <h2 id="vision-title" className="font-headline text-4xl font-bold text-foreground mb-6">Our Vision</h2>
+            <h2 id="vision-title" className="font-headline text-4xl font-bold text-primary-foreground mb-6">Our Vision</h2>
             <div className="relative bg-card rounded-2xl p-8 shadow-lg shadow-black/5 border border-border/50 max-w-2xl mx-auto">
                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-card p-2 rounded-full border">
                 <Star className="w-6 h-6 text-accent" />
@@ -491,7 +491,7 @@ export default function Home() {
             <h2 className="font-headline text-4xl font-bold text-foreground mb-3">Contact Us</h2>
             <p className="text-muted-foreground max-w-lg mx-auto">Have questions? We'd love to hear from you.</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+          <div className="grid grid-cols-4 gap-4 md:gap-8">
             <a href="tel:+66622244315">
                 <Card className="text-center h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                     <CardHeader className="p-4 pb-2 md:p-6 md:pb-2">
@@ -565,7 +565,7 @@ export default function Home() {
           <h2 className="font-headline text-4xl font-bold text-foreground mb-12">
             Follow Us
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-5 gap-y-8 gap-x-4 place-items-center">
+          <div className="grid grid-cols-5 gap-4 place-items-center">
             {socialLinks.map((social) => (
               <a
                 key={social.name}
@@ -585,5 +585,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
