@@ -20,6 +20,83 @@ const allPackages = [
         price: '6,600',
         image: PlaceHolderImages.find(p => p.id === 'vientiane-tour'),
         href: '/tours/1'
+    },
+    {
+        id: '2',
+        title: 'ทัวร์หลวงพระบาง',
+        description: '4 วัน 3 คืน',
+        tourCode: 'LPQ01',
+        days: '4 วัน',
+        rating: 4.5,
+        price: '8,500',
+        image: PlaceHolderImages.find(p => p.id === 'luang-prabang-tour'),
+        href: '/tours/2'
+    },
+    {
+        id: '3',
+        title: 'ทัวร์วังเวียง',
+        description: '3 วัน 2 คืน',
+        tourCode: 'VVO01',
+        days: '3 วัน',
+        rating: 4.0,
+        price: '7,200',
+        image: PlaceHolderImages.find(p => p.id === 'vang-vieng-tour'),
+        href: '/tours/3'
+    },
+    {
+        id: '4',
+        title: 'ทัวร์ปากเซ',
+        description: '3 วัน 2 คืน',
+        tourCode: 'PKZ01',
+        days: '3 วัน',
+        rating: 4,
+        price: '7,800',
+        image: PlaceHolderImages.find(p => p.id === 'pakse-tour'),
+        href: '/tours/4'
+    },
+    {
+        id: '5',
+        title: 'ทัวร์สี่พันดอน',
+        description: '4 วัน 3 คืน',
+        tourCode: '4KI01',
+        days: '4 วัน',
+        rating: 4.5,
+        price: '9,200',
+        image: PlaceHolderImages.find(p => p.id === '4000-islands-tour'),
+        href: '/tours/5'
+    },
+    {
+        id: '6',
+        title: 'ทุ่งไหหิน',
+        description: '3 วัน 2 คืน',
+        tourCode: 'XKH01',
+        days: '3 วัน',
+        rating: 4.2,
+        price: '8,100',
+        image: PlaceHolderImages.find(p => p.id === 'plain-of-jars-tour'),
+        href: '/tours/6'
+    },
+    {
+        id: '7',
+        title: 'ผจญภัยลาวเหนือ',
+        description: '5 วัน 4 คืน',
+        tourCode: 'NLA01',
+        days: '5 วัน',
+        rating: 4.8,
+        price: '12,500',
+        image: PlaceHolderImages.find(p => p.id === 'northern-laos-tour'),
+        href: '/tours/7'
+    },
+    {
+        id: '8',
+        title: 'สำรวจลาวใต้',
+        description: '5 วัน 4 คืน',
+        tourCode: 'SLA01',
+        days: '5 วัน',
+        rating: 4.6,
+        price: '11,800',
+        image: PlaceHolderImages.find(p => p.id === 'southern-laos-tour'),
+        href: '/tours/8'
     }
 ];
 
@@ -99,9 +176,6 @@ export default function PackagesPage() {
                     </div>
                     
                     <div className="mt-auto">
-                        <Button className="w-full bg-slate-900 text-white hover:bg-slate-800 mb-3">
-                            ดูรายละเอียด
-                        </Button>
                         <div className="text-center">
                             <p className="text-sm text-gray-500">ราคาเริ่มต้น</p>
                             <p className="text-xl font-bold text-primary">฿{pkg.price}</p>

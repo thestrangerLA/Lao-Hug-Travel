@@ -405,11 +405,6 @@ export default function Home() {
               </Card>
             ))}
           </div>
-           <div className="text-center mt-12">
-                <Button asChild variant="secondary">
-                    <Link href="/services">See All Services</Link>
-                </Button>
-            </div>
         </div>
       </section>
       
