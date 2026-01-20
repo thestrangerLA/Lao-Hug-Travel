@@ -17,7 +17,6 @@ import {
   Star,
   Mail,
   Phone,
-  MapPin,
   BedDouble,
   Car,
   Ticket,
@@ -26,6 +25,8 @@ import {
   UtensilsCrossed,
   Award,
   Menu,
+  MessageSquare,
+  MessageCircle,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { useLang } from '@/context/LangContext';
@@ -495,48 +496,70 @@ export default function Home() {
             <h2 className="font-headline text-4xl font-bold text-foreground mb-3">Contact Us</h2>
             <p className="text-muted-foreground max-w-lg mx-auto">Have questions? We'd love to hear from you.</p>
           </div>
-          <div className="grid grid-cols-3 gap-2 md:gap-8">
-            <Card className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <CardHeader className="p-4 pb-2 md:p-6 md:pb-2">
-                 <div className="flex justify-center mb-2">
-                    <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
-                        <Phone className="w-7 h-7 text-primary" />
-                    </div>
-                </div>
-                <CardTitle className="font-headline text-lg md:text-xl">Phone</CardTitle>
-              </CardHeader>
-              <CardContent className="px-4 pb-4 pt-0 md:px-6 md:pb-6">
-                <p className="text-muted-foreground text-sm">+856 20 55 123 456</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <CardHeader className="p-4 pb-2 md:p-6 md:pb-2">
-                    <div className="flex justify-center mb-2">
-                        <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
-                            <Mail className="w-7 h-7 text-primary" />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+            <a href="tel:+66622244315">
+                <Card className="text-center h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <CardHeader className="p-4 pb-2 md:p-6 md:pb-2">
+                        <div className="flex justify-center mb-2">
+                            <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
+                                <Phone className="w-7 h-7 text-primary" />
+                            </div>
                         </div>
-                    </div>
-                  <CardTitle className="font-headline text-lg md:text-xl">Email</CardTitle>
-                </CardHeader>
-                <CardContent className="px-4 pb-4 pt-0 md:px-6 md:pb-6">
-                  <a href="mailto:info@laohugtravel.com" className="text-muted-foreground hover:text-primary text-sm">info@laohugtravel.com</a>
-                </CardContent>
-            </Card>
+                        <CardTitle className="font-headline text-lg md:text-xl">Phone</CardTitle>
+                    </CardHeader>
+                    <CardContent className="px-4 pb-4 pt-0 md:px-6 md:pb-6">
+                        <p className="text-muted-foreground text-sm break-all">+66 62 224 4315</p>
+                    </CardContent>
+                </Card>
+            </a>
 
-            <Card className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <CardHeader className="p-4 pb-2 md:p-6 md:pb-2">
-                    <div className="flex justify-center mb-2">
-                        <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
-                            <MapPin className="w-7 h-7 text-primary" />
+            <a href="https://wa.me/8562096142645" target="_blank" rel="noopener noreferrer">
+                <Card className="text-center h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <CardHeader className="p-4 pb-2 md:p-6 md:pb-2">
+                        <div className="flex justify-center mb-2">
+                            <div className="w-14 h-14 rounded-full bg-green-500/10 flex items-center justify-center">
+                                <MessageCircle className="w-7 h-7 text-green-600" />
+                            </div>
                         </div>
-                    </div>
-                  <CardTitle className="font-headline text-lg md:text-xl">Address</CardTitle>
-                </CardHeader>
-                <CardContent className="px-4 pb-4 pt-0 md:px-6 md:pb-6">
-                  <p className="text-muted-foreground text-sm">123 Main Street, Vientiane, Laos</p>
-                </CardContent>
-            </Card>
+                      <CardTitle className="font-headline text-lg md:text-xl">WhatsApp</CardTitle>
+                    </CardHeader>
+                    <CardContent className="px-4 pb-4 pt-0 md:px-6 md:pb-6">
+                      <p className="text-muted-foreground text-sm break-all">+85620 96142645</p>
+                    </CardContent>
+                </Card>
+            </a>
+
+            <a href="mailto:Laohugtravel@gmail.com">
+                <Card className="text-center h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <CardHeader className="p-4 pb-2 md:p-6 md:pb-2">
+                        <div className="flex justify-center mb-2">
+                            <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
+                                <Mail className="w-7 h-7 text-primary" />
+                            </div>
+                        </div>
+                      <CardTitle className="font-headline text-lg md:text-xl">Email</CardTitle>
+                    </CardHeader>
+                    <CardContent className="px-4 pb-4 pt-0 md:px-6 md:pb-6">
+                      <p className="text-muted-foreground text-sm break-all">Laohugtravel@gmail.com</p>
+                    </CardContent>
+                </Card>
+            </a>
+
+            <a href="http://line.me/ti/p/~Laohugtravel" target="_blank" rel="noopener noreferrer">
+                <Card className="text-center h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <CardHeader className="p-4 pb-2 md:p-6 md:pb-2">
+                        <div className="flex justify-center mb-2">
+                            <div className="w-14 h-14 rounded-full bg-emerald-500/10 flex items-center justify-center">
+                                <MessageSquare className="w-7 h-7 text-emerald-600" />
+                            </div>
+                        </div>
+                      <CardTitle className="font-headline text-lg md:text-xl">Line</CardTitle>
+                    </CardHeader>
+                    <CardContent className="px-4 pb-4 pt-0 md:px-6 md:pb-6">
+                      <p className="text-muted-foreground text-sm break-all">Laohugtravel</p>
+                    </CardContent>
+                </Card>
+            </a>
           </div>
         </div>
       </section>
@@ -544,7 +567,5 @@ export default function Home() {
     </div>
   );
 }
-
-    
 
     
