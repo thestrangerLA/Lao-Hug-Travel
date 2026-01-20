@@ -125,11 +125,11 @@ const renderStars = (rating: number) => {
 
 export default function PackagesPage() {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-primary min-h-screen">
       <div className="container py-12">
         <div className="text-center mb-12">
-          <h1 className="font-headline text-4xl md:text-5xl font-bold">All Packages</h1>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+          <h1 className="font-headline text-4xl md:text-5xl font-bold text-primary-foreground">All Packages</h1>
+          <p className="mt-4 text-lg text-primary-foreground/90 max-w-2xl mx-auto">
             Explore our wide range of travel packages designed to make your journey unforgettable.
           </p>
         </div>
