@@ -354,11 +354,11 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-4 bg-card">
+      <section id="about" className="py-20 px-4 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="font-headline text-4xl font-bold text-foreground mb-3">About Lao Hug Travel</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
+            <h2 className="font-headline text-4xl font-bold mb-3">About Lao Hug Travel</h2>
+            <p className="text-primary-foreground/90 max-w-2xl mx-auto text-lg leading-relaxed">
               Lao Hug Travel is your trusted partner for unforgettable journeys in Laos. We specialize in crafting personalized travel experiences, with a special focus on Halal-friendly services. Our local expertise and commitment to quality ensure you a seamless and authentic adventure.
             </p>
           </div>
@@ -366,14 +366,14 @@ export default function Home() {
       </section>
 
       {/* Vision Section */}
-      <section id="vision" className="py-20 px-4 bg-primary">
+      <section id="vision" className="py-20 px-4 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <span className="inline-block px-4 py-1.5 bg-accent/10 text-accent-foreground text-sm font-medium rounded-full mb-4">
               Our Purpose
             </span>
-            <h2 id="vision-title" className="font-headline text-4xl font-bold text-primary-foreground mb-6">Our Vision</h2>
-            <div className="relative bg-card rounded-2xl p-8 shadow-lg shadow-black/5 border border-border/50 max-w-2xl mx-auto">
+            <h2 id="vision-title" className="font-headline text-4xl font-bold mb-6">Our Vision</h2>
+            <div className="relative bg-card rounded-2xl p-8 shadow-lg shadow-black/5 border border-border/50 max-w-2xl mx-auto text-card-foreground">
                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-card p-2 rounded-full border">
                 <Star className="w-6 h-6 text-accent" />
               </div>
@@ -384,18 +384,18 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="what-we-do" className="py-20 px-4 bg-card">
+      <section id="what-we-do" className="py-20 px-4 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">
+            <span className="inline-block px-4 py-1.5 bg-primary-foreground/10 text-primary-foreground text-sm font-medium rounded-full mb-4">
               What We Do
             </span>
-            <h2 className="font-headline text-4xl font-bold text-foreground mb-3">Our Services</h2>
-            <p className="text-muted-foreground max-w-lg mx-auto">Comprehensive travel solutions tailored to your dreams</p>
+            <h2 className="font-headline text-4xl font-bold mb-3">Our Services</h2>
+            <p className="text-primary-foreground/90 max-w-lg mx-auto">Comprehensive travel solutions tailored to your dreams</p>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service) => (
-              <Card key={service.title} className="bg-background/70 border hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1">
+              <Card key={service.title} className="bg-card text-card-foreground border hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1">
                 <CardContent className="flex flex-col items-center justify-center text-center p-6 gap-4">
                   <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center flex-shrink-0 shadow-lg`}>
                     {service.icon}
@@ -406,7 +406,7 @@ export default function Home() {
             ))}
           </div>
            <div className="text-center mt-12">
-                <Button asChild variant="outline">
+                <Button asChild variant="secondary">
                     <Link href="/services">See All Services</Link>
                 </Button>
             </div>
@@ -414,32 +414,32 @@ export default function Home() {
       </section>
       
       {/* Halal Tour Package Section */}
-      <section id="halal-package" className="py-20 px-4 bg-background">
+      <section id="halal-package" className="py-20 px-4 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div className="text-center md:text-left">
-                <span className="inline-block px-4 py-1.5 bg-emerald-500/10 text-emerald-600 text-sm font-medium rounded-full mb-4">
+                <span className="inline-block px-4 py-1.5 bg-emerald-500/10 text-emerald-300 text-sm font-medium rounded-full mb-4">
                     Specialty Tours
                 </span>
-                <h2 className="font-headline text-4xl font-bold text-foreground mb-4">Our Halal Tour Packages</h2>
-                <p className="text-muted-foreground text-lg mb-6">
+                <h2 className="font-headline text-4xl font-bold mb-4">Our Halal Tour Packages</h2>
+                <p className="text-primary-foreground/90 text-lg mb-6">
                     Travel with peace of mind. Our Halal tour packages are designed to cater to your needs, including Halal-certified meals, prayer facilities, and Muslim-friendly accommodations.
                 </p>
                 <ul className="space-y-3 text-left mb-8">
                     <li className="flex items-center gap-3">
-                        <ShieldCheck className="w-5 h-5 text-primary" />
+                        <ShieldCheck className="w-5 h-5 text-accent" />
                         <span>Certified Halal restaurants and caterers.</span>
                     </li>
                     <li className="flex items-center gap-3">
-                        <ShieldCheck className="w-5 h-5 text-primary" />
+                        <ShieldCheck className="w-5 h-5 text-accent" />
                         <span>Prayer times and facilities provided.</span>
                     </li>
                     <li className="flex items-center gap-3">
-                        <ShieldCheck className="w-5 h-5 text-primary" />
+                        <ShieldCheck className="w-5 h-5 text-accent" />
                         <span>Female-only guides available upon request.</span>
                     </li>
                 </ul>
                  <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                    <Button asChild size="lg">
+                    <Button asChild size="lg" variant="secondary">
                         <Link href="/services">Explore Halal Tours</Link>
                     </Button>
                     <Button asChild size="lg" variant="outline">
@@ -463,12 +463,12 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section id="why-choose-us" className="py-20 px-4 bg-card">
+      <section id="why-choose-us" className="py-20 px-4 bg-primary text-primary-foreground">
          <div className="max-w-2xl mx-auto">
              <div className="text-center mb-12">
-                <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">Our Promise</span>
-                <h2 className="font-headline text-4xl font-bold text-foreground mb-3">Why Choose Us</h2>
-                <p className="text-muted-foreground">Experience the difference with our commitment to excellence</p>
+                <span className="inline-block px-4 py-1.5 bg-primary-foreground/10 text-primary-foreground text-sm font-medium rounded-full mb-4">Our Promise</span>
+                <h2 className="font-headline text-4xl font-bold mb-3">Why Choose Us</h2>
+                <p className="text-primary-foreground/90">Experience the difference with our commitment to excellence</p>
              </div>
              <div className="space-y-6">
                 {strengths.map((strength) => (
@@ -485,11 +485,11 @@ export default function Home() {
       </section>
 
       {/* Contact Us Section */}
-      <section id="contact-us" className="py-20 px-4 bg-background">
+      <section id="contact-us" className="py-20 px-4 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="font-headline text-4xl font-bold text-foreground mb-3">Contact Us</h2>
-            <p className="text-muted-foreground max-w-lg mx-auto">Have questions? We'd love to hear from you.</p>
+            <h2 className="font-headline text-4xl font-bold mb-3">Contact Us</h2>
+            <p className="text-primary-foreground/90 max-w-lg mx-auto">Have questions? We'd love to hear from you.</p>
           </div>
           <div className="grid grid-cols-4 gap-4 md:gap-8">
             <a href="tel:+66622244315">
@@ -560,9 +560,9 @@ export default function Home() {
       </section>
 
       {/* Follow Us Section */}
-      <section id="follow-us" className="py-20 px-4 bg-card">
+      <section id="follow-us" className="py-20 px-4 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-headline text-4xl font-bold text-foreground mb-12">
+          <h2 className="font-headline text-4xl font-bold mb-12">
             Follow Us
           </h2>
           <div className="grid grid-cols-5 gap-4 place-items-center">
@@ -572,7 +572,7 @@ export default function Home() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                className="flex flex-col items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors"
               >
                 {social.icon}
                 <span className="font-medium text-xs">Lao Hug Travel</span>
