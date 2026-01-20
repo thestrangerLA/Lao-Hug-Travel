@@ -185,11 +185,11 @@ const TikTokIcon = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 const socialLinks = [
-    { name: 'Facebook', icon: <Facebook className="w-8 h-8" />, href: 'https://facebook.com/LaoHugTravel' },
-    { name: 'TikTok', icon: <TikTokIcon className="w-8 h-8" />, href: 'https://tiktok.com/@laohugtravel' },
-    { name: 'Instagram', icon: <Instagram className="w-8 h-8" />, href: 'https://instagram.com/laohugtravel' },
-    { name: 'Youtube', icon: <Youtube className="w-8 h-8" />, href: 'https://youtube.com/@LaoHugTravel' },
-    { name: 'X', icon: <Twitter className="w-8 h-8" />, href: 'https://x.com/laohugtravel' },
+    { name: 'Facebook', icon: <Facebook className="w-6 h-6" />, href: 'https://facebook.com/LaoHugTravel' },
+    { name: 'TikTok', icon: <TikTokIcon className="w-6 h-6" />, href: 'https://tiktok.com/@laohugtravel' },
+    { name: 'Instagram', icon: <Instagram className="w-6 h-6" />, href: 'https://instagram.com/laohugtravel' },
+    { name: 'Youtube', icon: <Youtube className="w-6 h-6" />, href: 'https://youtube.com/@LaoHugTravel' },
+    { name: 'X', icon: <Twitter className="w-6 h-6" />, href: 'https://x.com/laohugtravel' },
 ];
 
 
@@ -565,17 +565,17 @@ export default function Home() {
           <h2 className="font-headline text-4xl font-bold text-foreground mb-12">
             Follow Us
           </h2>
-          <div className="flex flex-wrap justify-center items-center gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-5 gap-y-8 gap-x-4 place-items-center">
             {socialLinks.map((social) => (
               <a
                 key={social.name}
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
+                className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
               >
                 {social.icon}
-                <span className="font-medium text-sm">Lao Hug Travel</span>
+                <span className="font-medium text-xs">Lao Hug Travel</span>
               </a>
             ))}
           </div>
