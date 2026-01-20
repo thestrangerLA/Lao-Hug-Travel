@@ -12,89 +12,89 @@ import Link from 'next/link';
 const allPackages = [
     {
         id: '1',
-        title: 'ทัวร์เวียงจันทน์',
-        description: '3 วัน 2 คืน',
+        title: 'เวียงจันทน์-วังเวียง',
+        description: 'ทัวร์ประเทศลาว',
         tourCode: 'VTE01',
         days: '3 วัน',
         rating: 3.5,
-        price: '6,600',
+        price: '6,500',
         image: PlaceHolderImages.find(p => p.id === 'vientiane-tour'),
         href: '/tours/1'
     },
     {
         id: '2',
-        title: 'ทัวร์หลวงพระบาง',
-        description: '4 วัน 3 คืน',
+        title: 'เวียงจันทน์-หลวงพระบาง',
+        description: 'ทัวร์ประเทศลาว',
         tourCode: 'LPQ01',
         days: '4 วัน',
         rating: 4.5,
-        price: '8,500',
+        price: '11,000',
         image: PlaceHolderImages.find(p => p.id === 'luang-prabang-tour'),
         href: '/tours/2'
     },
     {
         id: '3',
-        title: 'ทัวร์วังเวียง',
-        description: '3 วัน 2 คืน',
+        title: 'เวียงจันทน์-เมืองเฟือง-วังเวียง',
+        description: 'ทัวร์ประเทศลาว',
         tourCode: 'VVO01',
-        days: '3 วัน',
+        days: '4 วัน',
         rating: 4.0,
-        price: '7,200',
+        price: '9,500',
         image: PlaceHolderImages.find(p => p.id === 'vang-vieng-tour'),
         href: '/tours/3'
     },
     {
         id: '4',
-        title: 'ทัวร์ปากเซ',
-        description: '3 วัน 2 คืน',
+        title: 'เวียงจันทน์-เมืองเฟือง-วังเวียง-หลวงพระบาง',
+        description: 'ทัวร์ประเทศลาว',
         tourCode: 'PKZ01',
-        days: '3 วัน',
-        rating: 4,
-        price: '7,800',
+        days: '5 วัน',
+        rating: 4.0,
+        price: '12,500',
         image: PlaceHolderImages.find(p => p.id === 'pakse-tour'),
         href: '/tours/4'
     },
     {
         id: '5',
-        title: 'ทัวร์สี่พันดอน',
-        description: '4 วัน 3 คืน',
+        title: 'เวียงจันทน์-เมืองเฟือง-วังเวียง-หลวงพระบาง-12ปันนา (ประเทศจีน)',
+        description: 'ทัวร์ลาว-จีน',
         tourCode: '4KI01',
-        days: '4 วัน',
+        days: '7 วัน',
         rating: 4.5,
-        price: '9,200',
+        price: '30,000',
         image: PlaceHolderImages.find(p => p.id === '4000-islands-tour'),
         href: '/tours/5'
     },
     {
         id: '6',
-        title: 'ทุ่งไหหิน',
-        description: '3 วัน 2 คืน',
+        title: 'คุณหมิง-ต้าหลี-หลีเจียง-แชงกรีลา (ประเทศจีน)',
+        description: 'ทัวร์ประเทศจีน',
         tourCode: 'XKH01',
-        days: '3 วัน',
+        days: '6 วัน',
         rating: 4.2,
-        price: '8,100',
+        price: '38,000',
         image: PlaceHolderImages.find(p => p.id === 'plain-of-jars-tour'),
         href: '/tours/6'
     },
     {
         id: '7',
-        title: 'ผจญภัยลาวเหนือ',
-        description: '5 วัน 4 คืน',
+        title: 'คุณหมิง-ฉงชิ่ง (ประเทศจีน)',
+        description: 'ทัวร์ประเทศจีน',
         tourCode: 'NLA01',
         days: '5 วัน',
         rating: 4.8,
-        price: '12,500',
+        price: '40,000',
         image: PlaceHolderImages.find(p => p.id === 'northern-laos-tour'),
         href: '/tours/7'
     },
     {
         id: '8',
-        title: 'สำรวจลาวใต้',
-        description: '5 วัน 4 คืน',
+        title: 'คุณหมิง-ปักกิ่ง-เทียนจิน (ประเทศจีน)',
+        description: 'ทัวร์ประเทศจีน',
         tourCode: 'SLA01',
-        days: '5 วัน',
+        days: '8 วัน',
         rating: 4.6,
-        price: '11,800',
+        price: '49,000',
         image: PlaceHolderImages.find(p => p.id === 'southern-laos-tour'),
         href: '/tours/8'
     }
@@ -178,7 +178,10 @@ export default function PackagesPage() {
                     <div className="mt-auto">
                         <div className="text-center">
                             <p className="text-sm text-gray-500">ราคาเริ่มต้น</p>
-                            <p className="text-xl font-bold text-primary">฿{pkg.price}</p>
+                            <div className="flex items-baseline justify-center gap-1">
+                                <p className="text-xl font-bold text-primary">฿{pkg.price}</p>
+                                <p className="text-sm text-muted-foreground">/ ท่าน</p>
+                            </div>
                         </div>
                     </div>
                 </CardContent>
