@@ -336,9 +336,6 @@ export default function Home() {
                 </ul>
                  <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                     <Button asChild size="lg" variant="secondary">
-                        <Link href="/services">Explore Halal Tours</Link>
-                    </Button>
-                    <Button asChild size="lg" variant="outline">
                         <Link href="/packages">See All Packages</Link>
                     </Button>
                 </div>
@@ -461,3 +458,4 @@ export default function Home() {
     
 
     
+
