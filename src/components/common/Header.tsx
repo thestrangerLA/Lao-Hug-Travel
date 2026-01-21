@@ -40,7 +40,7 @@ export function Header() {
             <div className="container flex h-16 items-center">
                 <Link href="/" className="mr-6 flex items-center">
                     <Image 
-                        src="https://i.ibb.co/gV2ZzM1/logo.png"
+                        src="https://i.ibb.co/gLn7B0hs/logo.png"
                         alt="Lao Hug Travel Logo"
                         width={140}
                         height={40}
