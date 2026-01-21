@@ -68,9 +68,9 @@
     },
     {
       "id": "vientiane-tour",
-      "description": "A bridge structure, representing the Vientiane tour package.",
-      "imageUrl": "https://images.unsplash.com/photo-1714661116916-8e44405d0c83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxicmlkZ2UlMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzY4NTQ2MDQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "bridge architecture"
+      "description": "Hot air balloons flying over the mountains in Vang Vieng, Laos.",
+      "imageUrl": "https://images.unsplash.com/photo-1541600014493-0182c431d155?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzEyODZ8MHwxfHNlYXJjaHwxfHx2YW5nJTIwdmllbmclMjBob3QlMjBhaXIlMjBiYWxsb29ufGVufDB8fHx8MTY5OTUyNjAzN3ww&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "hot air balloons"
     },
     {
       "id": "luang-prabang-tour",
