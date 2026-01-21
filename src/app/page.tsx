@@ -192,12 +192,45 @@ export default function Home() {
   const hotelImage = PlaceHolderImages.find((p) => p.id === 'gmhi-hotel');
   const buildingImage = PlaceHolderImages.find((p) => p.id === 'gmhi-building');
   const corridorImage = PlaceHolderImages.find((p) => p.id === 'gmhi-corridor');
+  const [open, setOpen] = useState(false);
 
 
   const services = servicesData[lang] || servicesData.en;
   
+  const navLinks = [
+    { href: '#about', label: 'About Us' },
+    { href: '#vision', label: 'Vision' },
+    { href: '#halal-package', label: 'Tour Packages' },
+    { href: '#what-we-do', label: 'Our Services' },
+    { href: '#why-choose-us', label: 'Why Choose Us' },
+    { href: '#contact-us', label: 'Contact Us' },
+    { href: '#follow-us', label: 'Follow Us' },
+  ];
+
   return (
     <div className="bg-background text-foreground">
+       <Sheet open={open} onOpenChange={setOpen}>
+        <SheetTrigger asChild>
+            <Button variant="ghost" size="icon" className="fixed top-4 right-4 z-50 bg-background/80 backdrop-blur-sm rounded-full shadow-lg md:hidden">
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Toggle Menu</span>
+            </Button>
+        </SheetTrigger>
+        <SheetContent side="right">
+            <nav className="flex flex-col gap-6 pt-10">
+                {navLinks.map((link) => (
+                    <Link
+                        key={link.href}
+                        href={link.href}
+                        className="text-lg font-medium transition-colors hover:text-primary"
+                        onClick={() => setOpen(false)}
+                    >
+                        {link.label}
+                    </Link>
+                ))}
+            </nav>
+        </SheetContent>
+      </Sheet>
       {/* Hero Section */}
       <section className="relative bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 py-20">
@@ -458,4 +491,5 @@ export default function Home() {
     
 
     
+
 
