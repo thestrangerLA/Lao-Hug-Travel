@@ -46,7 +46,7 @@ const allPackages = [
     {
         id: '4',
         title: 'เวียงจันทน์-เมืองเฟือง-วังเวียง-หลวงพระบาง',
-        description: 'ทัวร์ประเทศลาว',
+        description: 'ทัวร์ลาว',
         tourCode: 'PKZ01',
         days: '5 วัน',
         rating: 4.0,
@@ -174,7 +174,6 @@ export default function PackagesPage() {
 
                       <div className="mt-auto text-center">
                           <h3 className="font-bold text-xl mb-4">{pkg.title}</h3>
-                          <p className="text-sm text-gray-500">ราคาเริ่มต้น</p>
                           <div className="flex items-baseline justify-center gap-1">
                               <p className="text-xl font-bold text-primary">฿{pkg.price}</p>
                               <p className="text-sm text-muted-foreground">/ ท่าน</p>
@@ -234,7 +233,6 @@ export default function PackagesPage() {
                       
                       <div className="mt-auto text-center">
                           <h3 className="font-bold text-xl mb-4">{pkg.title}</h3>
-                          <p className="text-sm text-gray-500">ราคาเริ่มต้น</p>
                           <div className="flex items-baseline justify-center gap-1">
                               <p className="text-xl font-bold text-primary">฿{pkg.price}</p>
                               <p className="text-sm text-muted-foreground">/ ท่าน</p>
