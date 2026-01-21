@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
-import { Noto_Sans_Thai } from "next/font/google";
+import { Kanit } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { LangProvider } from "@/context/LangContext";
+import { Header } from "@/components/common/Header";
+import Footer from "@/components/common/Footer";
 
-const noto = Noto_Sans_Thai({ 
+const kanit = Kanit({ 
   subsets: ["thai", "latin"],
-  weight: ['400', '700']
+  weight: ['300', '400', '500', '700'],
 });
 
 export const metadata: Metadata = {
@@ -21,9 +23,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="th">
-      <body className={noto.className}>
+      <body className={kanit.className}>
         <LangProvider>
-          {children}
+          <Header />
+          <main>{children}</main>
+          <Footer />
         </LangProvider>
         <Toaster />
       </body>
