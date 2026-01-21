@@ -173,8 +173,7 @@ export default function PackagesPage() {
                       </div>
 
                       <div className="mt-auto text-center">
-                          <h3 className="font-bold text-xl">{pkg.title}</h3>
-                          <p className="text-sm text-gray-600 mb-4">{pkg.description}</p>
+                          <h3 className="font-bold text-xl mb-4">{pkg.title}</h3>
                           <p className="text-sm text-gray-500">ราคาเริ่มต้น</p>
                           <div className="flex items-baseline justify-center gap-1">
                               <p className="text-xl font-bold text-primary">฿{pkg.price}</p>
@@ -234,8 +233,7 @@ export default function PackagesPage() {
                       </div>
                       
                       <div className="mt-auto text-center">
-                          <h3 className="font-bold text-xl">{pkg.title}</h3>
-                          <p className="text-sm text-gray-600 mb-4">{pkg.description}</p>
+                          <h3 className="font-bold text-xl mb-4">{pkg.title}</h3>
                           <p className="text-sm text-gray-500">ราคาเริ่มต้น</p>
                           <div className="flex items-baseline justify-center gap-1">
                               <p className="text-xl font-bold text-primary">฿{pkg.price}</p>
