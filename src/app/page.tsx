@@ -210,9 +210,6 @@ const pageContentData = {
         halalSubtitle: 'Specialty Tours',
         halalTitle: 'Our Halal Tour Packages',
         halalText: 'Travel with peace of mind. Our Halal tour packages are designed to cater to your needs, including Halal-certified meals, prayer facilities, and Muslim-friendly accommodations.',
-        halalPoint1: 'Certified Halal restaurants and caterers.',
-        halalPoint2: 'Prayer times and facilities provided.',
-        halalPoint3: 'Female-only guides available upon request.',
         seeAllPackages: 'See All Packages',
         whyChooseUsSubtitle: 'Our Promise',
         whyChooseUsTitle: 'Why Choose Us',
@@ -248,9 +245,6 @@ const pageContentData = {
         halalSubtitle: 'ทัวร์พิเศษ',
         halalTitle: 'แพ็คเกจทัวร์ฮาลาลของเรา',
         halalText: 'เดินทางอย่างสบายใจ แพ็คเกจทัวร์ฮาลาลของเราออกแบบมาเพื่อตอบสนองความต้องการของคุณ รวมถึงอาหารที่ได้รับการรับรองฮาลาล สถานที่ละหมาด และที่พักที่เป็นมิตรต่อชาวมุสลิม',
-        halalPoint1: 'ร้านอาหารและผู้จัดเลี้ยงที่ได้รับการรับรองฮาลาล',
-        halalPoint2: 'มีเวลาและสถานที่ละหมาดให้',
-        halalPoint3: 'มีไกด์หญิงให้บริการตามคำขอ',
         seeAllPackages: 'ดูแพ็คเกจทั้งหมด',
         whyChooseUsSubtitle: 'คำสัญญาของเรา',
         whyChooseUsTitle: 'ทำไมถึงเลือกเรา',
@@ -286,9 +280,6 @@ const pageContentData = {
         halalSubtitle: 'جولات متخصصة',
         halalTitle: 'باقاتنا السياحية الحلال',
         halalText: 'سافر براحة بال. تم تصميم باقاتنا السياحية الحلال لتلبية احتياجاتك ، بما في ذلك وجبات الطعام الحلال المعتمدة ، ومرافق الصلاة ، وأماكن الإقامة الصديقة للمسلمين.',
-        halalPoint1: 'مطاعم ومقدمو خدمات معتمدون من الحلال.',
-        halalPoint2: 'توفير أوقات ومرافق الصلاة.',
-        halalPoint3: 'مرشدات إناث متاحات عند الطلب.',
         seeAllPackages: 'عرض كل الباقات',
         whyChooseUsSubtitle: 'وعدنا',
         whyChooseUsTitle: 'لماذا تختارنا',
@@ -529,23 +520,9 @@ export default function Home() {
                     {pageContent.halalSubtitle}
                 </span>
                 <h2 className="font-headline text-4xl font-bold mb-4">{pageContent.halalTitle}</h2>
-                <p className="text-primary-foreground/90 text-lg mb-6">
+                <p className="text-primary-foreground/90 text-lg mb-8">
                     {pageContent.halalText}
                 </p>
-                <ul className="space-y-3 text-left mb-8">
-                    <li className="flex items-center gap-3">
-                        <ShieldCheck className="w-5 h-5 text-accent" />
-                        <span>{pageContent.halalPoint1}</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                        <ShieldCheck className="w-5 h-5 text-accent" />
-                        <span>{pageContent.halalPoint2}</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                        <ShieldCheck className="w-5 h-5 text-accent" />
-                        <span>{pageContent.halalPoint3}</span>
-                    </li>
-                </ul>
                  <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                     <Button asChild size="lg" variant="secondary">
                         <Link href="/packages">{pageContent.seeAllPackages}</Link>
