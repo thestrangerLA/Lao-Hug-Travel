@@ -6,13 +6,13 @@ import { LangProvider } from "@/context/LangContext";
 
 const notoSansThai = Noto_Sans_Thai({ 
   subsets: ["thai", "latin"],
-  weight: ['300', '400', '500', '700'],
+  weight: ['400', '700'],
   variable: '--font-noto-sans-thai',
 });
 
 const notoKufiArabic = Noto_Kufi_Arabic({
   subsets: ['arabic'],
-  weight: ['300', '400', '500', '700'],
+  weight: ['400', '700'],
   variable: '--font-noto-kufi-arabic',
 });
 
