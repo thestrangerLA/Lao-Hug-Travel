@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="th" dir="ltr">
-      <body className={`${kanit.variable} ${notoKufiArabic.variable} font-body`}>
+      <body className={`${kanit.variable} ${notoKufiArabic.variable}`}>
         <LangProvider>
           <main>{children}</main>
         </LangProvider>
