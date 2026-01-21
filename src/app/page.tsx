@@ -351,35 +351,36 @@ export default function Home() {
 
   return (
     <div className="bg-background text-foreground">
-       <div className="fixed top-4 left-4 z-50">
-        <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon" className="bg-background/80 backdrop-blur-sm rounded-full shadow-lg">
-                    <Globe className="h-6 w-6" />
-                    <span className="sr-only">Change Language</span>
-                </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="start">
-                <DropdownMenuItem onClick={() => setLang('en')}>
-                    English
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setLang('th')}>
-                    ไทย
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setLang('ar')}>
-                    العربية
-                </DropdownMenuItem>
-            </DropdownMenuContent>
-        </DropdownMenu>
-      </div>
+      <Sheet open={open} onOpenChange={setOpen}>
+        <div className="fixed top-4 right-4 z-50 flex items-center gap-2">
+          <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="icon" className="bg-background/80 backdrop-blur-sm rounded-full shadow-lg">
+                      <Globe className="h-6 w-6" />
+                      <span className="sr-only">Change Language</span>
+                  </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                  <DropdownMenuItem onClick={() => setLang('en')}>
+                      English
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => setLang('th')}>
+                      ไทย
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => setLang('ar')}>
+                      العربية
+                  </DropdownMenuItem>
+              </DropdownMenuContent>
+          </DropdownMenu>
 
-       <Sheet open={open} onOpenChange={setOpen}>
-        <SheetTrigger asChild>
-            <Button variant="ghost" size="icon" className="fixed top-4 right-4 z-50 bg-background/80 backdrop-blur-sm rounded-full shadow-lg md:hidden">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle Menu</span>
-            </Button>
-        </SheetTrigger>
+          <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="bg-background/80 backdrop-blur-sm rounded-full shadow-lg md:hidden">
+                  <Menu className="h-6 w-6" />
+                  <span className="sr-only">Toggle Menu</span>
+              </Button>
+          </SheetTrigger>
+        </div>
+
         <SheetContent side="right">
             <nav className="flex flex-col gap-6 pt-10">
                 {navLinks.map((link) => (
