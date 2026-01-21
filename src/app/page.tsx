@@ -413,8 +413,8 @@ export default function Home() {
                       <Image
                         src="https://i.ibb.co/gLn7B0hs/logo.png"
                         alt="Lao Hug Travel Logo"
-                        width={180}
-                        height={51}
+                        width={140}
+                        height={40}
                         className="object-contain"
                         priority
                       />

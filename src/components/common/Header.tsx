@@ -42,9 +42,9 @@ export function Header() {
                     <Image 
                         src="https://i.ibb.co/gLn7B0hs/logo.png"
                         alt="Lao Hug Travel Logo"
-                        width={98}
-                        height={28}
-                        className="h-7 w-auto object-contain"
+                        width={65}
+                        height={18}
+                        className="h-5 w-auto object-contain"
                     />
                     <span className="text-xs font-bold tracking-widest">LHT</span>
                 </Link>
