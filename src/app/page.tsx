@@ -38,6 +38,12 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 
 const servicesData = {
@@ -345,6 +351,28 @@ export default function Home() {
 
   return (
     <div className="bg-background text-foreground">
+       <div className="fixed top-4 left-4 z-50">
+        <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="icon" className="bg-background/80 backdrop-blur-sm rounded-full shadow-lg">
+                    <Globe className="h-6 w-6" />
+                    <span className="sr-only">Change Language</span>
+                </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start">
+                <DropdownMenuItem onClick={() => setLang('en')}>
+                    English
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setLang('th')}>
+                    ไทย
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setLang('ar')}>
+                    العربية
+                </DropdownMenuItem>
+            </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
+
        <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
             <Button variant="ghost" size="icon" className="fixed top-4 right-4 z-50 bg-background/80 backdrop-blur-sm rounded-full shadow-lg md:hidden">
@@ -365,6 +393,20 @@ export default function Home() {
                     </Link>
                 ))}
             </nav>
+            <div className="absolute bottom-4 left-4 right-4">
+                <div className="border-t pt-6">
+                    <h3 className="text-sm font-medium text-muted-foreground mb-2 px-4">Language</h3>
+                    <Button variant={lang === 'en' ? 'secondary' : 'ghost'} className="w-full justify-start" onClick={() => { setLang('en'); setOpen(false); }}>
+                        English
+                    </Button>
+                    <Button variant={lang === 'th' ? 'secondary' : 'ghost'} className="w-full justify-start" onClick={() => { setLang('th'); setOpen(false); }}>
+                        ไทย
+                    </Button>
+                    <Button variant={lang === 'ar' ? 'secondary' : 'ghost'} className="w-full justify-start" onClick={() => { setLang('ar'); setOpen(false); }}>
+                        العربية
+                    </Button>
+                </div>
+            </div>
         </SheetContent>
       </Sheet>
       {/* Hero Section */}
