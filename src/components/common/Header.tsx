@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -14,6 +15,7 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import { useLang } from '@/context/LangContext';
+import Image from 'next/image';
 
 
 const navLinks = [
@@ -36,10 +38,14 @@ export function Header() {
     return (
         <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <div className="container flex h-16 items-center">
-                <Link href="/" className="mr-6 flex items-center space-x-2">
-                    <span className="font-bold sm:inline-block font-headline text-lg">
-                        Lao Hug Travel
-                    </span>
+                <Link href="/" className="mr-6 flex items-center">
+                    <Image 
+                        src="https://i.ibb.co/gV2ZzM1/logo.png"
+                        alt="Lao Hug Travel Logo"
+                        width={140}
+                        height={40}
+                        className="h-10 w-auto object-contain"
+                    />
                 </Link>
 
                 <div className="flex flex-1 items-center justify-end space-x-2">

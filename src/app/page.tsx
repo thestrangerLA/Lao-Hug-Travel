@@ -181,7 +181,7 @@ const strengthsData = {
         { number: '06', title: 'บริการลูกค้าระดับมืออาชีพ', description: 'ตอบคำถามและให้คำแนะนำอย่างรวดเร็ว พร้อมดูแลตลอดการเดินทาง' }
     ],
     ar: [
-        { number: '01', title: 'فريق مسلم يفهم احتياجاتك', description: 'يديرنا فريق مسلم يفهم السياحة الحلالอย่างแท้จริง.' },
+        { number: '01', title: 'فريق مسلم يفهم احتياجاتك', description: 'يديرنا فريق مسلم يفهم السياحة الحلال بشكل حقيقي.' },
         { number: '02', title: 'خدمات حلال متكاملة', description: 'ننظم رحلات تشمل طعام حلال، إقامة حلال، وأنشطة مناسبة للمسلمين.' },
         { number: '03', title: 'تجربة محلية أصيلة', description: 'نحن خبراء في لاوس، مع معرفة وشبكات محلية تتيح لك تجربة الثقافة الحقيقية.' },
         { number: '04', title: 'باقات سياحية قابلة للتخصيص', description: 'صمم رحلتك وفقًا لاحتياجاتك، بما في ذلك المدة والميزانية وأسلوب السفر.' },
@@ -409,9 +409,16 @@ export default function Home() {
         <div className="container mx-auto px-4 py-20">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div className="flex flex-col text-left">
-                    <h1 className="text-5xl md:text-8xl font-bold font-headline tracking-tighter text-white mb-4">
-                        LHT
-                    </h1>
+                    <div className="mb-4">
+                      <Image
+                        src="https://i.ibb.co/gV2ZzM1/logo.png"
+                        alt="Lao Hug Travel Logo"
+                        width={240}
+                        height={80}
+                        className="object-contain"
+                        priority
+                      />
+                    </div>
                     <p className="text-lg md:text-xl font-light text-primary-foreground/90">
                       {pageContent.heroSubTitle}
                     </p>
