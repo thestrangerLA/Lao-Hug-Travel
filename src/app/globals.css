@@ -26,7 +26,7 @@
     --radius: 0.5rem;
 
     --font-body: var(--font-inter), var(--font-noto-sans-thai);
-    --font-headline: var(--font-inter);
+    --font-headline: var(--font-inter), var(--font-noto-sans-thai);
   }
 
   .dark {
