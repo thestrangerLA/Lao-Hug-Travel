@@ -409,15 +409,16 @@ export default function Home() {
         <div className="container mx-auto px-4 py-20">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div className="flex flex-col text-left">
-                    <div className="mb-4">
+                    <div className="mb-4 flex flex-col items-start">
                       <Image
                         src="https://i.ibb.co/gLn7B0hs/logo.png"
                         alt="Lao Hug Travel Logo"
-                        width={240}
-                        height={80}
+                        width={180}
+                        height={51}
                         className="object-contain"
                         priority
                       />
+                      <p className="mt-2 text-2xl font-bold tracking-widest text-primary-foreground/90">LHT</p>
                     </div>
                     <p className="text-lg md:text-xl font-light text-primary-foreground/90">
                       {pageContent.heroSubTitle}
