@@ -413,12 +413,12 @@ export default function Home() {
                       <Image
                         src="https://i.ibb.co/gLn7B0hs/logo.png"
                         alt="Lao Hug Travel Logo"
-                        width={140}
-                        height={40}
+                        width={100}
+                        height={28}
                         className="object-contain"
                         priority
                       />
-                      <p className="mt-2 text-2xl font-bold tracking-widest text-primary-foreground/90">LHT</p>
+                      <span className="text-xs font-bold tracking-widest">LHT</span>
                     </div>
                     <p className="text-lg md:text-xl font-light text-primary-foreground/90">
                       {pageContent.heroSubTitle}
@@ -525,32 +525,20 @@ export default function Home() {
       
       {/* Halal Tour Package Section */}
       <section id="halal-package" className="py-20 px-4 bg-primary text-primary-foreground">
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div className="text-center md:text-left">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 gap-12 items-center">
+            <div className="text-center">
                 <span className="inline-block px-4 py-1.5 bg-emerald-500/10 text-emerald-300 text-sm font-medium rounded-full mb-4">
                     {pageContent.halalSubtitle}
                 </span>
                 <h2 className="font-headline text-4xl font-bold mb-4">{pageContent.halalTitle}</h2>
-                <p className="text-primary-foreground/90 text-lg mb-8">
+                <p className="text-primary-foreground/90 text-lg mb-8 max-w-2xl mx-auto">
                     {pageContent.halalText}
                 </p>
-                 <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+                 <div className="flex flex-wrap gap-4 justify-center">
                     <Button asChild size="lg" variant="secondary">
                         <Link href="/packages">{pageContent.seeAllPackages}</Link>
                     </Button>
                 </div>
-            </div>
-            <div>
-                {halalTourImage && (
-                    <Image
-                        src={halalTourImage.imageUrl}
-                        alt={halalTourImage.description}
-                        width={600}
-                        height={600}
-                        className="rounded-2xl shadow-xl object-cover aspect-square"
-                        data-ai-hint={halalTourImage.imageHint}
-                    />
-                )}
             </div>
         </div>
       </section>
