@@ -80,10 +80,10 @@ export function Header() {
                                     English
                                 </DropdownMenuItem>
                                 <DropdownMenuItem onClick={() => setLang('th')}>
-                                    Thai
+                                    ไทย
                                 </DropdownMenuItem>
-                                <DropdownMenuItem onClick={() => setLang('lao')}>
-                                    Lao
+                                <DropdownMenuItem onClick={() => setLang('ar')}>
+                                    العربية
                                 </DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu>
@@ -137,10 +137,10 @@ export function Header() {
                                         English (EN)
                                     </Button>
                                     <Button variant={lang === 'th' ? 'secondary' : 'ghost'} className="w-full justify-start" onClick={() => setLang('th')}>
-                                        Thai (TH)
+                                        ไทย (TH)
                                     </Button>
-                                    <Button variant={lang === 'lao' ? 'secondary' : 'ghost'} className="w-full justify-start" onClick={() => setLang('lao')}>
-                                        Lao (LAO)
+                                    <Button variant={lang === 'ar' ? 'secondary' : 'ghost'} className="w-full justify-start" onClick={() => setLang('ar')}>
+                                        العربية (AR)
                                     </Button>
                                 </div>
                             </div>

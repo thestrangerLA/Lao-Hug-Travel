@@ -24,6 +24,9 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 147 60% 35%;
     --radius: 0.5rem;
+
+    --font-body: var(--font-kanit);
+    --font-headline: var(--font-kanit);
   }
 
   .dark {
@@ -46,6 +49,11 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 147 60% 45%;
+  }
+
+  html[dir="rtl"] {
+    --font-body: var(--font-noto-kufi-arabic);
+    --font-headline: var(--font-noto-kufi-arabic);
   }
 }
 
