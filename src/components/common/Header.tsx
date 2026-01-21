@@ -38,15 +38,14 @@ export function Header() {
     return (
         <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <div className="container flex h-16 items-center">
-                <Link href="/" className="mr-6 flex flex-col items-center">
+                <Link href="/" className="mr-6 flex items-center">
                     <Image 
                         src="https://i.ibb.co/gLn7B0hs/logo.png"
                         alt="Lao Hug Travel Logo"
-                        width={65}
-                        height={18}
-                        className="h-5 w-auto object-contain"
+                        width={80}
+                        height={22}
+                        className="object-contain"
                     />
-                    <span className="text-xs font-bold tracking-widest">LHT</span>
                 </Link>
 
                 <div className="flex flex-1 items-center justify-end space-x-2">

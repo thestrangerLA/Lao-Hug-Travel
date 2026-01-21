@@ -418,9 +418,8 @@ export default function Home() {
                         className="object-contain"
                         priority
                       />
-                      <span className="text-xs font-bold tracking-widest">LHT</span>
                     </div>
-                    <p className="text-lg md:text-xl font-light text-primary-foreground/90">
+                    <p className="text-2xl md:text-3xl font-light text-primary-foreground/90">
                       {pageContent.heroSubTitle}
                     </p>
                     <div className="w-24 h-1 bg-accent my-6"></div>
