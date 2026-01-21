@@ -165,25 +165,28 @@ const servicesData = {
 
 const strengthsData = {
     en: [
-        { number: '01', title: '10+ Years of Excellence', description: 'A decade of creating unforgettable travel experiences with thousands of happy customers.' },
-        { number: '02', title: '24/7 Customer Support', description: 'Round-the-clock assistance whenever you need us, wherever you are.' },
-        { number: '03', title: 'Best Price Guarantee', description: 'Competitive pricing with no hidden fees - transparency in every booking.' },
-        { number: '04', title: 'Local Expertise', description: 'Deep connections with local partners for authentic, off-the-beaten-path experiences.' },
-        { number: '05', title: 'Flexible Bookings', description: 'Easy modifications and cancellations with our traveler-friendly policies.' },
+        { number: '01', title: 'Muslim Team Who Understands Your Needs', description: 'We are managed by a Muslim team that truly understands Halal tourism.' },
+        { number: '02', title: 'Comprehensive Halal Services', description: 'We organize trips that include Halal food, Halal accommodations, and activities suitable for Muslims.' },
+        { number: '03', title: 'Authentic Local Experience', description: 'We are experts in Laos, with local knowledge and networks to let you experience the true culture.' },
+        { number: '04', title: 'Customizable Tour Packages', description: 'Design your trip according to your needs, including duration, budget, and travel style.' },
+        { number: '05', title: 'Safety and Comfort', description: 'We take care of all travel and booking arrangements, allowing you to travel with peace of mind.' },
+        { number: '06', title: 'Professional Customer Service', description: 'We answer questions and provide advice promptly, with care throughout your journey.' }
     ],
     th: [
-        { number: '01', title: '10+ ปีแห่งความเป็นเลิศ', description: 'ทศวรรษแห่งการสร้างสรรค์ประสบการณ์การเดินทางที่น่าจดจำกับลูกค้าที่มีความสุขนับพัน' },
-        { number: '02', title: 'บริการลูกค้า 24/7', description: 'ความช่วยเหลือตลอดเวลาเมื่อคุณต้องการเรา ไม่ว่าคุณจะอยู่ที่ไหน' },
-        { number: '03', title: 'รับประกันราคาดีที่สุด', description: 'ราคาที่แข่งขันได้โดยไม่มีค่าธรรมเนียมแอบแฝง - ความโปร่งใสในทุกการจอง' },
-        { number: '04', title: 'ความเชี่ยวชาญในท้องถิ่น', description: 'ความสัมพันธ์ที่ลึกซึ้งกับพันธมิตรในท้องถิ่นเพื่อประสบการณ์ที่แท้จริงและไม่เหมือนใคร' },
-        { number: '05', title: 'การจองที่ยืดหยุ่น', description: 'การแก้ไขและยกเลิกที่ง่ายดายด้วยนโยบายที่เป็นมิตรกับนักเดินทางของเรา' },
+        { number: '01', title: 'ทีมงานมุสลิมที่เข้าใจความต้องการ', description: 'เราดูแลโดยทีมงานมุสลิมที่เข้าใจการท่องเที่ยวแบบฮาลาลอย่างแท้จริง' },
+        { number: '02', title: 'บริการฮาลาลครบวงจร', description: 'จัดทริปที่รวมอาหารฮาลาล, ที่พักฮาลาล และกิจกรรมที่เหมาะสมกับชาวมุสลิม' },
+        { number: '03', title: 'ประสบการณ์ท้องถิ่นแท้จริง', description: 'เราคือผู้เชี่ยวชาญในลาว มีความรู้และเครือข่ายท้องถิ่นเพื่อให้คุณได้สัมผัสวัฒนธรรมอย่างแท้จริง' },
+        { number: '04', title: 'แพ็กเกจท่องเที่ยวที่ปรับได้ตามต้องการ', description: 'ออกแบบทริปตามความต้องการของคุณ ทั้งระยะเวลา งบประมาณ และสไตล์การเดินทาง' },
+        { number: '05', title: 'ความปลอดภัยและความสะดวกสบาย', description: 'ดูแลเรื่องการเดินทางและการจองให้ครบถ้วน ให้คุณเดินทางอย่างสบายใจ' },
+        { number: '06', title: 'บริการลูกค้าระดับมืออาชีพ', description: 'ตอบคำถามและให้คำแนะนำอย่างรวดเร็ว พร้อมดูแลตลอดการเดินทาง' }
     ],
     ar: [
-        { number: '01', title: '10+ سنوات من التميز', description: 'عقد من خلق تجارب سفر لا تنسى مع آلاف العملاء السعداء.' },
-        { number: '02', title: 'دعم العملاء 24/7', description: 'مساعدة على مدار الساعة كلما احتجت إلينا ، أينما كنت.' },
-        { number: '03', title: 'ضمان أفضل سعر', description: 'أسعار تنافسية بدون رسوم خفية - الشفافية في كل حجز.' },
-        { number: '04', title: 'الخبرة المحلية', description: 'علاقات عميقة مع الشركاء المحليين لتجارب أصيلة بعيدة عن المسار المطروق.' },
-        { number: '05', title: 'حجوزات مرنة', description: 'تعديلات وإلغاءات سهلة مع سياساتنا الصديقة للمسافرين.' },
+        { number: '01', title: 'فريق مسلم يفهم احتياجاتك', description: 'يديرنا فريق مسلم يفهم السياحة الحلالอย่างแท้จริง.' },
+        { number: '02', title: 'خدمات حلال متكاملة', description: 'ننظم رحلات تشمل طعام حلال، إقامة حلال، وأنشطة مناسبة للمسلمين.' },
+        { number: '03', title: 'تجربة محلية أصيلة', description: 'نحن خبراء في لاوس، مع معرفة وشبكات محلية تتيح لك تجربة الثقافة الحقيقية.' },
+        { number: '04', title: 'باقات سياحية قابلة للتخصيص', description: 'صمم رحلتك وفقًا لاحتياجاتك، بما في ذلك المدة والميزانية وأسلوب السفر.' },
+        { number: '05', title: 'السلامة والراحة', description: 'نهتم بجميع ترتيبات السفر والحجز، مما يتيح لك السفر براحة بال.' },
+        { number: '06', title: 'خدمة عملاء احترافية', description: 'نجيب على الأسئلة ونقدم المشورة بسرعة، مع الرعاية طوال رحلتك.' }
     ],
 };
 
