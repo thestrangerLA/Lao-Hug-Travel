@@ -387,69 +387,45 @@ export default function Home() {
             <h2 className="font-headline text-4xl font-bold mb-3">Contact Us</h2>
             <p className="text-primary-foreground/90 max-w-lg mx-auto">Have questions? We'd love to hear from you.</p>
           </div>
-          <div className="grid grid-cols-4 gap-4 md:gap-8">
-            <a href="tel:+66622244315">
-                <Card className="text-center h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                    <CardHeader className="p-4 pb-2 md:p-6 md:pb-2">
-                        <div className="flex justify-center mb-2">
-                            <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
-                                <Phone className="w-7 h-7 text-primary" />
-                            </div>
-                        </div>
-                        <CardTitle className="font-headline text-lg md:text-xl">Phone</CardTitle>
-                    </CardHeader>
-                    <CardContent className="px-4 pb-4 pt-0 md:px-6 md:pb-6">
-                        <p className="text-muted-foreground text-sm break-all">+66 62 224 4315</p>
-                    </CardContent>
-                </Card>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <a href="tel:+66622244315" className="flex flex-col items-center text-center gap-3 p-4 rounded-lg hover:bg-primary-foreground/10 transition-colors">
+                <div className="w-16 h-16 rounded-full bg-primary-foreground/10 flex items-center justify-center">
+                    <Phone className="w-8 h-8 text-accent" />
+                </div>
+                <div>
+                    <h3 className="font-headline text-xl font-semibold text-primary-foreground">Phone</h3>
+                    <p className="text-primary-foreground/80 text-sm break-all">+66 62 224 4315</p>
+                </div>
             </a>
 
-            <a href="https://wa.me/8562096142645" target="_blank" rel="noopener noreferrer">
-                <Card className="text-center h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                    <CardHeader className="p-4 pb-2 md:p-6 md:pb-2">
-                        <div className="flex justify-center mb-2">
-                            <div className="w-14 h-14 rounded-full bg-green-500/10 flex items-center justify-center">
-                                <MessageCircle className="w-7 h-7 text-green-600" />
-                            </div>
-                        </div>
-                      <CardTitle className="font-headline text-lg md:text-xl">WhatsApp</CardTitle>
-                    </CardHeader>
-                    <CardContent className="px-4 pb-4 pt-0 md:px-6 md:pb-6">
-                      <p className="text-muted-foreground text-sm break-all">+85620 96142645</p>
-                    </CardContent>
-                </Card>
+            <a href="https://wa.me/8562096142645" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-center gap-3 p-4 rounded-lg hover:bg-primary-foreground/10 transition-colors">
+                <div className="w-16 h-16 rounded-full bg-primary-foreground/10 flex items-center justify-center">
+                    <MessageCircle className="w-8 h-8 text-accent" />
+                </div>
+                <div>
+                    <h3 className="font-headline text-xl font-semibold text-primary-foreground">WhatsApp</h3>
+                    <p className="text-primary-foreground/80 text-sm break-all">+85620 96142645</p>
+                </div>
             </a>
 
-            <a href="mailto:Laohugtravel@gmail.com">
-                <Card className="text-center h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                    <CardHeader className="p-4 pb-2 md:p-6 md:pb-2">
-                        <div className="flex justify-center mb-2">
-                            <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
-                                <Mail className="w-7 h-7 text-primary" />
-                            </div>
-                        </div>
-                      <CardTitle className="font-headline text-lg md:text-xl">Email</CardTitle>
-                    </CardHeader>
-                    <CardContent className="px-4 pb-4 pt-0 md:px-6 md:pb-6">
-                      <p className="text-muted-foreground text-sm break-all">Laohugtravel@gmail.com</p>
-                    </CardContent>
-                </Card>
+            <a href="mailto:Laohugtravel@gmail.com" className="flex flex-col items-center text-center gap-3 p-4 rounded-lg hover:bg-primary-foreground/10 transition-colors">
+                 <div className="w-16 h-16 rounded-full bg-primary-foreground/10 flex items-center justify-center">
+                    <Mail className="w-8 h-8 text-accent" />
+                </div>
+                <div>
+                    <h3 className="font-headline text-xl font-semibold text-primary-foreground">Email</h3>
+                    <p className="text-primary-foreground/80 text-sm break-all">Laohugtravel@gmail.com</p>
+                </div>
             </a>
 
-            <a href="http://line.me/ti/p/~Laohugtravel" target="_blank" rel="noopener noreferrer">
-                <Card className="text-center h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                    <CardHeader className="p-4 pb-2 md:p-6 md:pb-2">
-                        <div className="flex justify-center mb-2">
-                            <div className="w-14 h-14 rounded-full bg-emerald-500/10 flex items-center justify-center">
-                                <MessageSquare className="w-7 h-7 text-emerald-600" />
-                            </div>
-                        </div>
-                      <CardTitle className="font-headline text-lg md:text-xl">Line</CardTitle>
-                    </CardHeader>
-                    <CardContent className="px-4 pb-4 pt-0 md:px-6 md:pb-6">
-                      <p className="text-muted-foreground text-sm break-all">Laohugtravel</p>
-                    </CardContent>
-                </Card>
+            <a href="http://line.me/ti/p/~Laohugtravel" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-center gap-3 p-4 rounded-lg hover:bg-primary-foreground/10 transition-colors">
+                <div className="w-16 h-16 rounded-full bg-primary-foreground/10 flex items-center justify-center">
+                    <MessageSquare className="w-8 h-8 text-accent" />
+                </div>
+                <div>
+                    <h3 className="font-headline text-xl font-semibold text-primary-foreground">Line</h3>
+                    <p className="text-primary-foreground/80 text-sm break-all">Laohugtravel</p>
+                </div>
             </a>
           </div>
         </div>
