@@ -11,9 +11,9 @@ const allPackagesData = [
     id: '1',
     tourCode: 'VTE01',
     rating: 3.5,
-    price: '6,500',
+    priceThb: '6,500',
+    priceUsd: '195',
     image: PlaceHolderImages.find((p) => p.id === 'vientiane-tour'),
-    href: '/tours/1',
     category: 'laos',
     translations: {
       en: { title: 'Vientiane-VangVieng', days: '3 Days' },
@@ -25,9 +25,9 @@ const allPackagesData = [
     id: '2',
     tourCode: 'LPQ01',
     rating: 4.5,
-    price: '11,000',
+    priceThb: '11,000',
+    priceUsd: '320',
     image: PlaceHolderImages.find((p) => p.id === 'luang-prabang-tour'),
-    href: '/tours/2',
     category: 'laos',
     translations: {
       en: { title: 'Vientiane-Luang Prabang', days: '4 Days' },
@@ -39,9 +39,9 @@ const allPackagesData = [
     id: '3',
     tourCode: 'VVO01',
     rating: 4.0,
-    price: '9,500',
+    priceThb: '9,500',
+    priceUsd: '265',
     image: PlaceHolderImages.find((p) => p.id === 'vang-vieng-tour'),
-    href: '/tours/3',
     category: 'laos',
     translations: {
       en: { title: 'Vientiane-MuangFueang-VangVieng', days: '4 Days' },
@@ -53,9 +53,9 @@ const allPackagesData = [
     id: '4',
     tourCode: 'PKZ01',
     rating: 4.0,
-    price: '12,500',
+    priceThb: '12,500',
+    priceUsd: '360',
     image: PlaceHolderImages.find((p) => p.id === 'pakse-tour'),
-    href: '/tours/4',
     category: 'laos',
     translations: {
       en: {
@@ -76,9 +76,9 @@ const allPackagesData = [
     id: '5',
     tourCode: '4KI01',
     rating: 4.5,
-    price: '30,000',
+    priceThb: '30,000',
+    priceUsd: '920',
     image: PlaceHolderImages.find((p) => p.id === '4000-islands-tour'),
-    href: '/tours/5',
     category: 'laos-china',
     translations: {
       en: {
@@ -102,9 +102,9 @@ const allPackagesData = [
     id: '6',
     tourCode: 'XKH01',
     rating: 4.2,
-    price: '38,000',
+    priceThb: '38,000',
+    priceUsd: '1,250',
     image: PlaceHolderImages.find((p) => p.id === 'plain-of-jars-tour'),
-    href: '/tours/6',
     category: 'china',
     translations: {
       en: { title: 'Kunming-Dali-Lijiang-Shangrila (China)', days: '6 Days' },
@@ -122,9 +122,9 @@ const allPackagesData = [
     id: '7',
     tourCode: 'NLA01',
     rating: 4.8,
-    price: '40,000',
+    priceThb: '40,000',
+    priceUsd: '1,333',
     image: PlaceHolderImages.find((p) => p.id === 'northern-laos-tour'),
-    href: '/tours/7',
     category: 'china',
     translations: {
       en: { title: 'Kunming-Chongqing (China)', days: '5 Days' },
@@ -136,9 +136,9 @@ const allPackagesData = [
     id: '8',
     tourCode: 'SLA01',
     rating: 4.6,
-    price: '49,000',
+    priceThb: '49,000',
+    priceUsd: '1,600',
     image: PlaceHolderImages.find((p) => p.id === 'southern-laos-tour'),
-    href: '/tours/8',
     category: 'china',
     translations: {
       en: { title: 'Kunming-Beijing-Tianjin (China)', days: '8 Days' },
@@ -156,7 +156,7 @@ const contentData = {
         tourCode: 'Tour Code',
         days: 'Days',
         hotel: 'Hotel',
-        perPerson: '/ person',
+        perPerson: '/ pax',
         noLaosPackages: 'There are no Laos packages available at this time.',
         noChinaPackages: 'There are no China packages available at this time.',
     },
@@ -235,53 +235,57 @@ export default function PackagesPage() {
           </h2>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {laosPackages.length > 0 ? (
-              laosPackages.map((pkg) => (
-                <div key={pkg.id} className="block group">
-                  <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
-                    {pkg.image && (
-                      <div className="relative h-48 w-full">
-                        <Image
-                          src={pkg.image.imageUrl}
-                          alt={pkg.image.description}
-                          fill
-                          className="object-cover"
-                          data-ai-hint={pkg.image.imageHint}
-                        />
-                      </div>
-                    )}
-                    <CardContent className="p-4 flex flex-col flex-grow">
-                      <div className="grid grid-cols-3 gap-4 text-center text-xs text-gray-500 border-b pb-3 mb-3">
-                        <div>
-                          <p>{content.tourCode}</p>
-                          <p className="font-bold text-black">{pkg.tourCode}</p>
+              laosPackages.map((pkg) => {
+                const price = lang === 'en' ? pkg.priceUsd : pkg.priceThb;
+                const currencySymbol = lang === 'en' ? '$' : '฿';
+                return (
+                  <div key={pkg.id} className="block group">
+                    <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+                      {pkg.image && (
+                        <div className="relative h-48 w-full">
+                          <Image
+                            src={pkg.image.imageUrl}
+                            alt={pkg.image.description}
+                            fill
+                            className="object-cover"
+                            data-ai-hint={pkg.image.imageHint}
+                          />
                         </div>
-                        <div>
-                          <p>{content.days}</p>
-                          <p className="font-bold text-black">{pkg.days}</p>
-                        </div>
-                        <div>
-                          <p>{content.hotel}</p>
-                          <div className="flex justify-center mt-1">
-                            {renderStars(pkg.rating)}
+                      )}
+                      <CardContent className="p-4 flex flex-col flex-grow">
+                        <div className="grid grid-cols-3 gap-4 text-center text-xs text-gray-500 border-b pb-3 mb-3">
+                          <div>
+                            <p>{content.tourCode}</p>
+                            <p className="font-bold text-black">{pkg.tourCode}</p>
+                          </div>
+                          <div>
+                            <p>{content.days}</p>
+                            <p className="font-bold text-black">{pkg.days}</p>
+                          </div>
+                          <div>
+                            <p>{content.hotel}</p>
+                            <div className="flex justify-center mt-1">
+                              {renderStars(pkg.rating)}
+                            </div>
                           </div>
                         </div>
-                      </div>
 
-                      <div className="mt-auto text-center">
-                        <h3 className="font-bold text-xl mb-4">{pkg.title}</h3>
-                        <div className="flex items-baseline justify-center gap-1">
-                          <p className="text-xl font-bold text-primary">
-                            ฿{pkg.price}
-                          </p>
-                          <p className="text-sm text-muted-foreground">
-                            {content.perPerson}
-                          </p>
+                        <div className="mt-auto text-center">
+                          <h3 className="font-bold text-xl mb-4">{pkg.title}</h3>
+                          <div className="flex items-baseline justify-center gap-1">
+                            <p className="text-xl font-bold text-primary">
+                              {currencySymbol}{price}
+                            </p>
+                            <p className="text-sm text-muted-foreground">
+                              {content.perPerson}
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              ))
+                      </CardContent>
+                    </Card>
+                  </div>
+                )
+              })
             ) : (
               <p className="col-span-full text-center text-muted-foreground">
                 {content.noLaosPackages}
@@ -296,53 +300,57 @@ export default function PackagesPage() {
           </h2>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {chinaPackages.length > 0 ? (
-              chinaPackages.map((pkg) => (
-                <div key={pkg.id} className="block group">
-                  <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
-                    {pkg.image && (
-                      <div className="relative h-48 w-full">
-                        <Image
-                          src={pkg.image.imageUrl}
-                          alt={pkg.image.description}
-                          fill
-                          className="object-cover"
-                          data-ai-hint={pkg.image.imageHint}
-                        />
-                      </div>
-                    )}
-                    <CardContent className="p-4 flex flex-col flex-grow">
-                      <div className="grid grid-cols-3 gap-4 text-center text-xs text-gray-500 border-b pb-3 mb-3">
-                        <div>
-                          <p>{content.tourCode}</p>
-                          <p className="font-bold text-black">{pkg.tourCode}</p>
+              chinaPackages.map((pkg) => {
+                const price = lang === 'en' ? pkg.priceUsd : pkg.priceThb;
+                const currencySymbol = lang === 'en' ? '$' : '฿';
+                return (
+                  <div key={pkg.id} className="block group">
+                    <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+                      {pkg.image && (
+                        <div className="relative h-48 w-full">
+                          <Image
+                            src={pkg.image.imageUrl}
+                            alt={pkg.image.description}
+                            fill
+                            className="object-cover"
+                            data-ai-hint={pkg.image.imageHint}
+                          />
                         </div>
-                        <div>
-                          <p>{content.days}</p>
-                          <p className="font-bold text-black">{pkg.days}</p>
-                        </div>
-                        <div>
-                          <p>{content.hotel}</p>
-                          <div className="flex justify-center mt-1">
-                            {renderStars(pkg.rating)}
+                      )}
+                      <CardContent className="p-4 flex flex-col flex-grow">
+                        <div className="grid grid-cols-3 gap-4 text-center text-xs text-gray-500 border-b pb-3 mb-3">
+                          <div>
+                            <p>{content.tourCode}</p>
+                            <p className="font-bold text-black">{pkg.tourCode}</p>
+                          </div>
+                          <div>
+                            <p>{content.days}</p>
+                            <p className="font-bold text-black">{pkg.days}</p>
+                          </div>
+                          <div>
+                            <p>{content.hotel}</p>
+                            <div className="flex justify-center mt-1">
+                              {renderStars(pkg.rating)}
+                            </div>
                           </div>
                         </div>
-                      </div>
 
-                      <div className="mt-auto text-center">
-                        <h3 className="font-bold text-xl mb-4">{pkg.title}</h3>
-                        <div className="flex items-baseline justify-center gap-1">
-                          <p className="text-xl font-bold text-primary">
-                            ฿{pkg.price}
-                          </p>
-                          <p className="text-sm text-muted-foreground">
-                            {content.perPerson}
-                          </p>
+                        <div className="mt-auto text-center">
+                          <h3 className="font-bold text-xl mb-4">{pkg.title}</h3>
+                          <div className="flex items-baseline justify-center gap-1">
+                            <p className="text-xl font-bold text-primary">
+                              {currencySymbol}{price}
+                            </p>
+                            <p className="text-sm text-muted-foreground">
+                              {content.perPerson}
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              ))
+                      </CardContent>
+                    </Card>
+                  </div>
+                )
+                })
             ) : (
               <p className="col-span-full text-center text-muted-foreground">
                 {content.noChinaPackages}
