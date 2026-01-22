@@ -24,7 +24,6 @@ const navLinks = [
         label: 'Tours',
         subLinks: [
             { href: '/packages', label: 'All Packages' },
-            { href: '/tours/1', label: 'Vientiane Tour' },
         ],
     },
     { href: '/services', label: 'Services' },
