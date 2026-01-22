@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Star } from 'lucide-react';
-import Link from 'next/link';
 import { useLang } from '@/context/LangContext';
 
 const allPackagesData = [
@@ -237,7 +236,7 @@ export default function PackagesPage() {
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {laosPackages.length > 0 ? (
               laosPackages.map((pkg) => (
-                <Link href={pkg.href} key={pkg.id} className="block group">
+                <div key={pkg.id} className="block group">
                   <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
                     {pkg.image && (
                       <div className="relative h-48 w-full">
@@ -281,7 +280,7 @@ export default function PackagesPage() {
                       </div>
                     </CardContent>
                   </Card>
-                </Link>
+                </div>
               ))
             ) : (
               <p className="col-span-full text-center text-muted-foreground">
@@ -298,7 +297,7 @@ export default function PackagesPage() {
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {chinaPackages.length > 0 ? (
               chinaPackages.map((pkg) => (
-                <Link href={pkg.href} key={pkg.id} className="block group">
+                <div key={pkg.id} className="block group">
                   <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
                     {pkg.image && (
                       <div className="relative h-48 w-full">
@@ -342,7 +341,7 @@ export default function PackagesPage() {
                       </div>
                     </CardContent>
                   </Card>
-                </Link>
+                </div>
               ))
             ) : (
               <p className="col-span-full text-center text-muted-foreground">
