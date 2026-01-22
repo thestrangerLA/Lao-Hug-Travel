@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Noto_Sans_Thai } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { LangProvider } from "@/context/LangContext";
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ["latin", "thai"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-plus-jakarta-sans",
+const notoSansThai = Noto_Sans_Thai({
+  subsets: ["thai", "latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-noto-sans-thai",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -23,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="th" dir="ltr">
       <body
-        className={`${plusJakartaSans.variable}`}
+        className={notoSansThai.variable}
       >
         <LangProvider>
           <main>{children}</main>
