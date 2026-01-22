@@ -321,11 +321,7 @@ const socialLinks = [
 
 export default function Home() {
   const { lang, setLang } = useLang();
-  const halalTourImage = PlaceHolderImages.find(p => p.id === "service-halal");
   const chefImage = PlaceHolderImages.find((p) => p.id === 'gmhi-chef');
-  const hotelImage = PlaceHolderImages.find((p) => p.id === 'gmhi-hotel');
-  const buildingImage = PlaceHolderImages.find((p) => p.id === 'gmhi-building');
-  const corridorImage = PlaceHolderImages.find((p) => p.id === 'gmhi-corridor');
   const [open, setOpen] = useState(false);
 
 
@@ -431,35 +427,15 @@ export default function Home() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
-                    {chefImage && <div className="col-span-2 rounded-lg overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                <div className="grid grid-cols-1 gap-4">
+                    {chefImage && <div className="rounded-lg overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
                     <Image
                         src={chefImage.imageUrl}
                         alt={chefImage.description}
                         width={500}
-                        height={250}
+                        height={400}
                         className="object-cover w-full h-full"
                         data-ai-hint={chefImage.imageHint}
-                    />
-                    </div>}
-                    {hotelImage && <div className="rounded-lg overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                        <Image
-                        src={hotelImage.imageUrl}
-                        alt={hotelImage.description}
-                        width={250}
-                        height={250}
-                        className="object-cover w-full h-full aspect-square"
-                        data-ai-hint={hotelImage.imageHint}
-                    />
-                    </div>}
-                    {buildingImage && <div className="rounded-lg overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                    <Image
-                        src={buildingImage.imageUrl}
-                        alt={buildingImage.description}
-                        width={250}
-                        height={250}
-                        className="object-cover w-full h-full aspect-square"
-                        data-ai-hint={buildingImage.imageHint}
                     />
                     </div>}
                 </div>
