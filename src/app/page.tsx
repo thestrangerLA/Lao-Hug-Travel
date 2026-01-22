@@ -1,4 +1,3 @@
-
 'use client';
 
 import Link from 'next/link';
@@ -201,22 +200,15 @@ const pageContentData = {
         navFollowUs: 'Follow Us',
         heroSubTitle: 'Lao Hug Travel',
         heroTitle: 'BEST CHOICE HALAL SERVICE',
-        heroTagline: '"The Mark of Muslim-Friendly Excellence"',
         aboutTitle: 'About Lao Hug Travel',
         aboutText: 'Lao Hug Travel is your trusted partner for unforgettable journeys in Laos. We specialize in crafting personalized travel experiences, with a special focus on Halal-friendly services. Our local expertise and commitment to quality ensure you a seamless and authentic adventure.',
-        visionPurpose: 'Our Purpose',
         visionTitle: 'Our Vision',
         visionText: '"Exploring Laos is not just about seeing beautiful sights; it\'s about creating unforgettable memories that last a lifetime, connecting with locals, and immersing yourself in rich cultural experiences in the Halal Way."',
-        servicesSubtitle: 'What We Do',
         servicesTitle: 'Our Services',
-        servicesText: 'Comprehensive travel solutions tailored to your dreams',
-        halalSubtitle: 'Specialty Tours',
         halalTitle: 'Our Halal Tour Packages',
         halalText: 'Travel with peace of mind. Our Halal tour packages are designed to cater to your needs, including Halal-certified meals, prayer facilities, and Muslim-friendly accommodations.',
         seeAllPackages: 'See All Packages',
-        whyChooseUsSubtitle: 'Our Promise',
         whyChooseUsTitle: 'Why Choose Us',
-        whyChooseUsText: 'Experience the difference with our commitment to excellence',
         contactTitle: 'Contact Us',
         contactText: 'Have questions? We\'d love to hear from you.',
         contactPhoneTitle: 'Phone',
@@ -236,22 +228,15 @@ const pageContentData = {
         navFollowUs: 'ติดตามเรา',
         heroSubTitle: 'ลาวฮัก ทราเวล',
         heroTitle: 'บริการฮาลาล ทางเลือกที่ดีที่สุด',
-        heroTagline: '"เครื่องหมายแห่งความเป็นเลิศที่เป็นมิตรต่อชาวมุสลิม"',
         aboutTitle: 'เกี่ยวกับ ลาวฮัก ทราเวล',
         aboutText: 'ลาวฮัก ทราเวล คือคู่หูที่เชื่อถือได้ของคุณสำหรับการเดินทางที่น่าจดจำในลาว เราเชี่ยวชาญในการสร้างสรรค์ประสบการณ์การเดินทางส่วนบุคคล โดยให้ความสำคัญเป็นพิเศษกับบริการที่เป็นมิตรกับฮาลาล ความเชี่ยวชาญในท้องถิ่นและความมุ่งมั่นในคุณภาพของเรารับประกันว่าคุณจะได้รับการผจญภัยที่ราบรื่นและเป็นของแท้',
-        visionPurpose: 'วัตถุประสงค์ของเรา',
         visionTitle: 'วิสัยทัศน์ของเรา',
         visionText: '"การสำรวจลาวไม่ใช่แค่การได้เห็นสถานที่สวยงามเท่านั้น แต่ยังเกี่ยวกับการสร้างความทรงจำอันน่าจดจำไปตลอดชีวิต การเชื่อมต่อกับคนในท้องถิ่น และการดื่มด่ำกับประสบการณ์ทางวัฒนธรรมอันยาวนานในแนวทางฮาลาล"',
-        servicesSubtitle: 'สิ่งที่เราทำ',
         servicesTitle: 'บริการของเรา',
-        servicesText: 'โซลูชั่นการเดินทางที่ครอบคลุมซึ่งปรับให้เหมาะกับความฝันของคุณ',
-        halalSubtitle: 'ทัวร์พิเศษ',
         halalTitle: 'แพ็คเกจทัวร์ฮาลาลของเรา',
         halalText: 'เดินทางอย่างสบายใจ แพ็คเกจทัวร์ฮาลาลของเราออกแบบมาเพื่อตอบสนองความต้องการของคุณ รวมถึงอาหารที่ได้รับการรับรองฮาลาล สถานที่ละหมาด และที่พักที่เป็นมิตรต่อชาวมุสลิม',
         seeAllPackages: 'ดูแพ็คเกจทั้งหมด',
-        whyChooseUsSubtitle: 'คำสัญญาของเรา',
         whyChooseUsTitle: 'ทำไมถึงเลือกเรา',
-        whyChooseUsText: 'สัมผัสความแตกต่างด้วยความมุ่งมั่นสู่ความเป็นเลิศของเรา',
         contactTitle: 'ติดต่อเรา',
         contactText: 'มีคำถาม? เรายินดีรับฟังจากคุณ',
         contactPhoneTitle: 'โทรศัพท์',
@@ -271,22 +256,15 @@ const pageContentData = {
         navFollowUs: 'تابعنا',
         heroSubTitle: 'لاو هاغ ترافيل',
         heroTitle: 'أفضل خيار للخدمات الحلال',
-        heroTagline: '"علامة التميز الصديقة للمسلمين"',
         aboutTitle: 'حول لاو هاغ ترافيل',
         aboutText: 'لاو هاغ ترافيل هي شريكك الموثوق به لرحلات لا تنسى في لاوس. نحن متخصصون في صياغة تجارب سفر شخصية ، مع التركيز بشكل خاص على الخدمات الصديقة للحلال. تضمن خبرتنا المحلية والتزامنا بالجودة مغامرة سلسة وأصيلة.',
-        visionPurpose: 'هدفنا',
         visionTitle: 'رؤيتنا',
         visionText: '"استكشاف لاوس لا يقتصر فقط على رؤية المعالم الجميلة ؛ إنه يتعلق بخلق ذكريات لا تُنسى تدوم مدى الحياة ، والتواصل مع السكان المحليين ، والانغماس في التجارب الثقافية الغنية بالطريقة الحلال."',
-        servicesSubtitle: 'ماذا نفعل',
         servicesTitle: 'خدماتنا',
-        servicesText: 'حلول سفر شاملة مصممة خصيصًا لأحلامك',
-        halalSubtitle: 'جولات متخصصة',
         halalTitle: 'باقاتنا السياحية الحلال',
         halalText: 'سافر براحة بال. تم تصميم باقاتنا السياحية الحلال لتلبية احتياجاتك ، بما في ذلك وجبات الطعام الحلال المعتمدة ، ومرافق الصلاة ، وأماكن الإقامة الصديقة للمسلمين.',
         seeAllPackages: 'عرض كل الباقات',
-        whyChooseUsSubtitle: 'وعدنا',
         whyChooseUsTitle: 'لماذا تختارنا',
-        whyChooseUsText: 'جرب الفرق مع التزامنا بالتميز',
         contactTitle: 'اتصل بنا',
         contactText: 'هل لديك أسئلة؟ نود أن نسمع منك.',
         contactPhoneTitle: 'هاتف',
@@ -422,9 +400,6 @@ export default function Home() {
                     <h2 className="text-xl md:text-3xl font-semibold font-headline text-white">
                       {pageContent.heroTitle}
                     </h2>
-                    <p className="mt-4 text-lg font-light italic text-primary-foreground/80">
-                      {pageContent.heroTagline}
-                    </p>
                 </div>
 
                 <div className="grid grid-cols-1 gap-4">
@@ -459,9 +434,6 @@ export default function Home() {
       <section id="vision" className="py-20 px-4 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <span className="inline-block px-4 py-1.5 bg-accent/10 text-accent-foreground text-sm font-medium rounded-full mb-4">
-              {pageContent.visionPurpose}
-            </span>
             <h2 id="vision-title" className="font-headline text-4xl font-bold mb-6">{pageContent.visionTitle}</h2>
             <div className="relative bg-card rounded-2xl p-8 shadow-lg shadow-black/5 border border-border/50 max-w-2xl mx-auto text-card-foreground">
                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-card p-2 rounded-full border">
@@ -477,11 +449,7 @@ export default function Home() {
       <section id="what-we-do" className="py-20 px-4 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <span className="inline-block px-4 py-1.5 bg-primary-foreground/10 text-primary-foreground text-sm font-medium rounded-full mb-4">
-              {pageContent.servicesSubtitle}
-            </span>
             <h2 className="font-headline text-4xl font-bold mb-3">{pageContent.servicesTitle}</h2>
-            <p className="text-primary-foreground/90 max-w-lg mx-auto">{pageContent.servicesText}</p>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service) => (
@@ -502,9 +470,6 @@ export default function Home() {
       <section id="halal-package" className="py-20 px-4 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto grid grid-cols-1 gap-12 items-center">
             <div className="text-center">
-                <span className="inline-block px-4 py-1.5 bg-emerald-500/10 text-emerald-300 text-sm font-medium rounded-full mb-4">
-                    {pageContent.halalSubtitle}
-                </span>
                 <h2 className="font-headline text-4xl font-bold mb-4">{pageContent.halalTitle}</h2>
                 <p className="text-primary-foreground/90 text-lg mb-8 max-w-2xl mx-auto">
                     {pageContent.halalText}
@@ -522,9 +487,7 @@ export default function Home() {
       <section id="why-choose-us" className="py-20 px-4 bg-primary text-primary-foreground">
          <div className="max-w-2xl mx-auto">
              <div className="text-center mb-12">
-                <span className="inline-block px-4 py-1.5 bg-primary-foreground/10 text-primary-foreground text-sm font-medium rounded-full mb-4">{pageContent.whyChooseUsSubtitle}</span>
                 <h2 className="font-headline text-4xl font-bold mb-3">{pageContent.whyChooseUsTitle}</h2>
-                <p className="text-primary-foreground/90">{pageContent.whyChooseUsText}</p>
              </div>
              <div className="space-y-6">
                 {strengths.map((strength, index) => (
