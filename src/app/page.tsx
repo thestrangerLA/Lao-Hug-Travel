@@ -322,7 +322,7 @@ export default function Home() {
   const navLinks = [
     { href: '#about', label: pageContent.navAbout },
     { href: '#vision', label: pageContent.navVision },
-    { href: '#halal-package', label: pageContent.navTourPackages },
+    { href: '/packages', label: pageContent.navTourPackages },
     { href: '#what-we-do', label: pageContent.navOurServices },
     { href: '#why-choose-us', label: pageContent.navWhyChooseUs },
     { href: '#contact-us', label: pageContent.navContactUs },
