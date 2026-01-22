@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Star } from 'lucide-react';
+import { Star, StarHalf } from 'lucide-react';
 import { useLang } from '@/context/LangContext';
 
 const allPackagesData = [
@@ -196,25 +196,8 @@ const renderStars = (rating: number) => {
   }
 
   if (hasHalfStar) {
-    const halfStar = (
-      <svg key="half" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27z" fill="url(#half-grad)" />
-        <path d="M12 17.27L5.82 21l1.64-7.03L2 9.24l7.19-.61L12 2v15.27z" fill="currentColor" className="text-yellow-400" />
-        <defs>
-          <linearGradient id="half-grad">
-            <stop offset="50%" stopColor="currentColor" className="text-yellow-400" />
-            <stop offset="50%" stopColor="currentColor" stopOpacity="0" className="text-gray-300" />
-          </linearGradient>
-        </defs>
-      </svg>
-    );
     stars.push(
-       <div key="half-star" style={{position: 'relative', width: '16px', height: '16px' }}>
-         <Star className="w-4 h-4 text-gray-300" style={{position: 'absolute'}}/>
-         <div style={{ position: 'absolute', width: '50%', height: '100%', overflow: 'hidden' }}>
-            <Star className="w-4 h-4 text-yellow-400 fill-yellow-400"/>
-         </div>
-       </div>
+      <StarHalf key="half" className="w-4 h-4 text-yellow-400 fill-yellow-400" />
     );
   }
 
@@ -288,7 +271,7 @@ export default function PackagesPage() {
                         </div>
 
                         <div className="mt-auto text-center">
-                          <h3 className="font-bold text-xl mb-4 flex min-h-[3rem] items-center justify-center">{pkg.title}</h3>
+                          <h3 className="font-bold text-xl mb-4 flex items-center justify-center min-h-[3rem]">{pkg.title}</h3>
                           <div className="flex items-baseline justify-center gap-1">
                             <p className="text-xl font-bold text-primary">
                               {currencySymbol}{price}
@@ -353,7 +336,7 @@ export default function PackagesPage() {
                         </div>
 
                         <div className="mt-auto text-center">
-                           <h3 className="font-bold text-xl mb-4 flex min-h-[3rem] items-center justify-center">{pkg.title}</h3>
+                           <h3 className="font-bold text-xl mb-4 flex items-center justify-center min-h-[3rem]">{pkg.title}</h3>
                           <div className="flex items-baseline justify-center gap-1">
                             <p className="text-xl font-bold text-primary">
                               {currencySymbol}{price}
