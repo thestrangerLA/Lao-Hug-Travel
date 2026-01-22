@@ -397,7 +397,7 @@ export default function Home() {
                 <div className="flex flex-col text-left">
                     <div className="mb-4 flex flex-col items-start">
                       <Image
-                        src="https://i.ibb.co/gLn7B0hs/logo.png"
+                        src="https://i.ibb.co/w6hF9F7/logo.png"
                         alt="Lao Hug Travel Logo"
                         width={100}
                         height={28}
@@ -609,5 +609,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
