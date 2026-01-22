@@ -72,7 +72,11 @@ const mealData = [
     { day: 3, schedule: "จะแจ้งให้ทราบเร็วๆนี้", breakfast: true, lunch: true, dinner: true },
 ];
 
-export default function TourDetailPage({ params }: { params: { tourId: string } }) {
+type TourDetailPageProps = {
+  params: { tourId: string };
+};
+
+export default function TourDetailPage({ params }: TourDetailPageProps) {
   const [currency, setCurrency] = useState('thb');
 
   const tour = tourDetails[params.tourId as keyof typeof tourDetails];
