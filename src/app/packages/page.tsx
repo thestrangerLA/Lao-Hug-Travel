@@ -9,7 +9,7 @@ import { useLang } from '@/context/LangContext';
 const allPackagesData = [
   {
     id: '1',
-    tourCode: 'VTE01',
+    tourCode: 'LHT01',
     rating: 3.5,
     priceThb: '6,500',
     priceUsd: '195',
@@ -23,7 +23,7 @@ const allPackagesData = [
   },
   {
     id: '2',
-    tourCode: 'LPQ01',
+    tourCode: 'LHT02',
     rating: 3.5,
     priceThb: '11,000',
     priceUsd: '320',
@@ -37,7 +37,7 @@ const allPackagesData = [
   },
   {
     id: '3',
-    tourCode: 'VVO01',
+    tourCode: 'LHT03',
     rating: 3.5,
     priceThb: '9,500',
     priceUsd: '265',
@@ -51,7 +51,7 @@ const allPackagesData = [
   },
   {
     id: '4',
-    tourCode: 'PKZ01',
+    tourCode: 'LHT04',
     rating: 3.5,
     priceThb: '12,500',
     priceUsd: '360',
@@ -74,7 +74,7 @@ const allPackagesData = [
   },
   {
     id: '5',
-    tourCode: '4KI01',
+    tourCode: 'LHT05',
     rating: 4.0,
     priceThb: '30,000',
     priceUsd: '920',
@@ -100,7 +100,7 @@ const allPackagesData = [
   },
   {
     id: '6',
-    tourCode: 'XKH01',
+    tourCode: 'LHT06',
     rating: 4.0,
     priceThb: '38,000',
     priceUsd: '1,250',
@@ -120,7 +120,7 @@ const allPackagesData = [
   },
   {
     id: '7',
-    tourCode: 'NLA01',
+    tourCode: 'LHT07',
     rating: 4.0,
     priceThb: '40,000',
     priceUsd: '1,333',
@@ -134,7 +134,7 @@ const allPackagesData = [
   },
   {
     id: '8',
-    tourCode: 'SLA01',
+    tourCode: 'LHT08',
     rating: 4.0,
     priceThb: '49,000',
     priceUsd: '1,600',
@@ -209,7 +209,7 @@ const renderStars = (rating: number) => {
       </svg>
     );
     stars.push(
-       <div style={{position: 'relative', width: '16px', height: '16px' }}>
+       <div key="half-star" style={{position: 'relative', width: '16px', height: '16px' }}>
          <Star className="w-4 h-4 text-gray-300" style={{position: 'absolute'}}/>
          <div style={{ position: 'absolute', width: '50%', height: '100%', overflow: 'hidden' }}>
             <Star className="w-4 h-4 text-yellow-400 fill-yellow-400"/>
