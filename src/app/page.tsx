@@ -1,4 +1,3 @@
-
 'use client';
 
 import Link from 'next/link';
@@ -397,7 +396,7 @@ export default function Home() {
                 <div className="flex flex-col text-left">
                     <div className="mb-4 flex flex-col items-start">
                       <Image
-                        src="https://i.ibb.co/w6hF9F7/logo.png"
+                        src="https://i.ibb.co/zhgg0FPd/logo.png"
                         alt="Lao Hug Travel Logo"
                         width={100}
                         height={28}
@@ -609,7 +608,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
-
-    

@@ -39,7 +39,7 @@ export function Header() {
             <div className="container flex h-16 items-center">
                 <Link href="/" className="mr-6 flex items-center">
                     <Image 
-                        src="https://i.ibb.co/w6hF9F7/logo.png"
+                        src="https://i.ibb.co/zhgg0FPd/logo.png"
                         alt="Lao Hug Travel Logo"
                         width={80}
                         height={22}
@@ -156,5 +156,3 @@ export function Header() {
         </header>
     );
 }
-
-    
