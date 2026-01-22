@@ -16,9 +16,9 @@ const allPackagesData = [
     image: PlaceHolderImages.find((p) => p.id === 'vientiane-tour'),
     category: 'laos',
     translations: {
-      en: { title: 'Vientiane-VangVieng', days: '3 Days' },
-      th: { title: 'เวียงจันทน์-วังเวียง', days: '3 วัน' },
-      ar: { title: 'فيينتيان-فANG VIENG', days: '3 أيام' },
+      en: { title: 'Vientiane-VangVieng', days: '3 Days 2 Nights' },
+      th: { title: 'เวียงจันทน์-วังเวียง', days: '3 วัน 2 คืน' },
+      ar: { title: 'فيينتيان-فANG VIENG', days: '3 أيام 2 ليالي' },
     },
   },
   {
@@ -30,9 +30,9 @@ const allPackagesData = [
     image: PlaceHolderImages.find((p) => p.id === 'luang-prabang-tour'),
     category: 'laos',
     translations: {
-      en: { title: 'Vientiane-Luang Prabang', days: '4 Days' },
-      th: { title: 'เวียงจันทน์-หลวงพระบาง', days: '4 วัน' },
-      ar: { title: 'فيينتيان-لوانغ برابانغ', days: '4 أيام' },
+      en: { title: 'Vientiane-Luang Prabang', days: '4 Days 3 Nights' },
+      th: { title: 'เวียงจันทน์-หลวงพระบาง', days: '4 วัน 3 คืน' },
+      ar: { title: 'فيينتيان-لوانغ برابانغ', days: '4 أيام 3 ليالي' },
     },
   },
   {
@@ -44,9 +44,9 @@ const allPackagesData = [
     image: PlaceHolderImages.find((p) => p.id === 'vang-vieng-tour'),
     category: 'laos',
     translations: {
-      en: { title: 'Vientiane-MuangFueang-VangVieng', days: '4 Days' },
-      th: { title: 'เวียงจันทน์-เมืองเฟือง-วังเวียง', days: '4 วัน' },
-      ar: { title: 'فيينتيان-موانغ فونغ-فANG VIENG', days: '4 أيام' },
+      en: { title: 'Vientiane-MuangFueang-VangVieng', days: '4 Days 3 Nights' },
+      th: { title: 'เวียงจันทน์-เมืองเฟือง-วังเวียง', days: '4 วัน 3 คืน' },
+      ar: { title: 'فيينتيان-موانغ فونغ-فANG VIENG', days: '4 أيام 3 ليالي' },
     },
   },
   {
@@ -60,15 +60,15 @@ const allPackagesData = [
     translations: {
       en: {
         title: 'Vientiane-MuangFueang-VangVieng-Luang Prabang',
-        days: '5 Days',
+        days: '5 Days 4 Nights',
       },
       th: {
         title: 'เวียงจันทน์-เมืองเฟือง-วังเวียง-หลวงพระบาง',
-        days: '5 วัน',
+        days: '5 วัน 4 คืน',
       },
       ar: {
         title: 'فيينتيان-موانغ فونغ-فANG VIENG-لوانغ برابانغ',
-        days: '5 أيام',
+        days: '5 أيام 4 ليالي',
       },
     },
   },
@@ -84,17 +84,17 @@ const allPackagesData = [
       en: {
         title:
           'Vientiane-MuangFueang-VangVieng-Luang Prabang-Xishuangbanna (China)',
-        days: '7 Days',
+        days: '7 Days 6 Nights',
       },
       th: {
         title:
           'เวียงจันทน์-เมืองเฟือง-วังเวียง-หลวงพระบาง-12ปันนา (ประเทศจีน)',
-        days: '7 วัน',
+        days: '7 วัน 6 คืน',
       },
       ar: {
         title:
           'فيينتيان-موانغ فونغ-فانغ فينغ-لوانغ برابانغ-سيشوانغبانا (الصين)',
-        days: '7 أيام',
+        days: '7 أيام 6 ليالي',
       },
     },
   },
@@ -107,14 +107,14 @@ const allPackagesData = [
     image: PlaceHolderImages.find((p) => p.id === 'plain-of-jars-tour'),
     category: 'china',
     translations: {
-      en: { title: 'Kunming-Dali-Lijiang-Shangrila (China)', days: '6 Days' },
+      en: { title: 'Kunming-Dali-Lijiang-Shangrila (China)', days: '7 Days 6 Nights' },
       th: {
         title: 'คุณหมิง-ต้าหลี-หลีเจียง-แชงกรีลา (ประเทศจีน)',
-        days: '6 วัน',
+        days: '7 วัน 6 คืน',
       },
       ar: {
         title: 'كونمينغ-دالي-ليجيانغ-شانغريلا (الصين)',
-        days: '6 أيام',
+        days: '7 أيام 6 ليالي',
       },
     },
   },
@@ -127,9 +127,9 @@ const allPackagesData = [
     image: PlaceHolderImages.find((p) => p.id === 'northern-laos-tour'),
     category: 'china',
     translations: {
-      en: { title: 'Kunming-Chongqing (China)', days: '5 Days' },
-      th: { title: 'คุณหมิง-ฉงชิ่ง (ประเทศจีน)', days: '5 วัน' },
-      ar: { title: 'كونمينغ-تشونغتشينغ (الصين)', days: '5 أيام' },
+      en: { title: 'Kunming-Chongqing (China)', days: '7 Days 6 Nights' },
+      th: { title: 'คุณหมิง-ฉงชิ่ง (ประเทศจีน)', days: '7 วัน 6 คืน' },
+      ar: { title: 'كونمينغ-تشونغتشينغ (الصين)', days: '7 أيام 6 ليالي' },
     },
   },
   {
@@ -141,9 +141,9 @@ const allPackagesData = [
     image: PlaceHolderImages.find((p) => p.id === 'southern-laos-tour'),
     category: 'china',
     translations: {
-      en: { title: 'Kunming-Beijing-Tianjin (China)', days: '8 Days' },
-      th: { title: 'คุณหมิง-ปักกิ่ง-เทียนจิน (ประเทศจีน)', days: '8 วัน' },
-      ar: { title: 'كونمينغ-بكين-تيانجين (الصين)', days: '8 أيام' },
+      en: { title: 'Kunming-Beijing-Tianjin (China)', days: '7 Days 6 Nights' },
+      th: { title: 'คุณหมิง-ปักกิ่ง-เทียนจิน (ประเทศจีน)', days: '7 วัน 6 คืน' },
+      ar: { title: 'كونمينغ-بكين-تيانجين (الصين)', days: '7 أيام 6 ليالي' },
     },
   },
 ];
@@ -154,7 +154,7 @@ const contentData = {
         laosHeader: 'Laos Tours',
         chinaHeader: 'China Tours',
         tourCode: 'Tour Code',
-        days: 'Days',
+        days: 'Duration',
         hotel: 'Hotel',
         perPerson: '/ pax',
         noLaosPackages: 'There are no Laos packages available at this time.',
@@ -165,7 +165,7 @@ const contentData = {
         laosHeader: 'ทัวร์ประเทศลาว',
         chinaHeader: 'ทัวร์ประเทศจีน',
         tourCode: 'รหัสทัวร์',
-        days: 'วัน',
+        days: 'ระยะเวลา',
         hotel: 'โรงแรม',
         perPerson: '/ ท่าน',
         noLaosPackages: 'ไม่มีแพ็คเกจทัวร์ประเทศลาวในขณะนี้',
@@ -176,7 +176,7 @@ const contentData = {
         laosHeader: 'جولات لاوس',
         chinaHeader: 'جولات الصين',
         tourCode: 'رمز الجولة',
-        days: 'أيام',
+        days: 'المدة',
         hotel: 'الفندق',
         perPerson: '/ شخص',
         noLaosPackages: 'لا توجد باقات لاوس متاحة في هذا الوقت.',
@@ -196,8 +196,25 @@ const renderStars = (rating: number) => {
   }
 
   if (hasHalfStar) {
+    const halfStar = (
+      <svg key="half" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27z" fill="url(#half-grad)" />
+        <path d="M12 17.27L5.82 21l1.64-7.03L2 9.24l7.19-.61L12 2v15.27z" fill="currentColor" className="text-yellow-400" />
+        <defs>
+          <linearGradient id="half-grad">
+            <stop offset="50%" stopColor="currentColor" className="text-yellow-400" />
+            <stop offset="50%" stopColor="currentColor" stopOpacity="0" className="text-gray-300" />
+          </linearGradient>
+        </defs>
+      </svg>
+    );
     stars.push(
-      <Star key="half" className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+       <div style={{position: 'relative', width: '16px', height: '16px' }}>
+         <Star className="w-4 h-4 text-gray-300" style={{position: 'absolute'}}/>
+         <div style={{ position: 'absolute', width: '50%', height: '100%', overflow: 'hidden' }}>
+            <Star className="w-4 h-4 text-yellow-400 fill-yellow-400"/>
+         </div>
+       </div>
     );
   }
 
@@ -271,7 +288,7 @@ export default function PackagesPage() {
                         </div>
 
                         <div className="mt-auto text-center">
-                          <h3 className="font-bold text-xl mb-4">{pkg.title}</h3>
+                          <h3 className="font-bold text-xl mb-4 h-12 flex items-center justify-center">{pkg.title}</h3>
                           <div className="flex items-baseline justify-center gap-1">
                             <p className="text-xl font-bold text-primary">
                               {currencySymbol}{price}
@@ -336,7 +353,7 @@ export default function PackagesPage() {
                         </div>
 
                         <div className="mt-auto text-center">
-                          <h3 className="font-bold text-xl mb-4">{pkg.title}</h3>
+                           <h3 className="font-bold text-xl mb-4 h-12 flex items-center justify-center">{pkg.title}</h3>
                           <div className="flex items-baseline justify-center gap-1">
                             <p className="text-xl font-bold text-primary">
                               {currencySymbol}{price}
