@@ -290,7 +290,7 @@ const TikTokIcon = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 const socialLinks = [
-    { name: 'Facebook', icon: <Facebook className="w-6 h-6" />, href: 'https://facebook.com/LaoHugTravel' },
+    { name: 'Facebook', icon: <Facebook className="w-6 h-6" />, href: 'https://web.facebook.com/profile.php?id=61581202540768' },
     { name: 'TikTok', icon: <TikTokIcon className="w-6 h-6" />, href: 'https://tiktok.com/@laohugtravel' },
     { name: 'Instagram', icon: <Instagram className="w-6 h-6" />, href: 'https://instagram.com/laohugtravel' },
     { name: 'Youtube', icon: <Youtube className="w-6 h-6" />, href: 'https://youtube.com/@LaoHugTravel' },
@@ -578,4 +578,5 @@ export default function Home() {
     </div>
   );
 }
+
 
