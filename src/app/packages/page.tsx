@@ -288,7 +288,7 @@ export default function PackagesPage() {
                         </div>
 
                         <div className="mt-auto text-center">
-                          <h3 className="font-bold text-xl mb-4 h-12 flex items-center justify-center">{pkg.title}</h3>
+                          <h3 className="font-bold text-xl mb-4 flex min-h-[3rem] items-center justify-center">{pkg.title}</h3>
                           <div className="flex items-baseline justify-center gap-1">
                             <p className="text-xl font-bold text-primary">
                               {currencySymbol}{price}
@@ -353,7 +353,7 @@ export default function PackagesPage() {
                         </div>
 
                         <div className="mt-auto text-center">
-                           <h3 className="font-bold text-xl mb-4 h-12 flex items-center justify-center">{pkg.title}</h3>
+                           <h3 className="font-bold text-xl mb-4 flex min-h-[3rem] items-center justify-center">{pkg.title}</h3>
                           <div className="flex items-baseline justify-center gap-1">
                             <p className="text-xl font-bold text-primary">
                               {currencySymbol}{price}
