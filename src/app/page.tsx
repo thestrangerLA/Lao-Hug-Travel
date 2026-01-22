@@ -44,6 +44,13 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog';
 
 
 const servicesData = {
@@ -218,6 +225,7 @@ const pageContentData = {
         contactLineTitle: 'Line',
         followTitle: 'Follow Us',
         followText: 'Lao Hug Travel',
+        scanLine: 'Scan to add us on Line',
     },
     th: {
         navAbout: 'เกี่ยวกับเรา',
@@ -246,6 +254,7 @@ const pageContentData = {
         contactLineTitle: 'ไลน์',
         followTitle: 'ติดตามเรา',
         followText: 'ลาวฮัก ทราเวล',
+        scanLine: 'สแกนเพื่อเพิ่มเราบนไลน์',
     },
     ar: {
         navAbout: 'من نحن',
@@ -274,6 +283,7 @@ const pageContentData = {
         contactLineTitle: 'لاين',
         followTitle: 'تابعنا',
         followText: 'لاو هاغ ترافيل',
+        scanLine: 'امسح ضوئيًا لإضافتنا على Line',
     },
 };
 
@@ -301,6 +311,7 @@ const socialLinks = [
 export default function Home() {
   const { lang, setLang } = useLang();
   const chefImage = PlaceHolderImages.find((p) => p.id === 'gmhi-chef');
+  const lineQrImage = PlaceHolderImages.find((p) => p.id === 'line-qr-code');
   const [open, setOpen] = useState(false);
 
 
@@ -539,15 +550,35 @@ export default function Home() {
                 </div>
             </a>
 
-            <a href="http://line.me/ti/p/~Laohugtravel" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-center gap-2 p-2 rounded-lg hover:bg-primary-foreground/10 transition-colors">
-                <div className="w-12 h-12 rounded-full bg-primary-foreground/10 flex items-center justify-center">
-                    <MessageSquare className="w-6 h-6 text-accent" />
+            <Dialog>
+              <DialogTrigger asChild>
+                <div className="flex flex-col items-center text-center gap-2 p-2 rounded-lg hover:bg-primary-foreground/10 transition-colors cursor-pointer">
+                  <div className="w-12 h-12 rounded-full bg-primary-foreground/10 flex items-center justify-center">
+                      <MessageSquare className="w-6 h-6 text-accent" />
+                  </div>
+                  <div>
+                      <h3 className="font-headline text-lg font-semibold text-primary-foreground">{pageContent.contactLineTitle}</h3>
+                      <p className="text-primary-foreground/80 text-xs break-all">Laohugtravel</p>
+                  </div>
                 </div>
-                <div>
-                    <h3 className="font-headline text-lg font-semibold text-primary-foreground">{pageContent.contactLineTitle}</h3>
-                    <p className="text-primary-foreground/80 text-xs break-all">Laohugtravel</p>
-                </div>
-            </a>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-[425px]">
+                <DialogHeader>
+                  <DialogTitle>{pageContent.scanLine}</DialogTitle>
+                </DialogHeader>
+                {lineQrImage && (
+                  <div className="flex justify-center">
+                    <Image
+                      src={lineQrImage.imageUrl}
+                      alt={lineQrImage.description}
+                      width={250}
+                      height={250}
+                      data-ai-hint={lineQrImage.imageHint}
+                    />
+                  </div>
+                )}
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
       </section>
@@ -579,5 +610,4 @@ export default function Home() {
   );
 }
 
-
-
+    

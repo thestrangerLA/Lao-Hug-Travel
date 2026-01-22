@@ -113,6 +113,12 @@
       "description": "The Temple of Heaven in Beijing, China.",
       "imageUrl": "https://i.ibb.co/LzjQrn55/8.jpg",
       "imageHint": "beijing temple"
+    },
+    {
+      "id": "line-qr-code",
+      "description": "QR Code to add Lao Hug Travel on Line",
+      "imageUrl": "https://i.ibb.co/SJxV2fN/qr.png",
+      "imageHint": "line qr code"
     }
   ]
 }
