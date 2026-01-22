@@ -29,7 +29,7 @@ import {
   MessageCircle,
   Facebook,
   Instagram,
-  Twitter,
+  X,
   Youtube,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -294,7 +294,7 @@ const socialLinks = [
     { name: 'TikTok', icon: <TikTokIcon className="w-6 h-6" />, href: 'https://tiktok.com/@laohugtravel' },
     { name: 'Instagram', icon: <Instagram className="w-6 h-6" />, href: 'https://instagram.com/laohugtravel' },
     { name: 'Youtube', icon: <Youtube className="w-6 h-6" />, href: 'https://youtube.com/@LaoHugTravel' },
-    { name: 'X', icon: <Twitter className="w-6 h-6" />, href: 'https://x.com/laohugtravel' },
+    { name: 'X', icon: <X className="w-6 h-6" />, href: 'https://x.com/laohugtravel' },
 ];
 
 
@@ -578,5 +578,6 @@ export default function Home() {
     </div>
   );
 }
+
 
 
