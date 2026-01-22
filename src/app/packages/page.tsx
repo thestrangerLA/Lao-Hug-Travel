@@ -24,7 +24,7 @@ const allPackagesData = [
   {
     id: '2',
     tourCode: 'LPQ01',
-    rating: 4.5,
+    rating: 3.5,
     priceThb: '11,000',
     priceUsd: '320',
     image: PlaceHolderImages.find((p) => p.id === 'luang-prabang-tour'),
@@ -38,7 +38,7 @@ const allPackagesData = [
   {
     id: '3',
     tourCode: 'VVO01',
-    rating: 4.0,
+    rating: 3.5,
     priceThb: '9,500',
     priceUsd: '265',
     image: PlaceHolderImages.find((p) => p.id === 'vang-vieng-tour'),
@@ -52,7 +52,7 @@ const allPackagesData = [
   {
     id: '4',
     tourCode: 'PKZ01',
-    rating: 4.0,
+    rating: 3.5,
     priceThb: '12,500',
     priceUsd: '360',
     image: PlaceHolderImages.find((p) => p.id === 'pakse-tour'),
@@ -75,7 +75,7 @@ const allPackagesData = [
   {
     id: '5',
     tourCode: '4KI01',
-    rating: 4.5,
+    rating: 4.0,
     priceThb: '30,000',
     priceUsd: '920',
     image: PlaceHolderImages.find((p) => p.id === '4000-islands-tour'),
@@ -101,7 +101,7 @@ const allPackagesData = [
   {
     id: '6',
     tourCode: 'XKH01',
-    rating: 4.2,
+    rating: 4.0,
     priceThb: '38,000',
     priceUsd: '1,250',
     image: PlaceHolderImages.find((p) => p.id === 'plain-of-jars-tour'),
@@ -121,7 +121,7 @@ const allPackagesData = [
   {
     id: '7',
     tourCode: 'NLA01',
-    rating: 4.8,
+    rating: 4.0,
     priceThb: '40,000',
     priceUsd: '1,333',
     image: PlaceHolderImages.find((p) => p.id === 'northern-laos-tour'),
@@ -135,7 +135,7 @@ const allPackagesData = [
   {
     id: '8',
     tourCode: 'SLA01',
-    rating: 4.6,
+    rating: 4.0,
     priceThb: '49,000',
     priceUsd: '1,600',
     image: PlaceHolderImages.find((p) => p.id === 'southern-laos-tour'),
