@@ -25,8 +25,8 @@
     --ring: 147 60% 35%;
     --radius: 0.5rem;
 
-    --font-body: var(--font-kanit);
-    --font-headline: var(--font-kanit);
+    --font-body: var(--font-plus-jakarta-sans);
+    --font-headline: var(--font-plus-jakarta-sans);
   }
 
   .dark {

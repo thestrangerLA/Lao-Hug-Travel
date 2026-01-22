@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Kanit, Noto_Kufi_Arabic } from "next/font/google";
+import { Plus_Jakarta_Sans, Noto_Kufi_Arabic } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { LangProvider } from "@/context/LangContext";
 
-const kanit = Kanit({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin", "thai"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-kanit",
+  variable: "--font-plus-jakarta-sans",
 });
 
 const notoKufiArabic = Noto_Kufi_Arabic({
@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="th" dir="ltr">
       <body
-        className={`${kanit.variable} ${notoKufiArabic.variable}`}
+        className={`${plusJakartaSans.variable} ${notoKufiArabic.variable}`}
       >
         <LangProvider>
           <main>{children}</main>
