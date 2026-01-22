@@ -50,11 +50,6 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 147 60% 45%;
   }
-
-  html[dir="rtl"] {
-    --font-body: var(--font-noto-kufi-arabic);
-    --font-headline: var(--font-noto-kufi-arabic);
-  }
 }
 
 @layer base {
