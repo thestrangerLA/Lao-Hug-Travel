@@ -407,7 +407,7 @@ export default function Home() {
                     <p className="text-2xl md:text-3xl font-bold text-primary-foreground">
                       {pageContent.heroSubTitle}
                     </p>
-                    <div className="w-32 h-1 bg-primary-foreground my-6"></div>
+                    <div className="w-48 h-1 bg-primary-foreground my-6"></div>
                     <h2 className="text-xl md:text-3xl font-semibold font-headline text-white">
                       {pageContent.heroTitle}
                     </h2>
