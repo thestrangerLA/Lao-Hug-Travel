@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -30,6 +31,7 @@ import {
   Instagram,
   X,
   Youtube,
+  StarHalf,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { useLang } from '@/context/LangContext';
@@ -50,7 +52,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
-
+import { allPackagesData, packagesContentData } from '@/lib/packages-data';
 
 const servicesData = {
   en: [
@@ -306,6 +308,29 @@ const socialLinks = [
     { name: 'X', icon: <X className="w-6 h-6" />, href: 'https://x.com/laohugtravel' },
 ];
 
+const renderStars = (rating: number) => {
+  const stars = [];
+  const fullStars = Math.floor(rating);
+  const hasHalfStar = rating % 1 !== 0;
+
+  for (let i = 0; i < fullStars; i++) {
+    stars.push(
+      <Star key={`full-${i}`} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+    );
+  }
+
+  if (hasHalfStar) {
+    stars.push(
+      <StarHalf key="half" className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+    );
+  }
+
+  const emptyStars = 5 - Math.ceil(rating);
+  for (let i = 0; i < emptyStars; i++) {
+    stars.push(<Star key={`empty-${i}`} className="w-4 h-4 text-gray-300" />);
+  }
+  return stars;
+};
 
 export default function Home() {
   const { lang, setLang } = useLang();
@@ -317,6 +342,15 @@ export default function Home() {
   const services = servicesData[lang] || servicesData.en;
   const strengths = strengthsData[lang] || strengthsData.en;
   const pageContent = pageContentData[lang] || pageContentData.en;
+  const packageContent = packagesContentData[lang] || packagesContentData.en;
+
+  const featuredPackagesIds = ['1', '2', '7'];
+  const featuredPackages = allPackagesData
+    .filter(pkg => featuredPackagesIds.includes(pkg.id))
+    .map(pkg => ({
+      ...pkg,
+      ...(pkg.translations[lang] || pkg.translations.en)
+    }));
   
   const navLinks = [
     { href: '#about', label: pageContent.navAbout },
@@ -476,17 +510,72 @@ export default function Home() {
       
       {/* Halal Tour Package Section */}
       <section id="halal-package" className="py-20 px-4 bg-primary text-primary-foreground">
-        <div className="max-w-4xl mx-auto grid grid-cols-1 gap-12 items-center">
+        <div className="max-w-7xl mx-auto">
             <div className="text-center">
                 <h2 className="font-headline text-4xl font-bold mb-4">{pageContent.halalTitle}</h2>
                 <p className="text-primary-foreground/90 text-lg mb-8 max-w-2xl mx-auto">
                     {pageContent.halalText}
                 </p>
-                 <div className="flex flex-wrap gap-4 justify-center">
-                    <Button asChild size="lg" variant="secondary">
-                        <Link href="/packages">{pageContent.seeAllPackages}</Link>
-                    </Button>
-                </div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-12">
+              {featuredPackages.map((pkg) => {
+                const price = lang === 'en' ? pkg.priceUsd : pkg.priceThb;
+                const currencySymbol = lang === 'en' ? '$' : '฿';
+                return (
+                  <div key={pkg.id} className="block group">
+                    <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full bg-card text-card-foreground">
+                      {pkg.image && (
+                        <div className="relative h-48 w-full">
+                          <Image
+                            src={pkg.image.imageUrl}
+                            alt={pkg.image.description}
+                            fill
+                            className="object-cover"
+                            data-ai-hint={pkg.image.imageHint}
+                          />
+                        </div>
+                      )}
+                      <CardContent className="p-4 flex flex-col flex-grow">
+                        <div className="grid grid-cols-3 gap-4 text-center text-xs text-muted-foreground border-b pb-3 mb-3">
+                          <div>
+                            <p>{packageContent.tourCode}</p>
+                            <p className="font-bold text-foreground">{pkg.tourCode}</p>
+                          </div>
+                          <div>
+                            <p>{packageContent.days}</p>
+                            <p className="font-bold text-foreground">{pkg.days}</p>
+                          </div>
+                          <div>
+                            <p>{packageContent.hotel}</p>
+                            <div className="flex justify-center mt-1">
+                              {renderStars(pkg.rating)}
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="mt-auto text-center">
+                          <h3 className="font-bold text-xl mb-4 flex items-center justify-center min-h-[3rem]">{pkg.title}</h3>
+                          <div className="flex items-baseline justify-center gap-1">
+                            <p className="text-xl font-bold text-primary">
+                              {currencySymbol}{price}
+                            </p>
+                            <p className="text-sm text-muted-foreground">
+                              {packageContent.perPerson}
+                            </p>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                )
+              })}
+            </div>
+
+            <div className="flex flex-wrap gap-4 justify-center">
+                <Button asChild size="lg" variant="secondary">
+                    <Link href="/packages">{pageContent.seeAllPackages}</Link>
+                </Button>
             </div>
         </div>
       </section>
