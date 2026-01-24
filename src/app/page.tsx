@@ -88,7 +88,7 @@ const servicesData = {
       icon: <UtensilsCrossed className="w-7 h-7 text-white" />,
       title: 'Halal food service',
       description: 'Enjoy delicious Halal meals.',
-      color: 'from-green-500 to-green-600 shadow-green-500/20',
+      color: 'from-green-500 to-green-600 shadow-green-600/20',
     },
   ],
   th: [
@@ -126,7 +126,7 @@ const servicesData = {
       icon: <UtensilsCrossed className="w-7 h-7 text-white" />,
       title: 'บริการอาหารฮาลาล',
       description: 'เพลิดเพลินกับอาหารฮาลาลแสนอร่อย',
-      color: 'from-green-500 to-green-600 shadow-green-500/20',
+      color: 'from-green-500 to-green-600 shadow-green-600/20',
     },
   ],
   ar: [
@@ -164,7 +164,7 @@ const servicesData = {
         icon: <UtensilsCrossed className="w-7 h-7 text-white" />,
         title: 'خدمة الطعام الحلال',
         description: 'استمتع بوجبات حلال لذيذة.',
-        color: 'from-green-500 to-green-600 shadow-green-500/20',
+        color: 'from-green-500 to-green-600 shadow-green-600/20',
       },
   ]
 };
@@ -404,7 +404,7 @@ export default function Home() {
                         priority
                       />
                     </div>
-                    <p className="text-2xl md:text-3xl font-light text-primary-foreground/90">
+                    <p className="text-2xl md:text-3xl font-bold text-primary-foreground/90">
                       {pageContent.heroSubTitle}
                     </p>
                     <div className="w-24 h-1 bg-accent my-6"></div>
