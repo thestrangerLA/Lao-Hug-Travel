@@ -14,7 +14,6 @@ import {
   Shield,
   Eye,
   Globe,
-  Star,
   Mail,
   Phone,
   BedDouble,
@@ -31,7 +30,6 @@ import {
   Instagram,
   X,
   Youtube,
-  StarHalf,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { useLang } from '@/context/LangContext';
@@ -308,30 +306,6 @@ const socialLinks = [
     { name: 'X', icon: <X className="w-6 h-6" />, href: 'https://x.com/laohugtravel' },
 ];
 
-const renderStars = (rating: number) => {
-  const stars = [];
-  const fullStars = Math.floor(rating);
-  const hasHalfStar = rating % 1 !== 0;
-
-  for (let i = 0; i < fullStars; i++) {
-    stars.push(
-      <Star key={`full-${i}`} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-    );
-  }
-
-  if (hasHalfStar) {
-    stars.push(
-      <StarHalf key="half" className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-    );
-  }
-
-  const emptyStars = 5 - Math.ceil(rating);
-  for (let i = 0; i < emptyStars; i++) {
-    stars.push(<Star key={`empty-${i}`} className="w-4 h-4 text-gray-300" />);
-  }
-  return stars;
-};
-
 export default function Home() {
   const { lang, setLang } = useLang();
   const chefImage = PlaceHolderImages.find((p) => p.id === 'gmhi-chef');
@@ -428,9 +402,9 @@ export default function Home() {
         <div className="container mx-auto px-4 py-20">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div className="flex flex-col text-left">
-                    <div className="mb-4 -mt-8 flex flex-col items-start">
+                    <div className="mb-4 -mt-24 flex flex-col items-start">
                       <Image
-                        src="https://i.ibb.co/zhgg0FPd/logo.png"
+                        src="https://i.ibb.co/zhgg0FP/logo.png"
                         alt="Lao Hug Travel Logo"
                         width={100}
                         height={28}
@@ -537,7 +511,7 @@ export default function Home() {
                         </div>
                       )}
                       <CardContent className="p-4 flex flex-col flex-grow">
-                        <div className="grid grid-cols-3 gap-4 text-center text-xs text-muted-foreground border-b pb-3 mb-3">
+                        <div className="grid grid-cols-2 gap-4 text-center text-xs text-muted-foreground border-b pb-3 mb-3">
                           <div>
                             <p>{packageContent.tourCode}</p>
                             <p className="font-bold text-foreground">{pkg.tourCode}</p>
@@ -545,12 +519,6 @@ export default function Home() {
                           <div>
                             <p>{packageContent.days}</p>
                             <p className="font-bold text-foreground">{pkg.days}</p>
-                          </div>
-                          <div>
-                            <p>{packageContent.hotel}</p>
-                            <div className="flex justify-center mt-1">
-                              {renderStars(pkg.rating)}
-                            </div>
                           </div>
                         </div>
 

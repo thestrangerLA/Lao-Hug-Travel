@@ -3,33 +3,8 @@
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Star, StarHalf } from 'lucide-react';
 import { useLang } from '@/context/LangContext';
 import { allPackagesData, packagesContentData as contentData } from '@/lib/packages-data';
-
-const renderStars = (rating: number) => {
-  const stars = [];
-  const fullStars = Math.floor(rating);
-  const hasHalfStar = rating % 1 !== 0;
-
-  for (let i = 0; i < fullStars; i++) {
-    stars.push(
-      <Star key={`full-${i}`} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-    );
-  }
-
-  if (hasHalfStar) {
-    stars.push(
-      <StarHalf key="half" className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-    );
-  }
-
-  const emptyStars = 5 - Math.ceil(rating);
-  for (let i = 0; i < emptyStars; i++) {
-    stars.push(<Star key={`empty-${i}`} className="w-4 h-4 text-gray-300" />);
-  }
-  return stars;
-};
 
 export default function PackagesPage() {
   const { lang } = useLang();
@@ -76,7 +51,7 @@ export default function PackagesPage() {
                         </div>
                       )}
                       <CardContent className="p-4 flex flex-col flex-grow">
-                        <div className="grid grid-cols-3 gap-4 text-center text-xs text-gray-500 border-b pb-3 mb-3">
+                        <div className="grid grid-cols-2 gap-4 text-center text-xs text-gray-500 border-b pb-3 mb-3">
                           <div>
                             <p>{content.tourCode}</p>
                             <p className="font-bold text-black">{pkg.tourCode}</p>
@@ -84,12 +59,6 @@ export default function PackagesPage() {
                           <div>
                             <p>{content.days}</p>
                             <p className="font-bold text-black">{pkg.days}</p>
-                          </div>
-                          <div>
-                            <p>{content.hotel}</p>
-                            <div className="flex justify-center mt-1">
-                              {renderStars(pkg.rating)}
-                            </div>
                           </div>
                         </div>
 
@@ -141,7 +110,7 @@ export default function PackagesPage() {
                         </div>
                       )}
                       <CardContent className="p-4 flex flex-col flex-grow">
-                        <div className="grid grid-cols-3 gap-4 text-center text-xs text-gray-500 border-b pb-3 mb-3">
+                        <div className="grid grid-cols-2 gap-4 text-center text-xs text-gray-500 border-b pb-3 mb-3">
                           <div>
                             <p>{content.tourCode}</p>
                             <p className="font-bold text-black">{pkg.tourCode}</p>
@@ -149,12 +118,6 @@ export default function PackagesPage() {
                           <div>
                             <p>{content.days}</p>
                             <p className="font-bold text-black">{pkg.days}</p>
-                          </div>
-                          <div>
-                            <p>{content.hotel}</p>
-                            <div className="flex justify-center mt-1">
-                              {renderStars(pkg.rating)}
-                            </div>
                           </div>
                         </div>
 

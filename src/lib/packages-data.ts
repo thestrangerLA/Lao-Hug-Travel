@@ -5,7 +5,6 @@ export const allPackagesData = [
   {
     id: '1',
     tourCode: 'LHT01',
-    rating: 3.5,
     priceThb: '6,500',
     priceUsd: '195',
     image: PlaceHolderImages.find((p) => p.id === 'vientiane-tour'),
@@ -19,7 +18,6 @@ export const allPackagesData = [
   {
     id: '2',
     tourCode: 'LHT02',
-    rating: 3.5,
     priceThb: '11,000',
     priceUsd: '320',
     image: PlaceHolderImages.find((p) => p.id === 'luang-prabang-tour'),
@@ -33,7 +31,6 @@ export const allPackagesData = [
   {
     id: '3',
     tourCode: 'LHT03',
-    rating: 3.5,
     priceThb: '9,500',
     priceUsd: '265',
     image: PlaceHolderImages.find((p) => p.id === 'vang-vieng-tour'),
@@ -47,7 +44,6 @@ export const allPackagesData = [
   {
     id: '4',
     tourCode: 'LHT04',
-    rating: 3.5,
     priceThb: '12,500',
     priceUsd: '360',
     image: PlaceHolderImages.find((p) => p.id === 'pakse-tour'),
@@ -70,7 +66,6 @@ export const allPackagesData = [
   {
     id: '5',
     tourCode: 'LHT05',
-    rating: 4.5,
     priceThb: '30,000',
     priceUsd: '920',
     image: PlaceHolderImages.find((p) => p.id === '4000-islands-tour'),
@@ -96,7 +91,6 @@ export const allPackagesData = [
   {
     id: '6',
     tourCode: 'LHT06',
-    rating: 4.5,
     priceThb: '38,000',
     priceUsd: '1,250',
     image: PlaceHolderImages.find((p) => p.id === 'plain-of-jars-tour'),
@@ -116,7 +110,6 @@ export const allPackagesData = [
   {
     id: '7',
     tourCode: 'LHT07',
-    rating: 4.5,
     priceThb: '40,000',
     priceUsd: '1,333',
     image: PlaceHolderImages.find((p) => p.id === 'northern-laos-tour'),
@@ -130,7 +123,6 @@ export const allPackagesData = [
   {
     id: '8',
     tourCode: 'LHT08',
-    rating: 4.5,
     priceThb: '49,000',
     priceUsd: '1,600',
     image: PlaceHolderImages.find((p) => p.id === 'southern-laos-tour'),
@@ -150,7 +142,6 @@ export const packagesContentData = {
         chinaHeader: 'China Tours',
         tourCode: 'Tour Code',
         days: 'Duration',
-        hotel: 'Hotel',
         perPerson: '/ pax',
         noLaosPackages: 'There are no Laos packages available at this time.',
         noChinaPackages: 'There are no China packages available at this time.',
@@ -161,7 +152,6 @@ export const packagesContentData = {
         chinaHeader: 'ทัวร์ประเทศจีน',
         tourCode: 'รหัสทัวร์',
         days: 'ระยะเวลา',
-        hotel: 'โรงแรม',
         perPerson: '/ ท่าน',
         noLaosPackages: 'ไม่มีแพ็คเกจทัวร์ประเทศลาวในขณะนี้',
         noChinaPackages: 'ไม่มีแพ็คเกจทัวร์ประเทศจีนในขณะนี้',
@@ -172,7 +162,6 @@ export const packagesContentData = {
         chinaHeader: 'جولات الصين',
         tourCode: 'رمز الجولة',
         days: 'المدة',
-        hotel: 'الفندق',
         perPerson: '/ شخص',
         noLaosPackages: 'لا توجد باقات لاوس متاحة في هذا الوقت.',
         noChinaPackages: 'لا توجد باقات صينية متاحة في هذا الوقت.',
