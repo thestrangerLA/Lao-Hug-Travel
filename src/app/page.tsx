@@ -394,7 +394,7 @@ export default function Home() {
         <div className="container mx-auto px-4 py-20">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div className="flex flex-col text-left">
-                    <div className="mb-4 flex flex-col items-start">
+                    <div className="mb-4 -mt-8 flex flex-col items-start">
                       <Image
                         src="https://i.ibb.co/zhgg0FPd/logo.png"
                         alt="Lao Hug Travel Logo"
