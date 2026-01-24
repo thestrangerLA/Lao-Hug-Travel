@@ -447,10 +447,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 id="vision-title" className="font-headline text-4xl font-bold mb-6">{pageContent.visionTitle}</h2>
             <div className="relative bg-card rounded-2xl p-8 shadow-lg shadow-black/5 border border-border/50 max-w-2xl mx-auto text-card-foreground">
-               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-card p-2 rounded-full border">
-                <Star className="w-6 h-6 text-accent" />
-              </div>
-              <p id="vision-text" className="text-muted-foreground text-lg leading-relaxed italic">{pageContent.visionText}</p>
+              <p id="vision-text" className="text-muted-foreground text-lg leading-relaxed">{pageContent.visionText}</p>
             </div>
           </div>
         </div>
