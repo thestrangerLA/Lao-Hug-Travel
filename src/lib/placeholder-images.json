@@ -119,6 +119,12 @@
       "description": "QR Code to add Lao Hug Travel on Line",
       "imageUrl": "https://i.ibb.co/ccwJpgqB/Whats-App-Image-2026-01-22-at-12-46-39.jpg",
       "imageHint": "line qr code"
+    },
+    {
+      "id": "about-us-image",
+      "description": "Hot air balloons over Vang Vieng, Laos.",
+      "imageUrl": "https://i.ibb.co/gMbYmsnv/vv.jpg",
+      "imageHint": "vang vieng balloons"
     }
   ]
 }

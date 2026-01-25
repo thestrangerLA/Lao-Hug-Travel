@@ -307,8 +307,9 @@ const socialLinks = [
 
 export default function Home() {
   const { lang, setLang } = useLang();
-  const chefImage = PlaceHolderImages.find((p) => p.id === 'luang-prabang-tour');
+  const heroImage = PlaceHolderImages.find((p) => p.id === 'luang-prabang-tour');
   const lineQrImage = PlaceHolderImages.find((p) => p.id === 'line-qr-code');
+  const aboutImage = PlaceHolderImages.find((p) => p.id === 'about-us-image');
   const [open, setOpen] = useState(false);
 
 
@@ -421,14 +422,14 @@ export default function Home() {
                 </div>
 
                 <div className="grid grid-cols-1 gap-4">
-                    {chefImage && <div className="rounded-lg overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                    {heroImage && <div className="rounded-lg overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
                     <Image
-                        src={chefImage.imageUrl}
-                        alt={chefImage.description}
+                        src={heroImage.imageUrl}
+                        alt={heroImage.description}
                         width={500}
                         height={400}
                         className="object-cover w-full h-full"
-                        data-ai-hint={chefImage.imageHint}
+                        data-ai-hint={heroImage.imageHint}
                     />
                     </div>}
                 </div>
@@ -445,6 +446,18 @@ export default function Home() {
               {pageContent.aboutText}
             </p>
           </div>
+          {aboutImage && (
+            <div className="mt-12 rounded-lg overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
+              <Image
+                src={aboutImage.imageUrl}
+                alt={aboutImage.description}
+                width={896}
+                height={597}
+                className="object-cover w-full h-full"
+                data-ai-hint={aboutImage.imageHint}
+              />
+            </div>
+          )}
         </div>
       </section>
 
