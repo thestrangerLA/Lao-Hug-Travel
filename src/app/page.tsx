@@ -310,6 +310,7 @@ export default function Home() {
   const heroImage = PlaceHolderImages.find((p) => p.id === 'luang-prabang-tour');
   const lineQrImage = PlaceHolderImages.find((p) => p.id === 'line-qr-code');
   const aboutImage = PlaceHolderImages.find((p) => p.id === 'about-us-image');
+  const visionImage = PlaceHolderImages.find((p) => p.id === 'vision-image');
   const [open, setOpen] = useState(false);
 
 
@@ -470,6 +471,18 @@ export default function Home() {
               <p id="vision-text" className="text-muted-foreground text-lg leading-relaxed">{pageContent.visionText}</p>
             </div>
           </div>
+          {visionImage && (
+            <div className="mt-12 rounded-lg overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
+              <Image
+                src={visionImage.imageUrl}
+                alt={visionImage.description}
+                width={896}
+                height={597}
+                className="object-cover w-full h-full"
+                data-ai-hint={visionImage.imageHint}
+              />
+            </div>
+          )}
         </div>
       </section>
 

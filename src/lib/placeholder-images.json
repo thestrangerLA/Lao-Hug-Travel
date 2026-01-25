@@ -125,6 +125,12 @@
       "description": "Lush green mountains surrounding a river in Laos.",
       "imageUrl": "https://i.ibb.co/XrK9Qkv9/image.jpg",
       "imageHint": "laos river"
+    },
+    {
+      "id": "vision-image",
+      "description": "Scenic view of a river and mountains in Laos.",
+      "imageUrl": "https://i.ibb.co/bRQ4QCbB/jj.jpg",
+      "imageHint": "laos landscape"
     }
   ]
 }
