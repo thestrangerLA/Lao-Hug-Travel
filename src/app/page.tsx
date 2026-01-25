@@ -403,7 +403,7 @@ export default function Home() {
                 <div className="flex flex-col text-left">
                     <div className="mb-4 -mt-24 flex flex-col items-start">
                       <Image
-                        src="https://i.ibb.co/zhgg0FP/logo.png"
+                        src="https://i.ibb.co/zhgg0FPd/logo.png"
                         alt="Lao Hug Travel Logo"
                         width={100}
                         height={28}
@@ -570,7 +570,7 @@ export default function Home() {
       {/* Contact Us Section */}
       <section id="contact-us" className="py-20 px-4 bg-background text-foreground">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-headline text-4xl font-bold mb-12">{pageContent.contactTitle}</h2>
+          <h2 className="font-headline text-4xl font-bold mb-12 text-primary">{pageContent.contactTitle}</h2>
           <div className="grid grid-cols-4 gap-2">
             <a href="tel:+66622244315" className="flex flex-col items-center text-center gap-2 p-2 rounded-lg hover:bg-secondary transition-colors">
                 <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
