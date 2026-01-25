@@ -323,7 +323,7 @@ export default function Home() {
   const pageContent = pageContentData[lang] || pageContentData.en;
   const packageContent = packagesContentData[lang] || packagesContentData.en;
 
-  const featuredPackagesIds = ['2', '4', '3'];
+  const featuredPackagesIds = ['2', '4', '7'];
   const featuredPackages = allPackagesData
     .filter(pkg => featuredPackagesIds.includes(pkg.id))
     .map(pkg => ({
