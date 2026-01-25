@@ -603,13 +603,13 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-headline text-4xl font-bold mb-12 text-primary">{pageContent.contactTitle}</h2>
           <div className="grid grid-cols-4 gap-2">
-            <a href="tel:+66622244315" className="flex flex-col items-center text-center gap-2 p-2 rounded-lg hover:bg-secondary transition-colors">
+            <a href="tel:+8562096142645" className="flex flex-col items-center text-center gap-2 p-2 rounded-lg hover:bg-secondary transition-colors">
                 <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
                     <Phone className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                     <h3 className="font-headline text-lg font-semibold text-primary">{pageContent.contactPhoneTitle}</h3>
-                    <p className="text-primary text-xs break-all">+66 62 224 4315</p>
+                    <p className="text-primary text-xs break-all">+85620 96142645</p>
                 </div>
             </a>
 
