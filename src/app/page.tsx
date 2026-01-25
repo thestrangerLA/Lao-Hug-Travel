@@ -1,4 +1,3 @@
-
 'use client';
 
 import Link from 'next/link';
@@ -637,9 +636,9 @@ export default function Home() {
       </section>
 
       {/* Follow Us Section */}
-      <section id="follow-us" className="py-20 px-4 bg-primary text-primary-foreground">
+      <section id="follow-us" className="py-20 px-4 bg-background">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-headline text-4xl font-bold mb-12">
+          <h2 className="font-headline text-4xl font-bold mb-12 text-primary">
             {pageContent.followTitle}
           </h2>
           <div className="grid grid-cols-5 gap-4 place-items-center">
@@ -649,7 +648,7 @@ export default function Home() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors"
+                className="flex flex-col items-center gap-2 text-primary hover:text-accent transition-colors"
               >
                 {social.icon}
                 <span className="font-medium text-xs">{pageContent.followText}</span>
