@@ -307,7 +307,7 @@ const socialLinks = [
 
 export default function Home() {
   const { lang, setLang } = useLang();
-  const chefImage = PlaceHolderImages.find((p) => p.id === 'gmhi-chef');
+  const chefImage = PlaceHolderImages.find((p) => p.id === 'luang-prabang-tour');
   const lineQrImage = PlaceHolderImages.find((p) => p.id === 'line-qr-code');
   const [open, setOpen] = useState(false);
 
