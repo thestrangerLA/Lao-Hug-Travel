@@ -574,31 +574,31 @@ export default function Home() {
           <div className="grid grid-cols-4 gap-2">
             <a href="tel:+66622244315" className="flex flex-col items-center text-center gap-2 p-2 rounded-lg hover:bg-secondary transition-colors">
                 <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-accent" />
+                    <Phone className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                    <h3 className="font-headline text-lg font-semibold text-foreground">{pageContent.contactPhoneTitle}</h3>
-                    <p className="text-muted-foreground text-xs break-all">+66 62 224 4315</p>
+                    <h3 className="font-headline text-lg font-semibold text-primary">{pageContent.contactPhoneTitle}</h3>
+                    <p className="text-primary text-xs break-all">+66 62 224 4315</p>
                 </div>
             </a>
 
             <a href="https://wa.me/8562096142645" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-center gap-2 p-2 rounded-lg hover:bg-secondary transition-colors">
                 <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
-                    <MessageCircle className="w-6 h-6 text-accent" />
+                    <MessageCircle className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                    <h3 className="font-headline text-lg font-semibold text-foreground">{pageContent.contactWhatsAppTitle}</h3>
-                    <p className="text-muted-foreground text-xs break-all">+85620 96142645</p>
+                    <h3 className="font-headline text-lg font-semibold text-primary">{pageContent.contactWhatsAppTitle}</h3>
+                    <p className="text-primary text-xs break-all">+85620 96142645</p>
                 </div>
             </a>
 
             <a href="mailto:Laohugtravel@gmail.com" className="flex flex-col items-center text-center gap-2 p-2 rounded-lg hover:bg-secondary transition-colors">
                  <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-accent" />
+                    <Mail className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                    <h3 className="font-headline text-lg font-semibold text-foreground">{pageContent.contactEmailTitle}</h3>
-                    <p className="text-muted-foreground text-xs break-all">Laohugtravel@gmail.com</p>
+                    <h3 className="font-headline text-lg font-semibold text-primary">{pageContent.contactEmailTitle}</h3>
+                    <p className="text-primary text-xs break-all">Laohugtravel@gmail.com</p>
                 </div>
             </a>
 
@@ -606,11 +606,11 @@ export default function Home() {
               <DialogTrigger asChild>
                 <div className="flex flex-col items-center text-center gap-2 p-2 rounded-lg hover:bg-secondary transition-colors cursor-pointer">
                   <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
-                      <MessageSquare className="w-6 h-6 text-accent" />
+                      <MessageSquare className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                      <h3 className="font-headline text-lg font-semibold text-foreground">{pageContent.contactLineTitle}</h3>
-                      <p className="text-muted-foreground text-xs break-all">Laohugtravel</p>
+                      <h3 className="font-headline text-lg font-semibold text-primary">{pageContent.contactLineTitle}</h3>
+                      <p className="text-primary text-xs break-all">Laohugtravel</p>
                   </div>
                 </div>
               </DialogTrigger>
