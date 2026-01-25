@@ -569,49 +569,49 @@ export default function Home() {
       </section>
 
       {/* Contact Us Section */}
-      <section id="contact-us" className="py-20 px-4 bg-primary text-primary-foreground">
+      <section id="contact-us" className="py-20 px-4 bg-background text-foreground">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-headline text-4xl font-bold mb-12">{pageContent.contactTitle}</h2>
           <div className="grid grid-cols-4 gap-2">
-            <a href="tel:+66622244315" className="flex flex-col items-center text-center gap-2 p-2 rounded-lg hover:bg-primary-foreground/10 transition-colors">
-                <div className="w-12 h-12 rounded-full bg-primary-foreground/10 flex items-center justify-center">
+            <a href="tel:+66622244315" className="flex flex-col items-center text-center gap-2 p-2 rounded-lg hover:bg-secondary transition-colors">
+                <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
                     <Phone className="w-6 h-6 text-accent" />
                 </div>
                 <div>
-                    <h3 className="font-headline text-lg font-semibold text-primary-foreground">{pageContent.contactPhoneTitle}</h3>
-                    <p className="text-primary-foreground/80 text-xs break-all">+66 62 224 4315</p>
+                    <h3 className="font-headline text-lg font-semibold text-foreground">{pageContent.contactPhoneTitle}</h3>
+                    <p className="text-muted-foreground text-xs break-all">+66 62 224 4315</p>
                 </div>
             </a>
 
-            <a href="https://wa.me/8562096142645" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-center gap-2 p-2 rounded-lg hover:bg-primary-foreground/10 transition-colors">
-                <div className="w-12 h-12 rounded-full bg-primary-foreground/10 flex items-center justify-center">
+            <a href="https://wa.me/8562096142645" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-center gap-2 p-2 rounded-lg hover:bg-secondary transition-colors">
+                <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
                     <MessageCircle className="w-6 h-6 text-accent" />
                 </div>
                 <div>
-                    <h3 className="font-headline text-lg font-semibold text-primary-foreground">{pageContent.contactWhatsAppTitle}</h3>
-                    <p className="text-primary-foreground/80 text-xs break-all">+85620 96142645</p>
+                    <h3 className="font-headline text-lg font-semibold text-foreground">{pageContent.contactWhatsAppTitle}</h3>
+                    <p className="text-muted-foreground text-xs break-all">+85620 96142645</p>
                 </div>
             </a>
 
-            <a href="mailto:Laohugtravel@gmail.com" className="flex flex-col items-center text-center gap-2 p-2 rounded-lg hover:bg-primary-foreground/10 transition-colors">
-                 <div className="w-12 h-12 rounded-full bg-primary-foreground/10 flex items-center justify-center">
+            <a href="mailto:Laohugtravel@gmail.com" className="flex flex-col items-center text-center gap-2 p-2 rounded-lg hover:bg-secondary transition-colors">
+                 <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
                     <Mail className="w-6 h-6 text-accent" />
                 </div>
                 <div>
-                    <h3 className="font-headline text-lg font-semibold text-primary-foreground">{pageContent.contactEmailTitle}</h3>
-                    <p className="text-primary-foreground/80 text-xs break-all">Laohugtravel@gmail.com</p>
+                    <h3 className="font-headline text-lg font-semibold text-foreground">{pageContent.contactEmailTitle}</h3>
+                    <p className="text-muted-foreground text-xs break-all">Laohugtravel@gmail.com</p>
                 </div>
             </a>
 
             <Dialog>
               <DialogTrigger asChild>
-                <div className="flex flex-col items-center text-center gap-2 p-2 rounded-lg hover:bg-primary-foreground/10 transition-colors cursor-pointer">
-                  <div className="w-12 h-12 rounded-full bg-primary-foreground/10 flex items-center justify-center">
+                <div className="flex flex-col items-center text-center gap-2 p-2 rounded-lg hover:bg-secondary transition-colors cursor-pointer">
+                  <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
                       <MessageSquare className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                      <h3 className="font-headline text-lg font-semibold text-primary-foreground">{pageContent.contactLineTitle}</h3>
-                      <p className="text-primary-foreground/80 text-xs break-all">Laohugtravel</p>
+                      <h3 className="font-headline text-lg font-semibold text-foreground">{pageContent.contactLineTitle}</h3>
+                      <p className="text-muted-foreground text-xs break-all">Laohugtravel</p>
                   </div>
                 </div>
               </DialogTrigger>
