@@ -602,7 +602,7 @@ export default function Home() {
       <section id="contact-us" className="py-20 px-4 bg-background text-foreground">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-headline text-4xl font-bold mb-12 text-primary">{pageContent.contactTitle}</h2>
-          <div className="grid grid-cols-4 gap-2">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
             <a href="tel:+8562096142645" className="flex flex-col items-center text-center gap-2 p-2 rounded-lg hover:bg-secondary transition-colors">
                 <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
                     <Phone className="w-6 h-6 text-primary" />
@@ -613,6 +613,15 @@ export default function Home() {
                 </div>
             </a>
 
+            <a href="https://wa.me/66622244315" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-center gap-2 p-2 rounded-lg hover:bg-secondary transition-colors">
+                <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
+                    <MessageCircle className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                    <h3 className="font-headline text-lg font-semibold text-primary">{pageContent.contactWhatsAppTitle}</h3>
+                    <p className="text-primary text-xs break-all">+66 622244315</p>
+                </div>
+            </a>
             <a href="https://wa.me/8562096142645" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-center gap-2 p-2 rounded-lg hover:bg-secondary transition-colors">
                 <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
                     <MessageCircle className="w-6 h-6 text-primary" />
@@ -620,6 +629,15 @@ export default function Home() {
                 <div>
                     <h3 className="font-headline text-lg font-semibold text-primary">{pageContent.contactWhatsAppTitle}</h3>
                     <p className="text-primary text-xs break-all">+85620 96142645</p>
+                </div>
+            </a>
+            <a href="https://wa.me/8562028134181" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-center gap-2 p-2 rounded-lg hover:bg-secondary transition-colors">
+                <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
+                    <MessageCircle className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                    <h3 className="font-headline text-lg font-semibold text-primary">{pageContent.contactWhatsAppTitle}</h3>
+                    <p className="text-primary text-xs break-all">+85620 28134181</p>
                 </div>
             </a>
 
