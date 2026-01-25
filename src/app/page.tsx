@@ -207,7 +207,7 @@ const pageContentData = {
         navFollowUs: 'Follow Us',
         heroSubTitle: 'Lao Hug Travel',
         heroTitle: 'BEST CHOICE HALAL SERVICE',
-        heroPoweredBy: 'Powered by Salafi Laos Great Humble Group.',
+        heroPoweredBy: 'Powered by<br />Salafi Laos<br />Great Humble Group',
         aboutTitle: 'About Lao Hug Travel',
         aboutText: 'Lao Hug Travel is your trusted partner for unforgettable journeys in Laos. We specialize in crafting personalized travel experiences, with a special focus on Halal-friendly services. Our local expertise and commitment to quality ensure you a seamless and authentic adventure.',
         visionTitle: 'Our Vision',
@@ -237,7 +237,7 @@ const pageContentData = {
         navFollowUs: 'ติดตามเรา',
         heroSubTitle: 'ลาวฮัก ทราเวล',
         heroTitle: 'บริการฮาลาล ทางเลือกที่ดีที่สุด',
-        heroPoweredBy: 'สนับสนุนโดย Salafi Laos Great Humble Group.',
+        heroPoweredBy: 'สนับสนุนโดย<br />Salafi Laos<br />Great Humble Group',
         aboutTitle: 'เกี่ยวกับ ลาวฮัก ทราเวล',
         aboutText: 'ลาวฮัก ทราเวล คือคู่หูที่เชื่อถือได้ของคุณสำหรับการเดินทางที่น่าจดจำในลาว เราเชี่ยวชาญในการสร้างสรรค์ประสบการณ์การเดินทางส่วนบุคคล โดยให้ความสำคัญเป็นพิเศษกับบริการที่เป็นมิตรกับฮาลาล ความเชี่ยวชาญในท้องถิ่นและความมุ่งมั่นในคุณภาพของเรารับประกันว่าคุณจะได้รับการผจญภัยที่ราบรื่นและเป็นของแท้',
         visionTitle: 'วิสัยทัศน์ของเรา',
@@ -267,7 +267,7 @@ const pageContentData = {
         navFollowUs: 'تابعنا',
         heroSubTitle: 'لاو هاغ ترافيل',
         heroTitle: 'أفضل خيار للخدمات الحلال',
-        heroPoweredBy: 'بدعم من Salafi Laos Great Humble Group.',
+        heroPoweredBy: 'بدعم من<br />Salafi Laos<br />Great Humble Group',
         aboutTitle: 'حول لاو هاغ ترافيل',
         aboutText: 'لاو هاغ ترافيل هي شريكك الموثوق به لرحلات لا تنسى في لاوس. نحن متخصصون في صياغة تجارب سفر شخصية ، مع التركيز بشكل خاص على الخدمات الصديقة للحلال. تضمن خبرتنا المحلية والتزامنا بالجودة مغامرة سلسة وأصيلة.',
         visionTitle: 'رؤيتنا',
@@ -424,9 +424,7 @@ export default function Home() {
                     <h2 className="text-xl md:text-3xl font-semibold font-headline text-white">
                       {pageContent.heroTitle}
                     </h2>
-                    <p className="mt-2 text-lg font-light text-primary-foreground/90">
-                      {pageContent.heroPoweredBy}
-                    </p>
+                    <div className="mt-2 text-lg font-light text-primary-foreground/90" dangerouslySetInnerHTML={{ __html: pageContent.heroPoweredBy }} />
                 </div>
 
                 <div className="grid grid-cols-1 gap-4">
