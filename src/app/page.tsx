@@ -175,7 +175,7 @@ const strengthsData = {
         { number: '03', title: 'Authentic Local Experience', description: 'We are experts in Laos, with local knowledge and networks to let you experience the true culture.' },
         { number: '04', title: 'Customizable Tour Packages', description: 'Design your trip according to your needs, including duration, budget, and travel style.' },
         { number: '05', title: 'Safety and Comfort', description: 'We take care of all travel and booking arrangements, allowing you to travel with peace of mind.' },
-        { number: '06', title: 'Professional Customer Service', description: 'We answer questions and provide advice promptly, with care throughout your journey.' }
+        { number: '06', title: 'Professional CustomerService', description: 'We answer questions and provide advice promptly, with care throughout your journey.' }
     ],
     th: [
         { number: '01', title: 'ทีมงานมุสลิมที่เข้าใจความต้องการ', description: 'เราดูแลโดยทีมงานมุสลิมที่เข้าใจการท่องเที่ยวแบบฮาลาลอย่างแท้จริง' },
@@ -206,6 +206,7 @@ const pageContentData = {
         navFollowUs: 'Follow Us',
         heroSubTitle: 'Lao Hug Travel',
         heroTitle: 'BEST CHOICE HALAL SERVICE',
+        heroPoweredBy: 'Powered by',
         aboutTitle: 'About Lao Hug Travel',
         aboutText: 'Lao Hug Travel is your trusted partner for unforgettable journeys in Laos. We specialize in crafting personalized travel experiences, with a special focus on Halal-friendly services. Our local expertise and commitment to quality ensure you a seamless and authentic adventure.',
         visionTitle: 'Our Vision',
@@ -235,6 +236,7 @@ const pageContentData = {
         navFollowUs: 'ติดตามเรา',
         heroSubTitle: 'ลาวฮัก ทราเวล',
         heroTitle: 'บริการฮาลาล ทางเลือกที่ดีที่สุด',
+        heroPoweredBy: 'สนับสนุนโดย',
         aboutTitle: 'เกี่ยวกับ ลาวฮัก ทราเวล',
         aboutText: 'ลาวฮัก ทราเวล คือคู่หูที่เชื่อถือได้ของคุณสำหรับการเดินทางที่น่าจดจำในลาว เราเชี่ยวชาญในการสร้างสรรค์ประสบการณ์การเดินทางส่วนบุคคล โดยให้ความสำคัญเป็นพิเศษกับบริการที่เป็นมิตรกับฮาลาล ความเชี่ยวชาญในท้องถิ่นและความมุ่งมั่นในคุณภาพของเรารับประกันว่าคุณจะได้รับการผจญภัยที่ราบรื่นและเป็นของแท้',
         visionTitle: 'วิสัยทัศน์ของเรา',
@@ -264,6 +266,7 @@ const pageContentData = {
         navFollowUs: 'تابعنا',
         heroSubTitle: 'لاو هاغ ترافيل',
         heroTitle: 'أفضل خيار للخدمات الحلال',
+        heroPoweredBy: 'بدعم من',
         aboutTitle: 'حول لاو هاغ ترافيل',
         aboutText: 'لاو هاغ ترافيل هي شريكك الموثوق به لرحلات لا تنسى في لاوس. نحن متخصصون في صياغة تجارب سفر شخصية ، مع التركيز بشكل خاص على الخدمات الصديقة للحلال. تضمن خبرتنا المحلية والتزامنا بالجودة مغامرة سلسة وأصيلة.',
         visionTitle: 'رؤيتنا',
@@ -420,6 +423,9 @@ export default function Home() {
                     <h2 className="text-xl md:text-3xl font-semibold font-headline text-white">
                       {pageContent.heroTitle}
                     </h2>
+                    <p className="mt-2 text-lg font-light text-primary-foreground/90">
+                      {pageContent.heroPoweredBy}
+                    </p>
                 </div>
 
                 <div className="grid grid-cols-1 gap-4">
