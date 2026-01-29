@@ -1,6 +1,85 @@
 
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
+export const termsAndConditions = {
+  en: {
+    title: 'Details and Conditions',
+    conditions_tab: 'Conditions',
+    inclusions_tab: 'Included',
+    exclusions_tab: 'Not Included',
+    conditions: [
+      'The company reserves the right to change the program, prioritizing the customer\'s benefit.',
+      'The company is not responsible for denial of entry if you are outside the agreement.',
+      'This tour package price does not include tips for the guide and driver.'
+    ],
+    inclusions: [
+      'Accommodation as specified in the itinerary.',
+      'Transportation as per the itinerary (including high-speed train tickets where mentioned).',
+      'Meals as specified in the meal plan.',
+      'Entrance fees to attractions mentioned in the itinerary.',
+      'Local tour guide.'
+    ],
+    exclusions: [
+      'International and domestic airfare not mentioned in the program.',
+      'Visa fees (if applicable).',
+      'Personal expenses such as laundry, telephone calls, and mini-bar.',
+      'Tips for tour guide and driver.',
+      'Optional tours or activities not mentioned in the itinerary.'
+    ]
+  },
+  th: {
+    title: 'รายละเอียดและเงื่อนไข',
+    conditions_tab: 'เงื่อนไข',
+    inclusions_tab: 'รวม',
+    exclusions_tab: 'ไม่รวม',
+    conditions: [
+      'บริษัทขอสงวนสิทธิ์ในการเปลี่ยนแปลงโปรแกรม แต่จะคำนึงถึงผลประโยชน์ของลูกค้าเป็นหลัก',
+      'บริษัทจะไม่รับผิดชอบต่อการถูกปฏิเสธเข้าเมืองหากท่านอยู่นอกเหนือข้อตกลง',
+      'ราคาโปรแกรมทัวร์นี้ไม่รวมค่าทิปไกด์และคนขับรถ'
+    ],
+    inclusions: [
+      'ที่พักตามที่ระบุในโปรแกรม',
+      'การเดินทางตามโปรแกรม (รวมตั๋วรถไฟความเร็วสูงตามที่ระบุ)',
+      'อาหารตามที่ระบุในแผนอาหาร',
+      'ค่าเข้าชมสถานที่ตามที่ระบุในโปรแกรม',
+      'ไกด์ท้องถิ่น'
+    ],
+    exclusions: [
+      'ค่าตั๋วเครื่องบินระหว่างประเทศและภายในประเทศที่ไม่ได้ระบุในโปรแกรม',
+      'ค่าวีซ่า (ถ้ามี)',
+      'ค่าใช้จ่ายส่วนตัว เช่น ค่าซักรีด ค่าโทรศัพท์ และมินิบาร์',
+      'ค่าทิปสำหรับไกด์และคนขับรถ',
+      'ทัวร์หรือกิจกรรมเสริมที่ไม่ได้ระบุในโปรแกรม'
+    ]
+  },
+  ar: {
+    title: 'التفاصيل والشروط',
+    conditions_tab: 'الشروط',
+    inclusions_tab: 'مشمول',
+    exclusions_tab: 'غير مشمول',
+    conditions: [
+      'تحتفظ الشركة بالحق في تغيير البرنامج، مع إعطاء الأولوية لمصلحة العميل.',
+      'الشركة ليست مسؤولة عن رفض الدخول إذا كنت خارج الاتفاقية.',
+      'سعر باقة الجولة هذا لا يشمل الإكراميات للمرشد والسائق.'
+    ],
+    inclusions: [
+      'الإقامة كما هو محدد في خط سير الرحلة.',
+      'النقل حسب خط سير الرحلة (بما في ذلك تذاكر القطار فائق السرعة عند ذكرها).',
+      'الوجبات كما هو محدد في خطة الوجبات.',
+      'رسوم الدخول إلى مناطق الجذب المذكورة في خط سير الرحلة.',
+      'مرشد سياحي محلي.'
+    ],
+    exclusions: [
+      'تذاكر الطيران الدولية والداخلية غير المذكورة في البرنامج.',
+      'رسوم التأشيرة (إن وجدت).',
+      'المصاريف الشخصية مثل الغسيل والمكالمات الهاتفية والميني بار.',
+      'الإكراميات للمرشد السياحي والسائق.',
+      'الجولات أو الأنشطة الاختيارية غير المذكورة في خط سير الرحلة.'
+    ]
+  }
+};
+
+
 export const allPackagesData = [
   {
     id: '1',
@@ -9,6 +88,11 @@ export const allPackagesData = [
     priceUsd: '195',
     image: PlaceHolderImages.find((p) => p.id === 'vientiane-tour'),
     category: 'laos',
+    meals: [
+      { day: 1, breakfast: false, lunch: true, dinner: true },
+      { day: 2, breakfast: true, lunch: true, dinner: true },
+      { day: 3, breakfast: true, lunch: false, dinner: false },
+    ],
     translations: {
       en: { 
         title: 'Vientiane-VangVieng', 
@@ -133,6 +217,12 @@ export const allPackagesData = [
     priceUsd: '320',
     image: PlaceHolderImages.find((p) => p.id === 'luang-prabang-tour'),
     category: 'laos',
+    meals: [
+        { day: 1, breakfast: false, lunch: true, dinner: true },
+        { day: 2, breakfast: true, lunch: true, dinner: true },
+        { day: 3, breakfast: true, lunch: true, dinner: true },
+        { day: 4, breakfast: true, lunch: false, dinner: false },
+    ],
     translations: {
       en: { 
         title: 'Vientiane-Luang Prabang', 
@@ -284,6 +374,12 @@ export const allPackagesData = [
     priceUsd: '265',
     image: PlaceHolderImages.find((p) => p.id === 'vang-vieng-tour'),
     category: 'laos',
+    meals: [
+      { day: 1, breakfast: false, lunch: true, dinner: true },
+      { day: 2, breakfast: true, lunch: true, dinner: true },
+      { day: 3, breakfast: true, lunch: true, dinner: true },
+      { day: 4, breakfast: true, lunch: false, dinner: false },
+    ],
     translations: {
       en: { 
         title: 'Vientiane-MuangFueang-VangVieng', 
@@ -432,6 +528,13 @@ export const allPackagesData = [
     priceUsd: '360',
     image: PlaceHolderImages.find((p) => p.id === 'pakse-tour'),
     category: 'laos',
+    meals: [
+        { day: 1, breakfast: false, lunch: true, dinner: true },
+        { day: 2, breakfast: true, lunch: true, dinner: true },
+        { day: 3, breakfast: true, lunch: true, dinner: true },
+        { day: 4, breakfast: true, lunch: true, dinner: true },
+        { day: 5, breakfast: true, lunch: false, dinner: false },
+    ],
     translations: {
       en: {
         title: 'Vientiane-MuangFueang-VangVieng-Luang Prabang',
@@ -440,7 +543,7 @@ export const allPackagesData = [
         itinerary: [
           {
             day: 'Day 1',
-            title: 'Arrival in Vientiane & Transfer to Muang Fueang',
+            title: 'Arrival in Vientiane &amp; Transfer to Muang Fueang',
             activities: [
               'Arrive in Vientiane, meet our guide and travel to Muang Fueang.',
               'Check into your serene riverside accommodation.',
@@ -469,7 +572,7 @@ export const allPackagesData = [
           },
           {
             day: 'Day 4',
-            title: 'Luang Prabang City & Kuang Si Falls',
+            title: 'Luang Prabang City &amp; Kuang Si Falls',
             activities: [
               'Morning alms giving ceremony (optional).',
               'Visit Wat Xieng Thong, the city\'s most magnificent temple.',
@@ -607,6 +710,7 @@ export const allPackagesData = [
     priceUsd: '920',
     image: PlaceHolderImages.find((p) => p.id === '4000-islands-tour'),
     category: 'laos-china',
+    meals: [],
     translations: {
       en: {
         title:
@@ -638,6 +742,7 @@ export const allPackagesData = [
     priceUsd: '1,250',
     image: PlaceHolderImages.find((p) => p.id === 'plain-of-jars-tour'),
     category: 'china',
+    meals: [],
     translations: {
       en: { 
         title: 'Kunming-Dali-Lijiang-Shangrila (China)', 
@@ -666,6 +771,7 @@ export const allPackagesData = [
     priceUsd: '1,333',
     image: PlaceHolderImages.find((p) => p.id === 'northern-laos-tour'),
     category: 'china',
+    meals: [],
     translations: {
       en: { 
         title: 'Kunming-Chongqing (China)', 
@@ -694,6 +800,7 @@ export const allPackagesData = [
     priceUsd: '1,600',
     image: PlaceHolderImages.find((p) => p.id === 'southern-laos-tour'),
     category: 'china',
+    meals: [],
     translations: {
       en: { 
         title: 'Kunming-Beijing-Tianjin (China)', 
@@ -749,4 +856,5 @@ export const packagesContentData = {
         noChinaPackages: 'لا توجد باقات صينية متاحة في هذا الوقت.',
     }
 };
+
 

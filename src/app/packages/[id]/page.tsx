@@ -5,8 +5,8 @@ import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Calendar, Tag, Flag, CalendarDays, MapPin } from 'lucide-react';
-import { allPackagesData } from '@/lib/packages-data';
+import { ArrowLeft, Calendar, Tag, Flag, CalendarDays, MapPin, Utensils, XCircle, CheckCircle2, Info, UtensilsCrossed } from 'lucide-react';
+import { allPackagesData, termsAndConditions } from '@/lib/packages-data';
 import { useLang } from '@/context/LangContext';
 import Link from 'next/link';
 import { Separator } from '@/components/ui/separator';
@@ -17,6 +17,8 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 export default function PackageDetailPage() {
   const { id } = useParams();
@@ -35,6 +37,13 @@ export default function PackageDetailPage() {
         notFound: 'Package not found',
         category: 'Category',
         itineraryTitle: 'Daily Program (Premium)',
+        mealPlanTitle: 'Meal Plan',
+        mealDay: 'Day',
+        mealSchedule: 'Schedule',
+        mealBreakfast: 'Breakfast',
+        mealLunch: 'Lunch',
+        mealDinner: 'Dinner',
+        willBeAnnounced: 'Will be announced soon',
     },
     th: {
         tourCode: 'รหัสทัวร์',
@@ -46,6 +55,13 @@ export default function PackageDetailPage() {
         notFound: 'ไม่พบแพ็คเกจ',
         category: 'หมวดหมู่',
         itineraryTitle: 'โปรแกรมประจำวัน (Premium)',
+        mealPlanTitle: 'แผนอาหาร',
+        mealDay: 'วัน',
+        mealSchedule: 'กำหนดการ',
+        mealBreakfast: 'เช้า',
+        mealLunch: 'กลางวัน',
+        mealDinner: 'เย็น',
+        willBeAnnounced: 'จะแจ้งให้ทราบเร็วๆนี้',
     },
     ar: {
       tourCode: 'رمز الجولة',
@@ -57,10 +73,18 @@ export default function PackageDetailPage() {
       notFound: 'لم يتم العثور على الحزمة',
       category: 'فئة',
       itineraryTitle: 'البرنامج اليومي (พรีเมียม)',
+      mealPlanTitle: 'خطة الوجبات',
+      mealDay: 'يوم',
+      mealSchedule: 'جدول',
+      mealBreakfast: 'إفطار',
+      mealLunch: 'غداء',
+      mealDinner: 'عشاء',
+      willBeAnnounced: 'سيتم الإعلان عنها قريبًا',
     }
   };
 
   const content = contentData[lang] || contentData.en;
+  const terms = termsAndConditions[lang] || termsAndConditions.en;
 
   if (!pkg) {
     return (
@@ -130,7 +154,7 @@ export default function PackageDetailPage() {
                                     <Flag className="w-6 h-6 text-accent"/>
                                     <div>
                                         <p className="text-sm text-muted-foreground">{content.category}</p>
-                                        <p className="font-bold capitalize text-foreground">{pkg.category.replace('-', ' & ')}</p>
+                                        <p className="font-bold capitalize text-foreground">{pkg.category.replace('-', ' &amp; ')}</p>
                                     </div>
                                 </div>
                             </div>
@@ -183,6 +207,73 @@ export default function PackageDetailPage() {
                             </div>
                           </>
                         )}
+
+                        {pkg.meals && pkg.meals.length > 0 && (
+                            <>
+                                <Separator className="my-8" />
+                                <div className="space-y-6">
+                                    <h3 className="font-headline text-3xl text-primary flex items-center gap-3">
+                                        <Utensils className="w-7 h-7" />
+                                        {content.mealPlanTitle}
+                                    </h3>
+                                    <Card>
+                                        <Table>
+                                            <TableHeader>
+                                                <TableRow>
+                                                    <TableHead>{content.mealDay}</TableHead>
+                                                    <TableHead>{content.mealSchedule}</TableHead>
+                                                    <TableHead className="text-center">{content.mealBreakfast}</TableHead>
+                                                    <TableHead className="text-center">{content.mealLunch}</TableHead>
+                                                    <TableHead className="text-center">{content.mealDinner}</TableHead>
+                                                </TableRow>
+                                            </TableHeader>
+                                            <TableBody>
+                                                {pkg.meals.map((meal) => (
+                                                    <TableRow key={meal.day}>
+                                                        <TableCell className="font-medium">{meal.day}</TableCell>
+                                                        <TableCell>{content.willBeAnnounced}</TableCell>
+                                                        <TableCell className="text-center">{meal.breakfast ? <UtensilsCrossed className="mx-auto h-5 w-5 text-green-600" /> : <XCircle className="mx-auto h-5 w-5 text-red-500" />}</TableCell>
+                                                        <TableCell className="text-center">{meal.lunch ? <UtensilsCrossed className="mx-auto h-5 w-5 text-green-600" /> : <XCircle className="mx-auto h-5 w-5 text-red-500" />}</TableCell>
+                                                        <TableCell className="text-center">{meal.dinner ? <UtensilsCrossed className="mx-auto h-5 w-5 text-green-600" /> : <XCircle className="mx-auto h-5 w-5 text-red-500" />}</TableCell>
+                                                    </TableRow>
+                                                ))}
+                                            </TableBody>
+                                        </Table>
+                                    </Card>
+                                </div>
+                            </>
+                        )}
+                        
+                        <Separator className="my-8" />
+                        <div className="space-y-6">
+                            <h3 className="font-headline text-3xl text-primary flex items-center gap-3">
+                                <Info className="w-7 h-7" />
+                                {terms.title}
+                            </h3>
+                            <Tabs defaultValue="conditions" className="w-full">
+                                <TabsList className="grid w-full grid-cols-3">
+                                    <TabsTrigger value="conditions"><Info className="mr-2"/>{terms.conditions_tab}</TabsTrigger>
+                                    <TabsTrigger value="inclusions"><CheckCircle2 className="mr-2"/>{terms.inclusions_tab}</TabsTrigger>
+                                    <TabsTrigger value="exclusions"><XCircle className="mr-2"/>{terms.exclusions_tab}</TabsTrigger>
+                                </TabsList>
+                                <TabsContent value="conditions" className="bg-card p-6 rounded-b-md border border-t-0">
+                                    <ul className="space-y-3 text-muted-foreground list-disc list-inside">
+                                        {terms.conditions.map((item, index) => <li key={index}>{item}</li>)}
+                                    </ul>
+                                </TabsContent>
+                                <TabsContent value="inclusions" className="bg-card p-6 rounded-b-md border border-t-0">
+                                     <ul className="space-y-3 text-muted-foreground list-disc list-inside">
+                                        {terms.inclusions.map((item, index) => <li key={index}>{item}</li>)}
+                                    </ul>
+                                </TabsContent>
+                                <TabsContent value="exclusions" className="bg-card p-6 rounded-b-md border border-t-0">
+                                     <ul className="space-y-3 text-muted-foreground list-disc list-inside">
+                                        {terms.exclusions.map((item, index) => <li key={index}>{item}</li>)}
+                                    </ul>
+                                </TabsContent>
+                            </Tabs>
+                        </div>
+
                     </CardContent>
                 </Card>
             </div>
@@ -190,3 +281,4 @@ export default function PackageDetailPage() {
     </div>
   );
 }
+
