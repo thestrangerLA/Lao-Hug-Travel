@@ -1,14 +1,22 @@
+
 'use client';
 
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Calendar, Tag, Flag } from 'lucide-react';
+import { ArrowLeft, Calendar, Tag, Flag, CalendarDays, MapPin } from 'lucide-react';
 import { allPackagesData } from '@/lib/packages-data';
 import { useLang } from '@/context/LangContext';
 import Link from 'next/link';
 import { Separator } from '@/components/ui/separator';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+import { Badge } from '@/components/ui/badge';
 
 export default function PackageDetailPage() {
   const { id } = useParams();
@@ -26,6 +34,7 @@ export default function PackageDetailPage() {
         back: 'Back to all packages',
         notFound: 'Package not found',
         category: 'Category',
+        itineraryTitle: 'Daily Program (Premium)',
     },
     th: {
         tourCode: 'รหัสทัวร์',
@@ -36,6 +45,7 @@ export default function PackageDetailPage() {
         back: 'กลับไปหน้าแพ็คเกจทั้งหมด',
         notFound: 'ไม่พบแพ็คเกจ',
         category: 'หมวดหมู่',
+        itineraryTitle: 'โปรแกรมประจำวัน (Premium)',
     },
     ar: {
       tourCode: 'رمز الجولة',
@@ -46,6 +56,7 @@ export default function PackageDetailPage() {
       back: 'العودة إلى كافة الباقات',
       notFound: 'لم يتم العثور على الحزمة',
       category: 'فئة',
+      itineraryTitle: 'البرنامج اليومي (พรีเมียม)',
     }
   };
 
@@ -64,7 +75,7 @@ export default function PackageDetailPage() {
     );
   }
 
-  const { title, days, description } = pkg.translations[lang] || pkg.translations.en;
+  const { title, days, description, itinerary } = pkg.translations[lang] || pkg.translations.en;
   const price = lang === 'en' ? pkg.priceUsd : pkg.priceThb;
   const currencySymbol = lang === 'en' ? '$' : '฿';
 
@@ -138,6 +149,40 @@ export default function PackageDetailPage() {
                                 </Button>
                             </div>
                         </div>
+
+                        {itinerary && itinerary.length > 0 && (
+                          <>
+                            <Separator className="my-8" />
+                            <div className="space-y-6">
+                              <h3 className="font-headline text-3xl text-primary flex items-center gap-3">
+                                <CalendarDays className="w-7 h-7" />
+                                {content.itineraryTitle}
+                              </h3>
+                              <Accordion type="single" collapsible className="w-full space-y-2" defaultValue="day-0">
+                                {itinerary.map((item, index) => (
+                                  <AccordionItem key={index} value={`day-${index}`} className="border-b-0">
+                                    <AccordionTrigger className="bg-secondary hover:no-underline text-left p-4 rounded-lg">
+                                      <div className="flex items-center gap-4">
+                                        <Badge>{item.day}</Badge>
+                                        <p className="font-bold text-lg text-primary">{item.title}</p>
+                                      </div>
+                                    </AccordionTrigger>
+                                    <AccordionContent className="pt-4 pb-2 px-4">
+                                      <ul className="space-y-4">
+                                        {item.activities.map((activity, actIndex) => (
+                                          <li key={actIndex} className="flex items-start gap-3">
+                                            <MapPin className="w-5 h-5 text-accent mt-1 shrink-0" />
+                                            <p className="text-muted-foreground">{activity}</p>
+                                          </li>
+                                        ))}
+                                      </ul>
+                                    </AccordionContent>
+                                  </AccordionItem>
+                                ))}
+                              </Accordion>
+                            </div>
+                          </>
+                        )}
                     </CardContent>
                 </Card>
             </div>
