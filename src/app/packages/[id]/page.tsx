@@ -8,6 +8,7 @@ import { ArrowLeft, Calendar, Tag, Flag } from 'lucide-react';
 import { allPackagesData } from '@/lib/packages-data';
 import { useLang } from '@/context/LangContext';
 import Link from 'next/link';
+import { Separator } from '@/components/ui/separator';
 
 export default function PackageDetailPage() {
   const { id } = useParams();
@@ -63,7 +64,7 @@ export default function PackageDetailPage() {
     );
   }
 
-  const { title, days } = pkg.translations[lang] || pkg.translations.en;
+  const { title, days, description } = pkg.translations[lang] || pkg.translations.en;
   const price = lang === 'en' ? pkg.priceUsd : pkg.priceThb;
   const currencySymbol = lang === 'en' ? '$' : '฿';
 
@@ -91,43 +92,51 @@ export default function PackageDetailPage() {
                     <CardHeader>
                         <CardTitle className="font-headline text-4xl text-primary">{title}</CardTitle>
                     </CardHeader>
-                    <CardContent className="grid md:grid-cols-2 gap-6 p-6">
-                        <div className="space-y-4 text-lg">
-                             <div className="flex items-center gap-3">
-                                <Tag className="w-6 h-6 text-accent"/>
-                                <div>
-                                    <p className="text-sm text-muted-foreground">{content.tourCode}</p>
-                                    <p className="font-bold text-foreground">{pkg.tourCode}</p>
+                    <CardContent className="p-6">
+                        {description && (
+                            <>
+                                <p className="text-lg text-muted-foreground">{description}</p>
+                                <Separator className="my-6" />
+                            </>
+                        )}
+                        <div className="grid md:grid-cols-2 gap-6">
+                            <div className="space-y-4 text-lg">
+                                <div className="flex items-center gap-3">
+                                    <Tag className="w-6 h-6 text-accent"/>
+                                    <div>
+                                        <p className="text-sm text-muted-foreground">{content.tourCode}</p>
+                                        <p className="font-bold text-foreground">{pkg.tourCode}</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-center gap-3">
+                                    <Calendar className="w-6 h-6 text-accent"/>
+                                    <div>
+                                        <p className="text-sm text-muted-foreground">{content.days}</p>
+                                        <p className="font-bold text-foreground">{days}</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-center gap-3">
+                                    <Flag className="w-6 h-6 text-accent"/>
+                                    <div>
+                                        <p className="text-sm text-muted-foreground">{content.category}</p>
+                                        <p className="font-bold capitalize text-foreground">{pkg.category.replace('-', ' & ')}</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="flex items-center gap-3">
-                                <Calendar className="w-6 h-6 text-accent"/>
-                                <div>
-                                    <p className="text-sm text-muted-foreground">{content.days}</p>
-                                    <p className="font-bold text-foreground">{days}</p>
+                            <div className="flex flex-col items-center justify-center bg-primary/10 rounded-lg p-6">
+                                <p className="text-sm text-muted-foreground">{content.price}</p>
+                                <div className="flex items-baseline justify-center gap-2 my-2">
+                                    <p className="text-5xl font-bold text-primary">
+                                    {currencySymbol}{price}
+                                    </p>
+                                    <p className="text-base text-muted-foreground">
+                                    {content.perPerson}
+                                    </p>
                                 </div>
+                                <Button size="lg" className="mt-4 pulse-btn">
+                                    {content.bookNow}
+                                </Button>
                             </div>
-                             <div className="flex items-center gap-3">
-                                <Flag className="w-6 h-6 text-accent"/>
-                                <div>
-                                    <p className="text-sm text-muted-foreground">{content.category}</p>
-                                    <p className="font-bold capitalize text-foreground">{pkg.category.replace('-', ' & ')}</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="flex flex-col items-center justify-center bg-primary/10 rounded-lg p-6">
-                             <p className="text-sm text-muted-foreground">{content.price}</p>
-                             <div className="flex items-baseline justify-center gap-2 my-2">
-                                <p className="text-5xl font-bold text-primary">
-                                {currencySymbol}{price}
-                                </p>
-                                <p className="text-base text-muted-foreground">
-                                {content.perPerson}
-                                </p>
-                            </div>
-                            <Button size="lg" className="mt-4 pulse-btn">
-                                {content.bookNow}
-                            </Button>
                         </div>
                     </CardContent>
                 </Card>
