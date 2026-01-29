@@ -527,7 +527,7 @@ export default function Home() {
                 const price = lang === 'en' ? pkg.priceUsd : pkg.priceThb;
                 const currencySymbol = lang === 'en' ? '$' : '฿';
                 return (
-                  <div key={pkg.id} className="block group">
+                  <Link key={pkg.id} href={`/packages/${pkg.id}`} className="block group">
                     <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full bg-card text-card-foreground">
                       {pkg.image && (
                         <div className="relative h-48 w-full">
@@ -565,7 +565,7 @@ export default function Home() {
                         </div>
                       </CardContent>
                     </Card>
-                  </div>
+                  </Link>
                 )
               })}
             </div>

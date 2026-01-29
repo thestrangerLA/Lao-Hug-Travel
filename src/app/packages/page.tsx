@@ -1,6 +1,7 @@
 
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { useLang } from '@/context/LangContext';
@@ -37,7 +38,7 @@ export default function PackagesPage() {
                 const price = lang === 'en' ? pkg.priceUsd : pkg.priceThb;
                 const currencySymbol = lang === 'en' ? '$' : '฿';
                 return (
-                  <div key={pkg.id} className="block group">
+                  <Link key={pkg.id} href={`/packages/${pkg.id}`} className="block group">
                     <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
                       {pkg.image && (
                         <div className="relative h-48 w-full">
@@ -75,7 +76,7 @@ export default function PackagesPage() {
                         </div>
                       </CardContent>
                     </Card>
-                  </div>
+                  </Link>
                 )
               })
             ) : (
@@ -96,7 +97,7 @@ export default function PackagesPage() {
                 const price = lang === 'en' ? pkg.priceUsd : pkg.priceThb;
                 const currencySymbol = lang === 'en' ? '$' : '฿';
                 return (
-                  <div key={pkg.id} className="block group">
+                  <Link key={pkg.id} href={`/packages/${pkg.id}`} className="block group">
                     <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
                       {pkg.image && (
                         <div className="relative h-48 w-full">
@@ -134,7 +135,7 @@ export default function PackagesPage() {
                         </div>
                       </CardContent>
                     </Card>
-                  </div>
+                  </Link>
                 )
                 })
             ) : (
