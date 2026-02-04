@@ -83,7 +83,7 @@ export const termsAndConditions = {
 export const allPackagesData = [
   {
     id: '1',
-    tourCode: 'LHT01',
+    tourCode: 'LHT VTE-VV 3D2N',
     priceThb: '6,500',
     priceUsd: '195',
     image: PlaceHolderImages.find((p) => p.id === 'vientiane-tour'),
@@ -212,7 +212,7 @@ export const allPackagesData = [
   },
   {
     id: '2',
-    tourCode: 'LHT02',
+    tourCode: 'LHT VTE-LPB 4D3N',
     priceThb: '11,000',
     priceUsd: '320',
     image: PlaceHolderImages.find((p) => p.id === 'luang-prabang-tour'),
@@ -369,7 +369,7 @@ export const allPackagesData = [
   },
   {
     id: '3',
-    tourCode: 'LHT03',
+    tourCode: 'LHT VTE-MF-VV 4D3N',
     priceThb: '9,500',
     priceUsd: '265',
     image: PlaceHolderImages.find((p) => p.id === 'vang-vieng-tour'),
@@ -523,7 +523,7 @@ export const allPackagesData = [
   },
   {
     id: '4',
-    tourCode: 'LHT04',
+    tourCode: 'LHT VTE-MF-VV-LPB 5D4N',
     priceThb: '12,500',
     priceUsd: '360',
     image: PlaceHolderImages.find((p) => p.id === 'pakse-tour'),
@@ -705,7 +705,7 @@ export const allPackagesData = [
   },
   {
     id: '5',
-    tourCode: 'LHT05',
+    tourCode: 'LHT VTE-MF-VV-LPB-XSBN 7D6N',
     priceThb: '30,000',
     priceUsd: '920',
     image: PlaceHolderImages.find((p) => p.id === '4000-islands-tour'),
@@ -737,7 +737,7 @@ export const allPackagesData = [
   },
   {
     id: '6',
-    tourCode: 'LHT06',
+    tourCode: 'LHT KM-DL-LJ-SGL 7D6N',
     priceThb: '38,000',
     priceUsd: '1,250',
     image: PlaceHolderImages.find((p) => p.id === 'plain-of-jars-tour'),
