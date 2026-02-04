@@ -1,4 +1,3 @@
-
 'use client';
 
 import Link from 'next/link';
@@ -587,7 +586,7 @@ export default function Home() {
              <div className="space-y-6">
                 {strengths.map((strength, index) => (
                     <div key={strength.number} className={`flex items-start gap-4 p-4 rounded-xl bg-background/50 border-l-4 ${index === 0 ? 'border-primary' : index === 1 ? 'border-accent' : index === 2 ? 'border-blue-500' : index === 3 ? 'border-purple-500' : 'border-emerald-500'}`}>
-                        <span className="font-headline text-4xl font-bold text-foreground">{strength.number}</span>
+                        <span className="font-headline text-4xl font-bold text-black">{strength.number}</span>
                         <div>
                             <h3 className="font-headline font-semibold text-foreground mb-1 text-lg">{strength.title}</h3>
                             <p className="text-muted-foreground text-sm">{strength.description}</p>
