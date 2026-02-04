@@ -766,7 +766,7 @@ export const allPackagesData = [
   },
   {
     id: '7',
-    tourCode: 'LHT07',
+    tourCode: 'LHT KM-CQ',
     priceThb: '40,000',
     priceUsd: '1,333',
     image: PlaceHolderImages.find((p) => p.id === 'northern-laos-tour'),
@@ -795,7 +795,7 @@ export const allPackagesData = [
   },
   {
     id: '8',
-    tourCode: 'LHT08',
+    tourCode: 'KM-BJ-TJ',
     priceThb: '49,000',
     priceUsd: '1,600',
     image: PlaceHolderImages.find((p) => p.id === 'southern-laos-tour'),
@@ -943,6 +943,7 @@ export const packagesContentData = {
         noChinaPackages: 'لا توجد باقات صينية متاحة في هذا الوقت.',
     }
 };
+
 
 
 
