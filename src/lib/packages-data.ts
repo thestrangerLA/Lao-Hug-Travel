@@ -822,6 +822,93 @@ export const allPackagesData = [
       },
     },
   },
+  {
+    id: '9',
+    tourCode: 'LHT KM-DL-LJ',
+    priceThb: '35000',
+    priceUsd: '1150',
+    image: PlaceHolderImages.find((p) => p.id === 'plain-of-jars-tour'),
+    category: 'china',
+    meals: [],
+    translations: {
+      en: { 
+        title: 'Kunming-Dali-Lijiang', 
+        days: '5 Days 4 Nights', 
+        description: 'Discover the classic triangle of Yunnan, from the ancient city of Dali to the charming canals of Lijiang, all starting from the Spring City, Kunming.',
+        itinerary: []
+      },
+      th: { 
+        title: 'คุณหมิง-ต้าหลี-หลีเจียง', 
+        days: '5 วัน 4 คืน', 
+        description: 'ค้นพบสามเหลี่ยมคลาสสิกของยูนนาน จากเมืองโบราณต้าหลี่สู่คลองที่มีเสน่ห์ของลี่เจียง ทั้งหมดเริ่มต้นจากเมืองแห่งฤดูใบไม้ผลิ คุนหมิง',
+        itinerary: []
+      },
+      ar: { 
+        title: 'كونمينغ-دالي-ليجيانغ', 
+        days: '5 أيام 4 ليالي', 
+        description: 'اكتشف المثلث الكلاسيكي في يونان، من مدينة دالي القديمة إلى قنوات ليجيانغ الساحرة، وكلها تبدأ من مدينة الربيع، كونمينغ.',
+        itinerary: []
+      },
+    },
+  },
+  {
+    id: '10',
+    tourCode: 'LHT KM-CQ',
+    priceThb: '37000',
+    priceUsd: '1200',
+    image: PlaceHolderImages.find((p) => p.id === 'northern-laos-tour'),
+    category: 'china',
+    meals: [],
+    translations: {
+      en: { 
+        title: 'Kunming-Chongqing', 
+        days: '5 Days 4 Nights', 
+        description: 'Experience two of China\'s most dynamic cities. Start in the relaxed atmosphere of Kunming and dive into the vibrant, futuristic metropolis of Chongqing.',
+        itinerary: []
+      },
+      th: { 
+        title: 'คุณหมิง-ฉงชิ่ง', 
+        days: '5 วัน 4 คืน', 
+        description: 'สัมผัสประสบการณ์สองเมืองที่มีพลวัตที่สุดของจีน เริ่มต้นในบรรยากาศสบายๆ ของคุนหมิง และดำดิ่งสู่มหานครที่มีชีวิตชีวาและล้ำสมัยของฉงชิ่ง',
+        itinerary: []
+      },
+      ar: { 
+        title: 'كونمينغ-تشونغتشينغ', 
+        days: '5 أيام 4 ليالي', 
+        description: 'جرب اثنتين من أكثر مدن الصين ديناميكية. ابدأ في جو كونمينغ المريح وانغمس في مدينة تشونغتشينغ النابضة بالحياة والمستقبلية.',
+        itinerary: []
+      },
+    },
+  },
+  {
+    id: '11',
+    tourCode: 'LHT KM-BJ-TJ',
+    priceThb: '45000',
+    priceUsd: '1450',
+    image: PlaceHolderImages.find((p) => p.id === 'southern-laos-tour'),
+    category: 'china',
+    meals: [],
+    translations: {
+      en: { 
+        title: 'Kunming-Beijing-Tianjin', 
+        days: '5 Days 4 Nights', 
+        description: 'A whirlwind tour of China\'s imperial past and present, starting from Kunming. Explore the historic landmarks of Beijing and the colonial architecture of Tianjin.',
+        itinerary: []
+      },
+      th: { 
+        title: 'คุณหมิง-ปักกิ่ง-เทียนจิน', 
+        days: '5 วัน 4 คืน', 
+        description: 'ทัวร์ชมอดีตและปัจจุบันของจักรวรรดิจีนอย่างรวดเร็ว เริ่มต้นจากคุนหมิง สำรวจสถานที่สำคัญทางประวัติศาสตร์ของปักกิ่งและสถาปัตยกรรมโคโลเนียลของเทียนจิน',
+        itinerary: []
+      },
+      ar: { 
+        title: 'كونمينغ-بكين-تيانجين', 
+        days: '5 أيام 4 ليالي', 
+        description: 'جولة سريعة في ماضي الصين الإمبراطوري وحاضرها، بدءًا من كونمينغ. استكشف المعالم التاريخية في بكين والهندسة المعمارية الاستعمارية في تيانجين.',
+        itinerary: []
+      },
+    },
+  },
 ];
 
 export const packagesContentData = {
@@ -856,5 +943,6 @@ export const packagesContentData = {
         noChinaPackages: 'لا توجد باقات صينية متاحة في هذا الوقت.',
     }
 };
+
 
 
