@@ -83,7 +83,7 @@ export const termsAndConditions = {
 export const allPackagesData = [
   {
     id: '1',
-    tourCode: 'LHT VTE-VV 3D2N',
+    tourCode: 'LHT VTE-VV',
     priceThb: '6,500',
     priceUsd: '195',
     image: PlaceHolderImages.find((p) => p.id === 'vientiane-tour'),
@@ -212,7 +212,7 @@ export const allPackagesData = [
   },
   {
     id: '2',
-    tourCode: 'LHT VTE-LPB 4D3N',
+    tourCode: 'LHT VTE-LPB',
     priceThb: '11,000',
     priceUsd: '320',
     image: PlaceHolderImages.find((p) => p.id === 'luang-prabang-tour'),
@@ -369,7 +369,7 @@ export const allPackagesData = [
   },
   {
     id: '3',
-    tourCode: 'LHT VTE-MF-VV 4D3N',
+    tourCode: 'LHT VTE-MF-VV',
     priceThb: '9,500',
     priceUsd: '265',
     image: PlaceHolderImages.find((p) => p.id === 'vang-vieng-tour'),
@@ -523,7 +523,7 @@ export const allPackagesData = [
   },
   {
     id: '4',
-    tourCode: 'LHT VTE-MF-VV-LPB 5D4N',
+    tourCode: 'LHT VTE-MF-VV-LPB',
     priceThb: '12,500',
     priceUsd: '360',
     image: PlaceHolderImages.find((p) => p.id === 'pakse-tour'),
@@ -705,7 +705,7 @@ export const allPackagesData = [
   },
   {
     id: '5',
-    tourCode: 'LHT VTE-MF-VV-LPB-XSBN 7D6N',
+    tourCode: 'LHT VTE-MF-VV-LPB-XSBN',
     priceThb: '30,000',
     priceUsd: '920',
     image: PlaceHolderImages.find((p) => p.id === '4000-islands-tour'),
@@ -737,7 +737,7 @@ export const allPackagesData = [
   },
   {
     id: '6',
-    tourCode: 'LHT KM-DL-LJ-SGL 7D6N',
+    tourCode: 'LHT KM-DL-LJ-SGL',
     priceThb: '38,000',
     priceUsd: '1,250',
     image: PlaceHolderImages.find((p) => p.id === 'plain-of-jars-tour'),
