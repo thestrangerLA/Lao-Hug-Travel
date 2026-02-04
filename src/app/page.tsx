@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -534,7 +535,7 @@ export default function Home() {
                             src={pkg.image.imageUrl}
                             alt={pkg.image.description}
                             fill
-                            className="object-cover"
+                            className="object-contain"
                             data-ai-hint={pkg.image.imageHint}
                           />
                         </div>

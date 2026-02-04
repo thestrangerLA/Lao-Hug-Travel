@@ -46,7 +46,7 @@ export default function PackagesPage() {
                             src={pkg.image.imageUrl}
                             alt={pkg.image.description}
                             fill
-                            className="object-cover"
+                            className="object-contain"
                             data-ai-hint={pkg.image.imageHint}
                           />
                         </div>
@@ -105,7 +105,7 @@ export default function PackagesPage() {
                             src={pkg.image.imageUrl}
                             alt={pkg.image.description}
                             fill
-                            className="object-cover"
+                            className="object-contain"
                             data-ai-hint={pkg.image.imageHint}
                           />
                         </div>
