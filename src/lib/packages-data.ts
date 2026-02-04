@@ -215,7 +215,7 @@ export const allPackagesData = [
     tourCode: 'LHT VTE-LPB',
     priceThb: '11,000',
     priceUsd: '320',
-    image: PlaceHolderImages.find((p) => p.id === 'luang-prabang-tour'),
+    image: PlaceHolderImages.find((p) => p.id === 'vang-vieng-tour'),
     category: 'laos',
     meals: [
         { day: 1, breakfast: false, lunch: true, dinner: true },
@@ -372,7 +372,7 @@ export const allPackagesData = [
     tourCode: 'LHT VTE-MF-VV',
     priceThb: '9,500',
     priceUsd: '265',
-    image: PlaceHolderImages.find((p) => p.id === 'vang-vieng-tour'),
+    image: PlaceHolderImages.find((p) => p.id === 'luang-prabang-tour'),
     category: 'laos',
     meals: [
       { day: 1, breakfast: false, lunch: true, dinner: true },
@@ -943,6 +943,7 @@ export const packagesContentData = {
         noChinaPackages: 'لا توجد باقات صينية متاحة في هذا الوقت.',
     }
 };
+
 
 
 
