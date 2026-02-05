@@ -854,9 +854,9 @@ export const allPackagesData = [
   {
     id: '10',
     tourCode: 'LHT KM-CQ',
-    priceThb: '37000',
-    priceUsd: '1200',
-    image: PlaceHolderImages.find((p) => p.id === 'northern-laos-tour'),
+    priceThb: '33000',
+    priceUsd: '1070',
+    image: PlaceHolderImages.find((p) => p.id === 'kunming-chongqing-5d4n'),
     category: 'china',
     meals: [],
     translations: {
@@ -943,6 +943,7 @@ export const packagesContentData = {
         noChinaPackages: 'لا توجد باقات صينية متاحة في هذا الوقت.',
     }
 };
+
 
 
 

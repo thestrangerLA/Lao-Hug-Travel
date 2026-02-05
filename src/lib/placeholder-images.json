@@ -137,6 +137,12 @@
       "description": "A collage of tour highlights for the Kunming-Beijing-Tianjin 5-day tour.",
       "imageUrl": "https://i.ibb.co/Kxp2j77d/20.png",
       "imageHint": "china tour collage"
+    },
+    {
+      "id": "kunming-chongqing-5d4n",
+      "description": "A collage of tour highlights for the Kunming-Chongqing 5-day tour.",
+      "imageUrl": "https://i.ibb.co/gLkJq39r/16.png",
+      "imageHint": "china tour collage"
     }
   ]
 }
