@@ -825,9 +825,9 @@ export const allPackagesData = [
   {
     id: '9',
     tourCode: 'LHT KM-DL-LJ',
-    priceThb: '35000',
-    priceUsd: '1150',
-    image: PlaceHolderImages.find((p) => p.id === 'plain-of-jars-tour'),
+    priceThb: '30000',
+    priceUsd: '985',
+    image: PlaceHolderImages.find((p) => p.id === 'kunming-dali-lijiang-5d4n'),
     category: 'china',
     meals: [],
     translations: {
@@ -883,8 +883,8 @@ export const allPackagesData = [
   {
     id: '11',
     tourCode: 'LHT KM-BJ-TJ',
-    priceThb: '45000',
-    priceUsd: '1450',
+    priceThb: '37000',
+    priceUsd: '1190',
     image: PlaceHolderImages.find((p) => p.id === 'kunming-beijing-tianjin-5d4n'),
     category: 'china',
     meals: [],
@@ -943,6 +943,7 @@ export const packagesContentData = {
         noChinaPackages: 'لا توجد باقات صينية متاحة في هذا الوقت.',
     }
 };
+
 
 
 
