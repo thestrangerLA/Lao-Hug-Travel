@@ -89,7 +89,6 @@ export const allPackagesData = [
     images: {
       th: PlaceHolderImages.find((p) => p.id === 'vientiane-tour-th'),
       en: PlaceHolderImages.find((p) => p.id === 'vientiane-tour-en'),
-      ar: PlaceHolderImages.find((p) => p.id === 'vientiane-tour-en'),
     },
     category: 'laos',
     meals: [
@@ -222,7 +221,6 @@ export const allPackagesData = [
     images: {
       th: PlaceHolderImages.find((p) => p.id === 'vientiane-luang-prabang-tour-th'),
       en: PlaceHolderImages.find((p) => p.id === 'vientiane-luang-prabang-tour-en'),
-      ar: PlaceHolderImages.find((p) => p.id === 'vientiane-luang-prabang-tour-en'),
     },
     category: 'laos',
     meals: [
@@ -381,7 +379,7 @@ export const allPackagesData = [
     priceThb: '9,500',
     priceUsd: '265',
     images: {
-      default: PlaceHolderImages.find((p) => p.id === 'luang-prabang-tour'),
+      default: PlaceHolderImages.find((p) => p.id === 'vang-vieng-tour'),
     },
     category: 'laos',
     meals: [
@@ -537,7 +535,8 @@ export const allPackagesData = [
     priceThb: '12,500',
     priceUsd: '360',
     images: {
-      default: PlaceHolderImages.find((p) => p.id === 'pakse-tour'),
+      th: PlaceHolderImages.find((p) => p.id === 'laos-multi-dest-tour-th'),
+      en: PlaceHolderImages.find((p) => p.id === 'laos-multi-dest-tour-en'),
     },
     category: 'laos',
     meals: [
@@ -721,7 +720,7 @@ export const allPackagesData = [
     priceThb: '30,000',
     priceUsd: '920',
     images: {
-      default: PlaceHolderImages.find((p) => p.id === '4000-islands-tour'),
+      default: PlaceHolderImages.find((p) => p.id === 'laos-china-tour'),
     },
     category: 'laos-china',
     meals: [],
@@ -755,7 +754,7 @@ export const allPackagesData = [
     priceThb: '38,000',
     priceUsd: '1,250',
     images: {
-      default: PlaceHolderImages.find((p) => p.id === 'plain-of-jars-tour'),
+      default: PlaceHolderImages.find((p) => p.id === 'yunnan-tour'),
     },
     category: 'china',
     meals: [],
@@ -786,7 +785,7 @@ export const allPackagesData = [
     priceThb: '40,000',
     priceUsd: '1,333',
     images: {
-      default: PlaceHolderImages.find((p) => p.id === 'northern-laos-tour'),
+      default: PlaceHolderImages.find((p) => p.id === 'kunming-chongqing-tour'),
     },
     category: 'china',
     meals: [],
@@ -817,7 +816,7 @@ export const allPackagesData = [
     priceThb: '49,000',
     priceUsd: '1,600',
     images: {
-      default: PlaceHolderImages.find((p) => p.id === 'southern-laos-tour'),
+      default: PlaceHolderImages.find((p) => p.id === 'kunming-beijing-tianjin-tour'),
     },
     category: 'china',
     meals: [],

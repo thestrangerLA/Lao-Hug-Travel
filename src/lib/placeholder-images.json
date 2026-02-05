@@ -79,7 +79,7 @@
       "imageHint": "laos tour usd"
     },
     {
-      "id": "luang-prabang-tour",
+      "id": "vang-vieng-tour",
       "description": "A collage of tour highlights for the Vientiane-MuangFueang-VangVieng tour.",
       "imageUrl": "https://i.ibb.co/m54MP465/5.png",
       "imageHint": "laos collage"
@@ -97,31 +97,37 @@
       "imageHint": "laos tour usd"
     },
     {
-      "id": "pakse-tour",
+      "id": "laos-multi-dest-tour-th",
       "description": "A collage of tour highlights for a multi-destination Laos tour.",
       "imageUrl": "https://i.ibb.co/tpPY9w69/7.png",
       "imageHint": "laos collage"
     },
     {
-      "id": "4000-islands-tour",
+      "id": "laos-multi-dest-tour-en",
+      "description": "A collage of tour highlights for a multi-destination Laos tour with USD price.",
+      "imageUrl": "https://i.ibb.co/kVmLHfRM/8.png",
+      "imageHint": "laos tour usd"
+    },
+    {
+      "id": "laos-china-tour",
       "description": "A collage of tour highlights for the Laos-China cross-border tour.",
       "imageUrl": "https://i.ibb.co/JFFsbq2q/9.png",
       "imageHint": "laos china collage"
     },
     {
-      "id": "plain-of-jars-tour",
+      "id": "yunnan-tour",
       "description": "A collage of tour highlights for the Kunming-Dali-Lijiang-Shangrila tour.",
       "imageUrl": "https://i.ibb.co/LDZ7PwjW/11.png",
       "imageHint": "china tour collage"
     },
     {
-      "id": "northern-laos-tour",
+      "id": "kunming-chongqing-tour",
       "description": "A collage of tour highlights for the Kunming-Chongqing tour.",
       "imageUrl": "https://i.ibb.co/B20hQpx3/15.png",
       "imageHint": "china tour collage"
     },
     {
-      "id": "southern-laos-tour",
+      "id": "kunming-beijing-tianjin-tour",
       "description": "A collage of tour highlights for the Kunming-Beijing-Tianjin tour.",
       "imageUrl": "https://i.ibb.co/tM2gTKZ2/19.png",
       "imageHint": "china tour collage"
