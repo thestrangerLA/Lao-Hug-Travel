@@ -74,15 +74,15 @@
     },
     {
       "id": "luang-prabang-tour",
-      "description": "Karst mountains and river in Vang Vieng, Laos.",
-      "imageUrl": "https://i.ibb.co/gMbYmsnv/vv.jpg",
-      "imageHint": "vang vieng"
+      "description": "A collage of tour highlights for the Vientiane-MuangFueang-VangVieng tour.",
+      "imageUrl": "https://i.ibb.co/m54MP465/5.png",
+      "imageHint": "laos collage"
     },
     {
       "id": "vang-vieng-tour",
-      "description": "A collage of Luang Prabang tour highlights.",
-      "imageUrl": "https://i.ibb.co/m54MP465/5.png",
-      "imageHint": "laos collage"
+      "description": "Karst mountains and river in Vang Vieng, Laos.",
+      "imageUrl": "https://i.ibb.co/gMbYmsnv/vv.jpg",
+      "imageHint": "vang vieng"
     },
     {
       "id": "pakse-tour",
@@ -104,9 +104,9 @@
     },
     {
       "id": "northern-laos-tour",
-      "description": "A modern cityscape with impressive architecture, representing Chongqing, China.",
-      "imageUrl": "https://i.ibb.co/twKxy1Yz/Whats-App-Image-2026-01-25-at-14-01-14.jpg",
-      "imageHint": "chongqing china"
+      "description": "A collage of tour highlights for the Kunming-Chongqing tour.",
+      "imageUrl": "https://i.ibb.co/B20hQpx3/15.png",
+      "imageHint": "china tour collage"
     },
     {
       "id": "southern-laos-tour",
