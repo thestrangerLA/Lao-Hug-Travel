@@ -850,7 +850,8 @@ export const allPackagesData = [
     priceThb: '30000',
     priceUsd: '985',
     images: {
-      default: PlaceHolderImages.find((p) => p.id === 'kunming-dali-lijiang-5d4n'),
+      th: PlaceHolderImages.find((p) => p.id === 'kunming-dali-lijiang-5d4n-th'),
+      en: PlaceHolderImages.find((p) => p.id === 'kunming-dali-lijiang-5d4n-en'),
     },
     category: 'china',
     meals: [],

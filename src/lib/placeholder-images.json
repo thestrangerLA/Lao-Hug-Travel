@@ -175,10 +175,16 @@
       "imageHint": "china tour collage"
     },
     {
-      "id": "kunming-dali-lijiang-5d4n",
-      "description": "A collage of tour highlights for the Kunming-Dali-Lijiang 5-day tour.",
+      "id": "kunming-dali-lijiang-5d4n-th",
+      "description": "A collage of tour highlights for the Kunming-Dali-Lijiang 5-day tour in THB.",
       "imageUrl": "https://i.ibb.co/KcWXFft0/12.png",
-      "imageHint": "china tour collage"
+      "imageHint": "china tour collage thb"
+    },
+    {
+      "id": "kunming-dali-lijiang-5d4n-en",
+      "description": "A collage of tour highlights for the Kunming-Dali-Lijiang 5-day tour in USD.",
+      "imageUrl": "https://i.ibb.co/3m84wcQh/14.png",
+      "imageHint": "china tour collage usd"
     },
     {
       "id": "yunnan-tour-en",
