@@ -379,7 +379,8 @@ export const allPackagesData = [
     priceThb: '9,500',
     priceUsd: '265',
     images: {
-      default: PlaceHolderImages.find((p) => p.id === 'vang-vieng-tour'),
+      th: PlaceHolderImages.find((p) => p.id === 'vang-vieng-tour-th'),
+      en: PlaceHolderImages.find((p) => p.id === 'vang-vieng-tour-en'),
     },
     category: 'laos',
     meals: [
