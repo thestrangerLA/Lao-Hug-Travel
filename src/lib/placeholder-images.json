@@ -85,10 +85,16 @@
       "imageHint": "laos collage"
     },
     {
-      "id": "vang-vieng-tour",
-      "description": "A collage of tour highlights for the Vientiane-Luang Prabang tour.",
+      "id": "vientiane-luang-prabang-tour-th",
+      "description": "A collage of tour highlights for the Vientiane-Luang Prabang tour with THB price.",
       "imageUrl": "https://i.ibb.co/ns9Ffk0R/3-1.png",
-      "imageHint": "laos tour collage"
+      "imageHint": "laos tour thb"
+    },
+    {
+      "id": "vientiane-luang-prabang-tour-en",
+      "description": "A collage of tour highlights for the Vientiane-Luang Prabang tour with USD price.",
+      "imageUrl": "https://i.ibb.co/TqKG0MSj/3-2.png",
+      "imageHint": "laos tour usd"
     },
     {
       "id": "pakse-tour",

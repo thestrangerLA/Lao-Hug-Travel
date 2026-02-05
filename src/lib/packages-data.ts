@@ -220,7 +220,9 @@ export const allPackagesData = [
     priceThb: '11,000',
     priceUsd: '320',
     images: {
-      default: PlaceHolderImages.find((p) => p.id === 'vang-vieng-tour'),
+      th: PlaceHolderImages.find((p) => p.id === 'vientiane-luang-prabang-tour-th'),
+      en: PlaceHolderImages.find((p) => p.id === 'vientiane-luang-prabang-tour-en'),
+      ar: PlaceHolderImages.find((p) => p.id === 'vientiane-luang-prabang-tour-en'),
     },
     category: 'laos',
     meals: [
@@ -968,11 +970,4 @@ export const packagesContentData = {
     }
 };
 
-
-
-
-
-
-
-
-
+    
