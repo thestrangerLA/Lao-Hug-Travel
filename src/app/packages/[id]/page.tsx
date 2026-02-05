@@ -102,6 +102,7 @@ export default function PackageDetailPage() {
   const { title, days, description, itinerary } = pkg.translations[lang] || pkg.translations.en;
   const price = lang === 'en' ? pkg.priceUsd : pkg.priceThb;
   const currencySymbol = lang === 'en' ? '$' : '฿';
+  const image = pkg.images ? (pkg.images[lang] ?? (lang === 'ar' ? pkg.images.en : undefined) ?? pkg.images.th ?? pkg.images.default) : undefined;
 
   return (
     <div className="bg-secondary min-h-screen">
@@ -113,14 +114,14 @@ export default function PackageDetailPage() {
                   </Link>
                 </Button>
                 <Card className="overflow-hidden shadow-lg bg-card">
-                    {pkg.image && (
+                    {image && (
                         <div className="relative h-64 md:h-96 w-full">
                         <Image
-                            src={pkg.image.imageUrl}
-                            alt={pkg.image.description}
+                            src={image.imageUrl}
+                            alt={image.description}
                             fill
-                            className="object-cover"
-                            data-ai-hint={pkg.image.imageHint}
+                            className="object-contain"
+                            data-ai-hint={image.imageHint}
                         />
                         </div>
                     )}
@@ -281,4 +282,5 @@ export default function PackageDetailPage() {
     </div>
   );
 }
+
 

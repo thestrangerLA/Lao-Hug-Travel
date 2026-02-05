@@ -67,15 +67,21 @@
       "imageHint": "bright corridor"
     },
     {
-      "id": "vientiane-tour",
-      "description": "A collage of Vientiane and Vang Vieng tour highlights.",
+      "id": "vientiane-tour-th",
+      "description": "A collage of Vientiane and Vang Vieng tour highlights with THB price.",
       "imageUrl": "https://i.ibb.co/GK760d1/1.png",
-      "imageHint": "laos tour"
+      "imageHint": "laos tour thb"
+    },
+    {
+      "id": "vientiane-tour-en",
+      "description": "A collage of Vientiane and Vang Vieng tour highlights with USD price.",
+      "imageUrl": "https://i.ibb.co/205g2NbL/2.png",
+      "imageHint": "laos tour usd"
     },
     {
       "id": "luang-prabang-tour",
       "description": "A collage of tour highlights for the Vientiane-MuangFueang-VangVieng tour.",
-      "imageUrl": "https://i.ibb.co/gMbYmsnv/vv.jpg",
+      "imageUrl": "https://i.ibb.co/m54MP465/5.png",
       "imageHint": "laos collage"
     },
     {

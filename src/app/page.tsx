@@ -326,10 +326,14 @@ export default function Home() {
   const featuredPackagesIds = ['2', '4', '7'];
   const featuredPackages = allPackagesData
     .filter(pkg => featuredPackagesIds.includes(pkg.id))
-    .map(pkg => ({
-      ...pkg,
-      ...(pkg.translations[lang] || pkg.translations.en)
-    }));
+    .map(pkg => {
+      const image = pkg.images ? (pkg.images[lang] ?? (lang === 'ar' ? pkg.images.en : undefined) ?? pkg.images.th ?? pkg.images.default) : undefined;
+      return {
+        ...pkg,
+        ...(pkg.translations[lang] || pkg.translations.en),
+        displayImage: image,
+      }
+    });
   
   const navLinks = [
     { href: '#about', label: pageContent.navAbout },
@@ -529,14 +533,14 @@ export default function Home() {
                 return (
                   <Link key={pkg.id} href={`/packages/${pkg.id}`} className="block group">
                     <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full bg-card text-card-foreground">
-                      {pkg.image && (
+                      {pkg.displayImage && (
                         <div className="relative h-48 w-full">
                           <Image
-                            src={pkg.image.imageUrl}
-                            alt={pkg.image.description}
+                            src={pkg.displayImage.imageUrl}
+                            alt={pkg.displayImage.description}
                             fill
                             className="object-contain"
-                            data-ai-hint={pkg.image.imageHint}
+                            data-ai-hint={pkg.displayImage.imageHint}
                           />
                         </div>
                       )}

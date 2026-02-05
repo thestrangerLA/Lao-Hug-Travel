@@ -11,10 +11,14 @@ export default function PackagesPage() {
   const { lang } = useLang();
   const content = contentData[lang] || contentData.en;
   
-  const allPackages = allPackagesData.map(pkg => ({
-      ...pkg,
-      ...(pkg.translations[lang] || pkg.translations.en)
-  }));
+  const allPackages = allPackagesData.map(pkg => {
+      const image = pkg.images ? (pkg.images[lang] ?? (lang === 'ar' ? pkg.images.en : undefined) ?? pkg.images.th ?? pkg.images.default) : undefined;
+      return {
+        ...pkg,
+        ...(pkg.translations[lang] || pkg.translations.en),
+        displayImage: image,
+      }
+  });
   
   const laosPackages = allPackages.filter(pkg => pkg.category.includes('laos'));
   const chinaPackages = allPackages.filter(pkg => pkg.category === 'china');
@@ -40,14 +44,14 @@ export default function PackagesPage() {
                 return (
                   <Link key={pkg.id} href={`/packages/${pkg.id}`} className="block group">
                     <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
-                      {pkg.image && (
+                      {pkg.displayImage && (
                         <div className="relative h-48 w-full">
                           <Image
-                            src={pkg.image.imageUrl}
-                            alt={pkg.image.description}
+                            src={pkg.displayImage.imageUrl}
+                            alt={pkg.displayImage.description}
                             fill
                             className="object-contain"
-                            data-ai-hint={pkg.image.imageHint}
+                            data-ai-hint={pkg.displayImage.imageHint}
                           />
                         </div>
                       )}
@@ -99,14 +103,14 @@ export default function PackagesPage() {
                 return (
                   <Link key={pkg.id} href={`/packages/${pkg.id}`} className="block group">
                     <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
-                      {pkg.image && (
+                      {pkg.displayImage && (
                         <div className="relative h-48 w-full">
                           <Image
-                            src={pkg.image.imageUrl}
-                            alt={pkg.image.description}
+                            src={pkg.displayImage.imageUrl}
+                            alt={pkg.displayImage.description}
                             fill
                             className="object-contain"
-                            data-ai-hint={pkg.image.imageHint}
+                            data-ai-hint={pkg.displayImage.imageHint}
                           />
                         </div>
                       )}

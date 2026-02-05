@@ -86,7 +86,11 @@ export const allPackagesData = [
     tourCode: 'LHT VTE-VV',
     priceThb: '6,500',
     priceUsd: '195',
-    image: PlaceHolderImages.find((p) => p.id === 'vientiane-tour'),
+    images: {
+      th: PlaceHolderImages.find((p) => p.id === 'vientiane-tour-th'),
+      en: PlaceHolderImages.find((p) => p.id === 'vientiane-tour-en'),
+      ar: PlaceHolderImages.find((p) => p.id === 'vientiane-tour-en'),
+    },
     category: 'laos',
     meals: [
       { day: 1, breakfast: false, lunch: true, dinner: true },
@@ -215,7 +219,9 @@ export const allPackagesData = [
     tourCode: 'LHT VTE-LPB',
     priceThb: '11,000',
     priceUsd: '320',
-    image: PlaceHolderImages.find((p) => p.id === 'vang-vieng-tour'),
+    images: {
+      default: PlaceHolderImages.find((p) => p.id === 'vang-vieng-tour'),
+    },
     category: 'laos',
     meals: [
         { day: 1, breakfast: false, lunch: true, dinner: true },
@@ -372,7 +378,9 @@ export const allPackagesData = [
     tourCode: 'LHT VTE-MF-VV',
     priceThb: '9,500',
     priceUsd: '265',
-    image: PlaceHolderImages.find((p) => p.id === 'luang-prabang-tour'),
+    images: {
+      default: PlaceHolderImages.find((p) => p.id === 'luang-prabang-tour'),
+    },
     category: 'laos',
     meals: [
       { day: 1, breakfast: false, lunch: true, dinner: true },
@@ -526,7 +534,9 @@ export const allPackagesData = [
     tourCode: 'LHT VTE-MF-VV-LPB',
     priceThb: '12,500',
     priceUsd: '360',
-    image: PlaceHolderImages.find((p) => p.id === 'pakse-tour'),
+    images: {
+      default: PlaceHolderImages.find((p) => p.id === 'pakse-tour'),
+    },
     category: 'laos',
     meals: [
         { day: 1, breakfast: false, lunch: true, dinner: true },
@@ -708,7 +718,9 @@ export const allPackagesData = [
     tourCode: 'LHT VTE-MF-VV-LPB-XSBN',
     priceThb: '30,000',
     priceUsd: '920',
-    image: PlaceHolderImages.find((p) => p.id === '4000-islands-tour'),
+    images: {
+      default: PlaceHolderImages.find((p) => p.id === '4000-islands-tour'),
+    },
     category: 'laos-china',
     meals: [],
     translations: {
@@ -740,7 +752,9 @@ export const allPackagesData = [
     tourCode: 'LHT KM-DL-LJ-SGL',
     priceThb: '38,000',
     priceUsd: '1,250',
-    image: PlaceHolderImages.find((p) => p.id === 'plain-of-jars-tour'),
+    images: {
+      default: PlaceHolderImages.find((p) => p.id === 'plain-of-jars-tour'),
+    },
     category: 'china',
     meals: [],
     translations: {
@@ -769,7 +783,9 @@ export const allPackagesData = [
     tourCode: 'LHT KM-CQ',
     priceThb: '40,000',
     priceUsd: '1,333',
-    image: PlaceHolderImages.find((p) => p.id === 'northern-laos-tour'),
+    images: {
+      default: PlaceHolderImages.find((p) => p.id === 'northern-laos-tour'),
+    },
     category: 'china',
     meals: [],
     translations: {
@@ -798,7 +814,9 @@ export const allPackagesData = [
     tourCode: 'KM-BJ-TJ',
     priceThb: '49,000',
     priceUsd: '1,600',
-    image: PlaceHolderImages.find((p) => p.id === 'southern-laos-tour'),
+    images: {
+      default: PlaceHolderImages.find((p) => p.id === 'southern-laos-tour'),
+    },
     category: 'china',
     meals: [],
     translations: {
@@ -827,7 +845,9 @@ export const allPackagesData = [
     tourCode: 'LHT KM-DL-LJ',
     priceThb: '30000',
     priceUsd: '985',
-    image: PlaceHolderImages.find((p) => p.id === 'kunming-dali-lijiang-5d4n'),
+    images: {
+      default: PlaceHolderImages.find((p) => p.id === 'kunming-dali-lijiang-5d4n'),
+    },
     category: 'china',
     meals: [],
     translations: {
@@ -856,7 +876,9 @@ export const allPackagesData = [
     tourCode: 'LHT KM-CQ',
     priceThb: '33000',
     priceUsd: '1070',
-    image: PlaceHolderImages.find((p) => p.id === 'kunming-chongqing-5d4n'),
+    images: {
+      default: PlaceHolderImages.find((p) => p.id === 'kunming-chongqing-5d4n'),
+    },
     category: 'china',
     meals: [],
     translations: {
@@ -885,7 +907,9 @@ export const allPackagesData = [
     tourCode: 'LHT KM-BJ-TJ',
     priceThb: '37000',
     priceUsd: '1190',
-    image: PlaceHolderImages.find((p) => p.id === 'kunming-beijing-tianjin-5d4n'),
+    images: {
+      default: PlaceHolderImages.find((p) => p.id === 'kunming-beijing-tianjin-5d4n'),
+    },
     category: 'china',
     meals: [],
     translations: {
@@ -943,6 +967,7 @@ export const packagesContentData = {
         noChinaPackages: 'لا توجد باقات صينية متاحة في هذا الوقت.',
     }
 };
+
 
 
 
