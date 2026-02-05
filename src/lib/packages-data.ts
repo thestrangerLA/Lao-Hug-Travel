@@ -755,7 +755,8 @@ export const allPackagesData = [
     priceThb: '38,000',
     priceUsd: '1,250',
     images: {
-      default: PlaceHolderImages.find((p) => p.id === 'yunnan-tour'),
+      th: PlaceHolderImages.find((p) => p.id === 'yunnan-tour-th'),
+      en: PlaceHolderImages.find((p) => p.id === 'yunnan-tour-en'),
     },
     category: 'china',
     meals: [],

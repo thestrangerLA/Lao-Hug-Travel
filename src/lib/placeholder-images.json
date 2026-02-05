@@ -121,7 +121,7 @@
       "imageHint": "laos china collage"
     },
     {
-      "id": "yunnan-tour",
+      "id": "yunnan-tour-th",
       "description": "A collage of tour highlights for the Kunming-Dali-Lijiang-Shangrila tour.",
       "imageUrl": "https://i.ibb.co/LDZ7PwjW/11.png",
       "imageHint": "china tour collage"
@@ -173,6 +173,12 @@
       "description": "A collage of tour highlights for the Kunming-Dali-Lijiang 5-day tour.",
       "imageUrl": "https://i.ibb.co/KcWXFft0/12.png",
       "imageHint": "china tour collage"
+    },
+    {
+      "id": "yunnan-tour-en",
+      "description": "A collage of tour highlights for the Kunming-Dali-Lijiang-Shangrila tour with USD price.",
+      "imageUrl": "https://i.ibb.co/DHFPtWyQ/13.png",
+      "imageHint": "china tour usd"
     }
   ]
 }
