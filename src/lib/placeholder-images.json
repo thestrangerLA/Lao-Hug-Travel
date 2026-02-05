@@ -115,10 +115,16 @@
       "imageHint": "laos tour usd"
     },
     {
-      "id": "laos-china-tour",
-      "description": "A collage of tour highlights for the Laos-China cross-border tour.",
+      "id": "laos-china-tour-th",
+      "description": "A collage of tour highlights for the Laos-China cross-border tour in THB.",
       "imageUrl": "https://i.ibb.co/JFFsbq2q/9.png",
-      "imageHint": "laos china collage"
+      "imageHint": "laos china collage thb"
+    },
+    {
+      "id": "laos-china-tour-en",
+      "description": "A collage of tour highlights for the Laos-China cross-border tour in USD.",
+      "imageUrl": "https://i.ibb.co/5hS3HLVr/10.png",
+      "imageHint": "laos china collage usd"
     },
     {
       "id": "yunnan-tour-th",

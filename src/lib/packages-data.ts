@@ -721,7 +721,8 @@ export const allPackagesData = [
     priceThb: '30,000',
     priceUsd: '920',
     images: {
-      default: PlaceHolderImages.find((p) => p.id === 'laos-china-tour'),
+      th: PlaceHolderImages.find((p) => p.id === 'laos-china-tour-th'),
+      en: PlaceHolderImages.find((p) => p.id === 'laos-china-tour-en'),
     },
     category: 'laos-china',
     meals: [],
