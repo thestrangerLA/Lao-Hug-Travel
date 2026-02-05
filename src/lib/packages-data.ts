@@ -885,7 +885,7 @@ export const allPackagesData = [
     tourCode: 'LHT KM-BJ-TJ',
     priceThb: '45000',
     priceUsd: '1450',
-    image: PlaceHolderImages.find((p) => p.id === 'southern-laos-tour'),
+    image: PlaceHolderImages.find((p) => p.id === 'kunming-beijing-tianjin-5d4n'),
     category: 'china',
     meals: [],
     translations: {
@@ -943,6 +943,7 @@ export const packagesContentData = {
         noChinaPackages: 'لا توجد باقات صينية متاحة في هذا الوقت.',
     }
 };
+
 
 
 
