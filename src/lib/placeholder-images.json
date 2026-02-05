@@ -74,15 +74,15 @@
     },
     {
       "id": "luang-prabang-tour",
-      "description": "A collage of Luang Prabang tour highlights.",
+      "description": "Karst mountains and river in Vang Vieng, Laos.",
       "imageUrl": "https://i.ibb.co/gMbYmsnv/vv.jpg",
-      "imageHint": "laos collage"
+      "imageHint": "vang vieng"
     },
     {
       "id": "vang-vieng-tour",
-      "description": "Karst mountains and river in Vang Vieng, Laos.",
+      "description": "A collage of Luang Prabang tour highlights.",
       "imageUrl": "https://i.ibb.co/m54MP465/5.png",
-      "imageHint": "vang vieng"
+      "imageHint": "laos collage"
     },
     {
       "id": "pakse-tour",
@@ -98,9 +98,9 @@
     },
     {
       "id": "plain-of-jars-tour",
-      "description": "A stunning view of the Songzanlin Monastery in Shangrila, China.",
-      "imageUrl": "https://i.ibb.co/LXW9j6NP/Whats-App-Image-2026-01-25-at-09-41-55.jpg",
-      "imageHint": "shangrila monastery"
+      "description": "A collage of tour highlights for the Kunming-Dali-Lijiang-Shangrila tour.",
+      "imageUrl": "https://i.ibb.co/LDZ7PwjW/11.png",
+      "imageHint": "china tour collage"
     },
     {
       "id": "northern-laos-tour",
