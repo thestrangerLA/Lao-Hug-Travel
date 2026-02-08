@@ -788,7 +788,8 @@ export const allPackagesData = [
     priceThb: '40,000',
     priceUsd: '1,333',
     images: {
-      default: PlaceHolderImages.find((p) => p.id === 'kunming-chongqing-tour'),
+      th: PlaceHolderImages.find((p) => p.id === 'kunming-chongqing-tour-th'),
+      en: PlaceHolderImages.find((p) => p.id === 'kunming-chongqing-tour-en'),
     },
     category: 'china',
     meals: [],
@@ -975,6 +976,8 @@ export const packagesContentData = {
         noChinaPackages: 'لا توجد باقات صينية متاحة في هذا الوقت.',
     }
 };
+
+    
 
     
 
