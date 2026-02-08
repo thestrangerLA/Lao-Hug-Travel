@@ -534,7 +534,7 @@ export default function Home() {
                   <Link key={pkg.id} href={`/packages/${pkg.id}`} className="block group">
                     <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full bg-card text-card-foreground">
                       {pkg.displayImage && (
-                        <div className="relative h-48 w-full">
+                        <div className="relative w-full aspect-square">
                           <Image
                             src={pkg.displayImage.imageUrl}
                             alt={pkg.displayImage.description}

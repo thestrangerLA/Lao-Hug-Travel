@@ -58,7 +58,7 @@ export default function PackagesPage() {
                   <Link key={pkg.id} href={`/packages/${pkg.id}`} className="block group">
                     <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
                       {pkg.displayImage && (
-                        <div className="relative h-48 w-full">
+                        <div className="relative w-full aspect-square">
                           <Image
                             src={pkg.displayImage.imageUrl}
                             alt={pkg.displayImage.description}
@@ -117,7 +117,7 @@ export default function PackagesPage() {
                   <Link key={pkg.id} href={`/packages/${pkg.id}`} className="block group">
                     <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
                       {pkg.displayImage && (
-                        <div className="relative h-48 w-full">
+                        <div className="relative w-full aspect-square">
                           <Image
                             src={pkg.displayImage.imageUrl}
                             alt={pkg.displayImage.description}

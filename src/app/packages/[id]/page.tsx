@@ -115,7 +115,7 @@ export default function PackageDetailPage() {
                 </Button>
                 <Card className="overflow-hidden shadow-lg bg-card">
                     {image && (
-                        <div className="relative h-64 md:h-96 w-full">
+                        <div className="relative w-full aspect-square">
                         <Image
                             src={image.imageUrl}
                             alt={image.description}
@@ -282,5 +282,3 @@ export default function PackageDetailPage() {
     </div>
   );
 }
-
-
