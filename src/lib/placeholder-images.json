@@ -163,10 +163,16 @@
       "imageHint": "laos landscape"
     },
     {
-      "id": "kunming-beijing-tianjin-5d4n",
+      "id": "kunming-beijing-tianjin-5d4n-th",
       "description": "A collage of tour highlights for the Kunming-Beijing-Tianjin 5-day tour.",
       "imageUrl": "https://i.ibb.co/Kxp2j77d/20.png",
       "imageHint": "china tour collage"
+    },
+    {
+      "id": "kunming-beijing-tianjin-5d4n-en",
+      "description": "A collage of tour highlights for the Kunming-Beijing-Tianjin 5-day tour in USD.",
+      "imageUrl": "https://i.ibb.co/Cp6HxzC0/22.png",
+      "imageHint": "china tour collage usd"
     },
     {
       "id": "kunming-chongqing-5d4n",

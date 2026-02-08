@@ -911,9 +911,10 @@ export const allPackagesData = [
     id: '11',
     tourCode: 'LHT KM-BJ-TJ',
     priceThb: '37000',
-    priceUsd: '1190',
+    priceUsd: '1200',
     images: {
-      default: PlaceHolderImages.find((p) => p.id === 'kunming-beijing-tianjin-5d4n'),
+      th: PlaceHolderImages.find((p) => p.id === 'kunming-beijing-tianjin-5d4n-th'),
+      en: PlaceHolderImages.find((p) => p.id === 'kunming-beijing-tianjin-5d4n-en'),
     },
     category: 'china',
     meals: [],
@@ -972,5 +973,7 @@ export const packagesContentData = {
         noChinaPackages: 'لا توجد باقات صينية متاحة في هذا الوقت.',
     }
 };
+
+    
 
     
