@@ -1,4 +1,9 @@
+'use client';
+
 import Image from 'next/image';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { ArrowLeft } from 'lucide-react';
 import {
   Card,
   CardContent,
@@ -17,6 +22,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Search } from 'lucide-react';
+import { useLang } from '@/context/LangContext';
 
 const allServices = [
   {
@@ -58,8 +64,21 @@ const allServices = [
 ];
 
 export default function ServicesPage() {
+  const { lang } = useLang();
+  const backButtonContent = {
+    en: 'Back to Home',
+    th: 'กลับหน้าหลัก',
+    ar: 'العودة إلى الرئيسية'
+  };
+
   return (
     <div className="container py-12">
+      <Button asChild variant="ghost" className="mb-8">
+        <Link href="/">
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            {backButtonContent[lang] || backButtonContent.en}
+        </Link>
+      </Button>
       <div className="text-center mb-12">
         <h1 className="font-headline text-4xl md:text-5xl font-bold">Our Services</h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">

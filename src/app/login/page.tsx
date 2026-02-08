@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import {
@@ -9,52 +11,69 @@ import {
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { ArrowLeft } from 'lucide-react';
+import { useLang } from '@/context/LangContext';
 
 export default function LoginPage() {
+  const { lang } = useLang();
+  const backButtonContent = {
+    en: 'Back to Home',
+    th: 'กลับหน้าหลัก',
+    ar: 'العودة إلى الرئيسية'
+  };
+
   return (
-    <div className="flex items-center justify-center py-12 px-4">
-      <Card className="w-full max-w-sm">
-        <CardHeader>
-          <CardTitle className="text-2xl font-headline">Login</CardTitle>
-          <CardDescription>
-            Enter your email below to login to your account.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="grid gap-4">
-            <div className="grid gap-2">
-              <Label htmlFor="email">Email</Label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="m@example.com"
-                required
-              />
-            </div>
-            <div className="grid gap-2">
-              <div className="flex items-center">
-                <Label htmlFor="password">Password</Label>
-                <Link href="#" className="ml-auto inline-block text-sm underline">
-                  Forgot your password?
-                </Link>
+    <div className="container py-12">
+      <Button asChild variant="ghost" className="mb-4">
+          <Link href="/">
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              {backButtonContent[lang] || backButtonContent.en}
+          </Link>
+      </Button>
+      <div className="flex items-center justify-center px-4">
+        <Card className="w-full max-w-sm">
+          <CardHeader>
+            <CardTitle className="text-2xl font-headline">Login</CardTitle>
+            <CardDescription>
+              Enter your email below to login to your account.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="grid gap-4">
+              <div className="grid gap-2">
+                <Label htmlFor="email">Email</Label>
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="m@example.com"
+                  required
+                />
               </div>
-              <Input id="password" type="password" required />
+              <div className="grid gap-2">
+                <div className="flex items-center">
+                  <Label htmlFor="password">Password</Label>
+                  <Link href="#" className="ml-auto inline-block text-sm underline">
+                    Forgot your password?
+                  </Link>
+                </div>
+                <Input id="password" type="password" required />
+              </div>
+              <Button type="submit" className="w-full">
+                Login
+              </Button>
+              <Button variant="outline" className="w-full">
+                Login with Google
+              </Button>
             </div>
-            <Button type="submit" className="w-full">
-              Login
-            </Button>
-            <Button variant="outline" className="w-full">
-              Login with Google
-            </Button>
-          </div>
-          <div className="mt-4 text-center text-sm">
-            Don&apos;t have an account?{' '}
-            <Link href="/signup" className="underline">
-              Sign up
-            </Link>
-          </div>
-        </CardContent>
-      </Card>
+            <div className="mt-4 text-center text-sm">
+              Don&apos;t have an account?{' '}
+              <Link href="/signup" className="underline">
+                Sign up
+              </Link>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 }

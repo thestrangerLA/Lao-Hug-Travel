@@ -6,10 +6,17 @@ import { Card, CardContent } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { useLang } from '@/context/LangContext';
 import { allPackagesData, packagesContentData as contentData } from '@/lib/packages-data';
+import { Button } from '@/components/ui/button';
+import { ArrowLeft } from 'lucide-react';
 
 export default function PackagesPage() {
   const { lang } = useLang();
   const content = contentData[lang] || contentData.en;
+  const backButtonContent = {
+    en: 'Back to Home',
+    th: 'กลับหน้าหลัก',
+    ar: 'العودة إلى الرئيسية'
+  };
   
   const allPackages = allPackagesData.map(pkg => {
       const image = pkg.images ? (pkg.images[lang] ?? (lang === 'ar' ? pkg.images.en : undefined) ?? pkg.images.th ?? pkg.images.default) : undefined;
@@ -26,6 +33,12 @@ export default function PackagesPage() {
   return (
     <div className="bg-primary min-h-screen">
       <div className="container py-12">
+        <Button asChild variant="secondary" className="mb-4">
+          <Link href="/">
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            {backButtonContent[lang] || backButtonContent.en}
+          </Link>
+        </Button>
         <div className="text-center mb-12">
           <h1 className="font-headline text-4xl md:text-5xl font-bold text-primary-foreground">
             {content.pageTitle}

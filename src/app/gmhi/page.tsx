@@ -3,10 +3,19 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Phone, Globe, MapPin, Building, Utensils, Award } from 'lucide-react';
+import { Phone, Globe, MapPin, Building, Utensils, Award, ArrowLeft } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { useLang } from '@/context/LangContext';
+import Link from 'next/link';
 
 const GmhiPage = () => {
+  const { lang } = useLang();
+  const backButtonContent = {
+    en: 'Back to Home',
+    th: 'กลับหน้าหลัก',
+    ar: 'العودة إلى الرئيسية'
+  };
+
   const chefImage = PlaceHolderImages.find((p) => p.id === 'gmhi-chef');
   const hotelImage = PlaceHolderImages.find((p) => p.id === 'gmhi-hotel');
   const buildingImage = PlaceHolderImages.find((p) => p.id === 'gmhi-building');
@@ -14,9 +23,17 @@ const GmhiPage = () => {
 
   return (
     <div className="bg-background font-body">
+      <div className="container mx-auto px-4 pt-12">
+        <Button asChild variant="ghost" className="mb-4">
+            <Link href="/">
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                {backButtonContent[lang] || backButtonContent.en}
+            </Link>
+        </Button>
+      </div>
       <main>
         <div className="relative bg-primary text-primary-foreground">
-          <div className="container mx-auto px-4 py-20">
+          <div className="container mx-auto px-4 pb-20 pt-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div className="flex flex-col text-center md:text-left">
                 <div className="flex items-center gap-4 mb-4 justify-center md:justify-start">
