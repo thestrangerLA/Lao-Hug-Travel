@@ -819,7 +819,8 @@ export const allPackagesData = [
     priceThb: '49,000',
     priceUsd: '1,600',
     images: {
-      default: PlaceHolderImages.find((p) => p.id === 'kunming-beijing-tianjin-tour'),
+      th: PlaceHolderImages.find((p) => p.id === 'kunming-beijing-tianjin-tour-th'),
+      en: PlaceHolderImages.find((p) => p.id === 'kunming-beijing-tianjin-tour-en'),
     },
     category: 'china',
     meals: [],
@@ -848,7 +849,7 @@ export const allPackagesData = [
     id: '9',
     tourCode: 'LHT KM-DL-LJ',
     priceThb: '30000',
-    priceUsd: '985',
+    priceUsd: '999',
     images: {
       th: PlaceHolderImages.find((p) => p.id === 'kunming-dali-lijiang-5d4n-th'),
       en: PlaceHolderImages.find((p) => p.id === 'kunming-dali-lijiang-5d4n-en'),

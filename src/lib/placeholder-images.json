@@ -139,7 +139,7 @@
       "imageHint": "china tour collage"
     },
     {
-      "id": "kunming-beijing-tianjin-tour",
+      "id": "kunming-beijing-tianjin-tour-th",
       "description": "A collage of tour highlights for the Kunming-Beijing-Tianjin tour.",
       "imageUrl": "https://i.ibb.co/tM2gTKZ2/19.png",
       "imageHint": "china tour collage"
@@ -203,6 +203,12 @@
       "description": "A collage of tour highlights for the Kunming-Dali-Lijiang-Shangrila tour with USD price.",
       "imageUrl": "https://i.ibb.co/DHFPtWyQ/13.png",
       "imageHint": "china tour usd"
+    },
+    {
+      "id": "kunming-beijing-tianjin-tour-en",
+      "description": "A collage of tour highlights for the Kunming-Beijing-Tianjin tour.",
+      "imageUrl": "https://i.ibb.co/zyxw24x/21.png",
+      "imageHint": "china tour collage"
     }
   ]
 }
