@@ -175,10 +175,16 @@
       "imageHint": "china tour collage usd"
     },
     {
-      "id": "kunming-chongqing-5d4n",
-      "description": "A collage of tour highlights for the Kunming-Chongqing 5-day tour.",
+      "id": "kunming-chongqing-5d4n-th",
+      "description": "A collage of tour highlights for the Kunming-Chongqing 5-day tour in THB.",
       "imageUrl": "https://i.ibb.co/gLkJq39r/16.png",
-      "imageHint": "china tour collage"
+      "imageHint": "china tour collage thb"
+    },
+    {
+      "id": "kunming-chongqing-5d4n-en",
+      "description": "A collage of tour highlights for the Kunming-Chongqing 5-day tour in USD.",
+      "imageUrl": "https://i.ibb.co/GQB9bftF/18.png",
+      "imageHint": "china tour collage usd"
     },
     {
       "id": "kunming-dali-lijiang-5d4n-th",

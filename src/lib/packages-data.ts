@@ -880,9 +880,10 @@ export const allPackagesData = [
     id: '10',
     tourCode: 'LHT KM-CQ',
     priceThb: '33000',
-    priceUsd: '1070',
+    priceUsd: '1100',
     images: {
-      default: PlaceHolderImages.find((p) => p.id === 'kunming-chongqing-5d4n'),
+      th: PlaceHolderImages.find((p) => p.id === 'kunming-chongqing-5d4n-th'),
+      en: PlaceHolderImages.find((p) => p.id === 'kunming-chongqing-5d4n-en'),
     },
     category: 'china',
     meals: [],
