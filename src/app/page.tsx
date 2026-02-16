@@ -427,9 +427,9 @@ export default function Home() {
         <div className="fixed top-4 right-4 z-50 flex items-center gap-2">
           <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="icon" className="bg-background/80 backdrop-blur-sm rounded-full shadow-lg">
-                      <Globe className="h-6 w-6" />
-                      <span className="sr-only">Change Language</span>
+                  <Button variant="ghost" className="bg-background/80 backdrop-blur-sm rounded-full shadow-lg flex items-center gap-1.5 px-3 h-10">
+                      <Globe className="h-5 w-5" />
+                      <span className="uppercase font-semibold text-sm">{lang}</span>
                   </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">

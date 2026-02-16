@@ -76,8 +76,9 @@ export function Header() {
                     <div className="hidden md:block">
                         <DropdownMenu>
                             <DropdownMenuTrigger asChild>
-                                <Button variant="ghost" size="icon">
+                                <Button variant="ghost" className="flex items-center gap-1 text-sm">
                                     <Globe className="h-5 w-5" />
+                                    <span className="uppercase font-medium">{lang}</span>
                                 </Button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent align="end">
