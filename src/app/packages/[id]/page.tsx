@@ -155,7 +155,7 @@ export default function PackageDetailPage() {
                                     <Flag className="w-6 h-6 text-accent"/>
                                     <div>
                                         <p className="text-sm text-muted-foreground">{content.category}</p>
-                                        <p className="font-bold capitalize text-foreground">{pkg.category.replace('-', ' &amp; ')}</p>
+                                        <p className="font-bold capitalize text-foreground">{pkg.category.replace('-', ' & ')}</p>
                                     </div>
                                 </div>
                             </div>
@@ -282,3 +282,5 @@ export default function PackageDetailPage() {
     </div>
   );
 }
+
+    
