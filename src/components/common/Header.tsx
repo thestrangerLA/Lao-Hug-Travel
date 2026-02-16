@@ -4,7 +4,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -77,7 +77,7 @@ export function Header() {
                         <DropdownMenu>
                             <DropdownMenuTrigger asChild>
                                 <Button variant="ghost" size="icon">
-                                    <span className='text-sm'>{lang.toUpperCase()}</span>
+                                    <Globe className="h-5 w-5" />
                                 </Button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent align="end">
@@ -89,6 +89,9 @@ export function Header() {
                                 </DropdownMenuItem>
                                 <DropdownMenuItem onClick={() => setLang('ar')}>
                                     العربية
+                                </DropdownMenuItem>
+                                <DropdownMenuItem onClick={() => setLang('cn')}>
+                                    中文
                                 </DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu>
@@ -139,13 +142,16 @@ export function Header() {
                                 <div className="border-t pt-6">
                                     <h3 className="text-sm font-medium text-muted-foreground mb-2 px-4">Language</h3>
                                     <Button variant={lang === 'en' ? 'secondary' : 'ghost'} className="w-full justify-start" onClick={() => setLang('en')}>
-                                        English (EN)
+                                        English
                                     </Button>
                                     <Button variant={lang === 'th' ? 'secondary' : 'ghost'} className="w-full justify-start" onClick={() => setLang('th')}>
-                                        ไทย (TH)
+                                        ไทย
                                     </Button>
                                     <Button variant={lang === 'ar' ? 'secondary' : 'ghost'} className="w-full justify-start" onClick={() => setLang('ar')}>
-                                        العربية (AR)
+                                        العربية
+                                    </Button>
+                                    <Button variant={lang === 'cn' ? 'secondary' : 'ghost'} className="w-full justify-start" onClick={() => setLang('cn')}>
+                                        中文
                                     </Button>
                                 </div>
                             </div>

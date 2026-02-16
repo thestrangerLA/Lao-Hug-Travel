@@ -80,6 +80,24 @@ export default function PackageDetailPage() {
       mealLunch: 'غداء',
       mealDinner: 'عشاء',
       willBeAnnounced: 'سيتم الإعلان عنها قريبًا',
+    },
+    cn: {
+        tourCode: '旅游代码',
+        days: '持续时间',
+        price: '价格',
+        perPerson: '/人',
+        bookNow: '现在预订',
+        back: '返回所有套餐',
+        notFound: '未找到套餐',
+        category: '类别',
+        itineraryTitle: '每日计划 (高级)',
+        mealPlanTitle: '膳食计划',
+        mealDay: '天',
+        mealSchedule: '时间表',
+        mealBreakfast: '早餐',
+        mealLunch: '午餐',
+        mealDinner: '晚餐',
+        willBeAnnounced: '稍后通知',
     }
   };
 
@@ -102,7 +120,7 @@ export default function PackageDetailPage() {
   const { title, days, description, itinerary } = pkg.translations[lang] || pkg.translations.en;
   const price = lang === 'en' ? pkg.priceUsd : pkg.priceThb;
   const currencySymbol = lang === 'en' ? '$' : '฿';
-  const image = pkg.images ? (pkg.images[lang] ?? (lang === 'ar' ? pkg.images.en : undefined) ?? pkg.images.th ?? pkg.images.default) : undefined;
+  const image = pkg.images ? (pkg.images[lang] ?? (['ar', 'cn'].includes(lang) ? pkg.images.en : undefined) ?? pkg.images.th ?? pkg.images.default) : undefined;
 
   return (
     <div className="bg-secondary min-h-screen">

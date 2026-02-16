@@ -166,6 +166,44 @@ const servicesData = {
         description: 'استمتع بوجبات حلال لذيذة.',
         color: 'from-green-500 to-green-600 shadow-green-600/20',
       },
+  ],
+  cn: [
+    {
+      icon: <BedDouble className="w-7 h-7 text-white" />,
+      title: '预订住宿',
+      description: '寻找完美的住宿地点。',
+      color: 'from-teal-500 to-teal-600 shadow-teal-500/20',
+    },
+    {
+      icon: <Car className="w-7 h-7 text-white" />,
+      title: '导游车辆',
+      description: '乘坐私人车辆探索。',
+      color: 'from-amber-500 to-orange-500 shadow-amber-500/20',
+    },
+    {
+      icon: <Plane className="w-7 h-7 text-white" />,
+      title: '预订机票',
+      description: '获取最优惠的航班信息。',
+      color: 'from-blue-500 to-blue-600 shadow-blue-500/20',
+    },
+    {
+      icon: <Train className="w-7 h-7 text-white" />,
+      title: '预订火车票',
+      description: '轻松搭乘铁路旅行。',
+      color: 'from-purple-500 to-purple-600 shadow-purple-500/20',
+    },
+    {
+      icon: <Activity className="w-7 h-7 text-white" />,
+      title: '活动服务',
+      description: '预订精彩的旅游和活动。',
+      color: 'from-pink-500 to-pink-600 shadow-pink-500/20',
+    },
+    {
+      icon: <UtensilsCrossed className="w-7 h-7 text-white" />,
+      title: '清真食品服务',
+      description: '享用美味的清真餐点。',
+      color: 'from-green-500 to-green-600 shadow-green-600/20',
+    },
   ]
 };
 
@@ -193,6 +231,14 @@ const strengthsData = {
         { number: '04', title: 'باقات سياحية قابلة للتخصيص', description: 'صمم رحلتك وفقًا لاحتياجاتك، بما في ذلك المدة والميزانية وأسلوب السفر.' },
         { number: '05', title: 'السلامة والراحة', description: 'نهتم بجميع ترتيبات السفر والحجز، مما يتيح لك السفر براحة بال.' },
         { number: '06', title: 'خدمة عملاء احترافية', description: 'نجيب على الأسئلة ونقدم المشورة بسرعة، مع الرعاية طوال رحلتك.' }
+    ],
+    cn: [
+        { number: '01', title: '了解您需求的穆斯林团队', description: '我们由一个真正了解清真旅游的穆斯林团队管理。' },
+        { number: '02', title: '全面的清真服务', description: '我们组织的旅行包括清真食品、清真住宿和适合穆斯林的活动。' },
+        { number: '03', title: '地道的本地体验', description: '我们是老挝的专家，拥有本地知识和网络，让您体验真正的文化。' },
+        { number: '04', title: '可定制的旅游套餐', description: '根据您的需求设计您的旅行，包括时间、预算和旅行风格。' },
+        { number: '05', title: '安全与舒适', description: '我们负责所有旅行和预订安排，让您安心旅行。' },
+        { number: '06', title: '专业的客户服务', description: '我们及时回答问题并提供建议，在您的整个旅程中提供关怀。' }
     ],
 };
 
@@ -287,6 +333,36 @@ const pageContentData = {
         followText: 'لاو هاغ ترافيل',
         scanLine: 'امسح ضوئيًا لإضافتنا على Line',
     },
+    cn: {
+        navAbout: '关于我们',
+        navVision: '我们的愿景',
+        navTourPackages: '旅游套餐',
+        navOurServices: '我们的服务',
+        navWhyChooseUs: '为何选择我们',
+        navContactUs: '联系我们',
+        navFollowUs: '关注我们',
+        heroSubTitle: '老挝拥抱旅行',
+        heroTitle: '清真服务的最佳选择',
+        heroPoweredBy: '由<br />Salafi Laos<br />Great Humble Group提供支持',
+        aboutTitle: '关于老挝拥抱旅行',
+        aboutText: '老挝拥抱旅行是您在老挝难忘旅程的信赖伙伴。我们专注于打造个性化的旅行体验，特别注重清真友好服务。我们的本地专业知识和对质量的承诺确保您享受无缝、地道的冒险。',
+        visionTitle: '我们的愿景',
+        visionText: '"探索老挝不仅仅是看美丽的风景；它是创造一生难忘的回忆，与当地人建立联系，并以清真方式沉浸在丰富的文化体验中。"',
+        servicesTitle: '我们的服务',
+        halalTitle: '我们的清真旅游套餐',
+        halalText: '安心旅行。我们的清真旅游套餐旨在满足您的需求，包括经过清真认证的餐点、祈祷设施和穆斯林友好的住宿。',
+        seeAllPackages: '查看所有套餐',
+        whyChooseUsTitle: '为何选择我们',
+        contactTitle: '联系我们',
+        contactText: '有任何问题吗？我们很乐意听取您的意见。',
+        contactPhoneTitle: '电话',
+        contactWhatsAppTitle: 'WhatsApp',
+        contactEmailTitle: '电子邮件',
+        contactLineTitle: 'Line',
+        followTitle: '关注我们',
+        followText: '老挝拥抱旅行',
+        scanLine: '扫描以在Line上添加我们',
+    },
 };
 
 
@@ -327,7 +403,7 @@ export default function Home() {
   const featuredPackages = allPackagesData
     .filter(pkg => featuredPackagesIds.includes(pkg.id))
     .map(pkg => {
-      const image = pkg.images ? (pkg.images[lang] ?? (lang === 'ar' ? pkg.images.en : undefined) ?? pkg.images.th ?? pkg.images.default) : undefined;
+      const image = pkg.images ? (pkg.images[lang] ?? (['ar', 'cn'].includes(lang) ? pkg.images.en : undefined) ?? pkg.images.th ?? pkg.images.default) : undefined;
       return {
         ...pkg,
         ...(pkg.translations[lang] || pkg.translations.en),
@@ -366,6 +442,9 @@ export default function Home() {
                   <DropdownMenuItem onClick={() => setLang('ar')}>
                       العربية
                   </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => setLang('cn')}>
+                      中文
+                  </DropdownMenuItem>
               </DropdownMenuContent>
           </DropdownMenu>
 
@@ -401,6 +480,9 @@ export default function Home() {
                     </Button>
                     <Button variant={lang === 'ar' ? 'secondary' : 'ghost'} className="w-full justify-start" onClick={() => { setLang('ar'); setOpen(false); }}>
                         العربية
+                    </Button>
+                    <Button variant={lang === 'cn' ? 'secondary' : 'ghost'} className="w-full justify-start" onClick={() => { setLang('cn'); setOpen(false); }}>
+                        中文
                     </Button>
                 </div>
             </div>

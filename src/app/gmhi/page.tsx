@@ -13,7 +13,8 @@ const GmhiPage = () => {
   const backButtonContent = {
     en: 'Back to Home',
     th: 'กลับหน้าหลัก',
-    ar: 'العودة إلى الرئيسية'
+    ar: 'العودة إلى الرئيسية',
+    cn: '返回首页'
   };
 
   const chefImage = PlaceHolderImages.find((p) => p.id === 'gmhi-chef');

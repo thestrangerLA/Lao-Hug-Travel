@@ -15,11 +15,12 @@ export default function PackagesPage() {
   const backButtonContent = {
     en: 'Back to Home',
     th: 'กลับหน้าหลัก',
-    ar: 'العودة إلى الرئيسية'
+    ar: 'العودة إلى الرئيسية',
+    cn: '返回首页'
   };
   
   const allPackages = allPackagesData.map(pkg => {
-      const image = pkg.images ? (pkg.images[lang] ?? (lang === 'ar' ? pkg.images.en : undefined) ?? pkg.images.th ?? pkg.images.default) : undefined;
+      const image = pkg.images ? (pkg.images[lang] ?? (['ar', 'cn'].includes(lang) ? pkg.images.en : undefined) ?? pkg.images.th ?? pkg.images.default) : undefined;
       return {
         ...pkg,
         ...(pkg.translations[lang] || pkg.translations.en),

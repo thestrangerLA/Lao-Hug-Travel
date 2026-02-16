@@ -58,6 +58,9 @@
     min-height: 100vh;
     font-family: var(--font-noto-sans-thai);
   }
+  html[lang="cn"] body {
+    font-family: var(--font-noto-sans-sc);
+  }
   html {
     scroll-behavior: smooth;
   }
