@@ -4,25 +4,17 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import {
-  Map,
-  Users,
   Plane,
-  ShieldCheck,
-  HeartHandshake,
-  Shield,
-  Eye,
   Globe,
   Mail,
   Phone,
   BedDouble,
   Car,
-  Ticket,
   Train,
   Activity,
   UtensilsCrossed,
-  Award,
   Menu,
   MessageSquare,
   MessageCircle,
@@ -34,9 +26,7 @@ import {
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { useLang } from '@/context/LangContext';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { cn } from '@/lib/utils';
-import { useState, useEffect } from 'react';
-import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -613,8 +603,7 @@ export default function Home() {
                 const price = lang === 'en' ? pkg.priceUsd : pkg.priceThb;
                 const currencySymbol = lang === 'en' ? '$' : '฿';
                 return (
-                  <Link key={pkg.id} href={`/packages/${pkg.id}`} className="block group">
-                    <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full bg-card text-card-foreground">
+                    <Card key={pkg.id} className="overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full bg-card text-card-foreground">
                       {pkg.displayImage && (
                         <div className="relative w-full aspect-square">
                           <Image
@@ -640,7 +629,7 @@ export default function Home() {
 
                         <div className="mt-auto text-center">
                           <h3 className="font-bold text-xl mb-4 flex items-center justify-center min-h-[3rem]">{pkg.title}</h3>
-                          <div className="flex items-baseline justify-center gap-1">
+                          <div className="flex items-baseline justify-center gap-1 mb-4">
                             <p className="text-xl font-bold text-primary">
                               {currencySymbol}{price}
                             </p>
@@ -648,10 +637,15 @@ export default function Home() {
                               {packageContent.perPerson}
                             </p>
                           </div>
+                          <Button size="sm" className="w-full" asChild>
+                              <a href="https://wa.me/66622244315" target="_blank" rel="noopener noreferrer">
+                                  <MessageCircle className="mr-2 h-4 w-4" />
+                                  {packageContent.bookNow}
+                              </a>
+                          </Button>
                         </div>
                       </CardContent>
                     </Card>
-                  </Link>
                 )
               })}
             </div>
@@ -782,5 +776,3 @@ export default function Home() {
     </div>
   );
 }
-
-    

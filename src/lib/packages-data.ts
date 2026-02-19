@@ -216,7 +216,7 @@ export const allPackagesData = [
           },
           {
               day: 'اليوم 2',
-              title: 'نامبين يورلا با (فانغ فيينغ)',
+              title: 'نامبين يورla با (فانغ فيينغ)',
               activities: [
                   'السفر إلى فانغ فيينغ بالقطار فائق السرعة، والاستمتاع بالمناظر الخلابة على طول الطريق.',
                   'تسجيل الدخول في منتجع نامبين يورلا با والاستمتاع بالمناظر الجبلية الخلابة.',
@@ -1179,7 +1179,7 @@ export const allPackagesData = [
       th: { 
         title: 'คุณหมิง-ปักกิ่ง-เทียนจิน', 
         days: '5 วัน 4 คืน', 
-        description: 'ทัวร์ชมอดีตและปัจจุบันของจักรวรรดิจีนอย่างรวดเร็ว เริ่มต้นจากคุนหมิง สำรวจสถานที่สำคัญทางประวัติศาสตร์ของปักกิ่งและสถาปัตยกรรมโคโลเนียลของเทียนจิน',
+        description: 'ทัวร์ชมอดีตและปัจจุบันของจักรวรรดิจีนอย่างรวดเร็ว เริ่มต้นจากคุนหมิง สำรวจสถานที่สำคัญทางประวัติศาสตร์ของปักกิ่งและสถาปัตยกรรมโคโลเนีลของเทียนจิน',
         itinerary: []
       },
       ar: { 
@@ -1208,6 +1208,7 @@ export const packagesContentData = {
         perPerson: '/ pax',
         noLaosPackages: 'There are no Laos packages available at this time.',
         noChinaPackages: 'There are no China packages available at this time.',
+        bookNow: 'Contact to Book',
     },
     th: {
         pageTitle: 'แพ็คเกจทั้งหมด',
@@ -1218,6 +1219,7 @@ export const packagesContentData = {
         perPerson: '/ ท่าน',
         noLaosPackages: 'ไม่มีแพ็คเกจทัวร์ประเทศลาวในขณะนี้',
         noChinaPackages: 'ไม่มีแพ็คเกจทัวร์ประเทศจีนในขณะนี้',
+        bookNow: 'ติดต่อจองทัวร์',
     },
     ar: {
         pageTitle: 'كل الباقات',
@@ -1228,6 +1230,7 @@ export const packagesContentData = {
         perPerson: '/ شخص',
         noLaosPackages: 'لا توجد باقات لاوس متاحة في هذا الوقت.',
         noChinaPackages: 'لا توجد باقات صينية متاحة في هذا الوقت.',
+        bookNow: 'اتصل للحجز',
     },
     cn: {
         pageTitle: '所有套餐',
@@ -1238,11 +1241,6 @@ export const packagesContentData = {
         perPerson: '/人',
         noLaosPackages: '目前没有老挝套餐。',
         noChinaPackages: '目前没有中国套餐。',
+        bookNow: '联系预订',
     }
 };
-
-    
-
-    
-
-    
