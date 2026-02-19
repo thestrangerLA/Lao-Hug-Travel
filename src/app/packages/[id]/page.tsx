@@ -5,6 +5,15 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import { useLang } from '@/context/LangContext';
 import Link from 'next/link';
+import { allPackagesData } from '@/lib/packages-data';
+
+// Note: In a static export, generateStaticParams is required for dynamic routes.
+// Even if we are not using this page, it must exist for the build to pass.
+export async function generateStaticParams() {
+  return allPackagesData.map((pkg) => ({
+    id: pkg.id,
+  }));
+}
 
 export default function PackageDetailPage() {
   const { lang } = useLang();
