@@ -1,4 +1,3 @@
-
 'use client';
 
 import Link from 'next/link';
@@ -521,27 +520,23 @@ export default function Home() {
 
       {/* About Section */}
       <section id="about" className="py-20 px-4 bg-primary text-primary-foreground">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            {aboutImage && (
-              <div className="rounded-lg overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                <Image
-                  src={aboutImage.imageUrl}
-                  alt={aboutImage.description}
-                  width={600}
-                  height={400}
-                  className="object-cover w-full h-full"
-                  data-ai-hint={aboutImage.imageHint}
-                />
-              </div>
-            )}
-            <div className="text-left">
-              <h2 className="font-headline text-4xl font-bold mb-6">{pageContent.aboutTitle}</h2>
-              <p className="text-primary-foreground/90 text-lg leading-relaxed">
-                {pageContent.aboutText}
-              </p>
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="font-headline text-4xl font-bold mb-6">{pageContent.aboutTitle}</h2>
+          <p className="text-primary-foreground/90 text-lg leading-relaxed mb-12">
+            {pageContent.aboutText}
+          </p>
+          {aboutImage && (
+            <div className="rounded-lg overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
+              <Image
+                src={aboutImage.imageUrl}
+                alt={aboutImage.description}
+                width={800}
+                height={500}
+                className="object-cover w-full h-full"
+                data-ai-hint={aboutImage.imageHint}
+              />
             </div>
-          </div>
+          )}
         </div>
       </section>
 
