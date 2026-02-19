@@ -1,4 +1,3 @@
-
 'use client';
 
 import Link from 'next/link';
@@ -638,7 +637,7 @@ export default function Home() {
                             </p>
                           </div>
                           <Button size="sm" className="w-full" asChild>
-                              <a href="https://wa.me/66622244315" target="_blank" rel="noopener noreferrer">
+                              <a href="https://wa.me/8562096142645" target="_blank" rel="noopener noreferrer">
                                   <MessageCircle className="mr-2 h-4 w-4" />
                                   {packageContent.bookNow}
                               </a>
@@ -700,7 +699,6 @@ export default function Home() {
                 <div>
                     <h3 className="font-headline text-lg font-semibold text-primary">{pageContent.contactWhatsAppTitle}</h3>
                     <div className="mt-1 space-y-1">
-                      <a href="https://wa.me/66622244315" target="_blank" rel="noopener noreferrer" className="block text-primary text-xs break-all hover:underline">+66 622244315</a>
                       <a href="https://wa.me/8562096142645" target="_blank" rel="noopener noreferrer" className="block text-primary text-xs break-all hover:underline">+85620 96142645</a>
                       <a href="https://wa.me/8562028134181" target="_blank" rel="noopener noreferrer" className="block text-primary text-xs break-all hover:underline">+85620 28134181</a>
                     </div>

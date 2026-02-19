@@ -1,4 +1,3 @@
-
 'use client';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
@@ -69,7 +68,7 @@ export default function PackagesPage() {
               </p>
             </div>
             <Button size="sm" className="w-full" asChild>
-                <a href="https://wa.me/66622244315" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/8562096142645" target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="mr-2 h-4 w-4" />
                     {content.bookNow}
                 </a>
