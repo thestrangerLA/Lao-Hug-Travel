@@ -7,6 +7,12 @@
       "imageHint": "travel landscape"
     },
     {
+      "id": "luang-prabang-tour",
+      "description": "Lao Hug Travel Hero Image",
+      "imageUrl": "https://i.ibb.co/xShpQFpN/949a0c2b-7293-4ff8-8c4b-3f48565cd696.jpg",
+      "imageHint": "laos travel"
+    },
+    {
       "id": "service-custom-tours",
       "description": "A winding road through a picturesque landscape, symbolizing a custom journey.",
       "imageUrl": "https://images.unsplash.com/photo-1498637841888-108c6b723fcb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3aW5kaW5nJTIwcm9hZHxlbnwwfHx8fDE3NjgwODUyNzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
