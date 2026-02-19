@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -520,25 +521,27 @@ export default function Home() {
 
       {/* About Section */}
       <section id="about" className="py-20 px-4 bg-primary text-primary-foreground">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="font-headline text-4xl font-bold mb-3">{pageContent.aboutTitle}</h2>
-            <p className="text-primary-foreground/90 max-w-2xl mx-auto text-lg leading-relaxed">
-              {pageContent.aboutText}
-            </p>
-          </div>
-          {aboutImage && (
-            <div className="mt-12 rounded-lg overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
-              <Image
-                src={aboutImage.imageUrl}
-                alt={aboutImage.description}
-                width={896}
-                height={597}
-                className="object-cover w-full h-full"
-                data-ai-hint={aboutImage.imageHint}
-              />
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            {aboutImage && (
+              <div className="rounded-lg overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                <Image
+                  src={aboutImage.imageUrl}
+                  alt={aboutImage.description}
+                  width={600}
+                  height={400}
+                  className="object-cover w-full h-full"
+                  data-ai-hint={aboutImage.imageHint}
+                />
+              </div>
+            )}
+            <div className="text-left">
+              <h2 className="font-headline text-4xl font-bold mb-6">{pageContent.aboutTitle}</h2>
+              <p className="text-primary-foreground/90 text-lg leading-relaxed">
+                {pageContent.aboutText}
+              </p>
             </div>
-          )}
+          </div>
         </div>
       </section>
 
