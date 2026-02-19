@@ -145,6 +145,12 @@
       "imageHint": "china tour collage"
     },
     {
+      "id": "kunming-chongqing-tour-en",
+      "description": "A collage of tour highlights for the Kunming-Chongqing tour with USD price.",
+      "imageUrl": "https://i.ibb.co/2YKGGmHm/17.png",
+      "imageHint": "china tour collage usd"
+    },
+    {
       "id": "kunming-beijing-tianjin-tour-th",
       "description": "A collage of tour highlights for the Kunming-Beijing-Tianjin tour.",
       "imageUrl": "https://i.ibb.co/tM2gTKZ2/19.png",
@@ -215,12 +221,6 @@
       "description": "A collage of tour highlights for the Kunming-Beijing-Tianjin tour.",
       "imageUrl": "https://i.ibb.co/TD1gzkjh/22.png",
       "imageHint": "china tour collage"
-    },
-    {
-      "id": "kunming-chongqing-tour-en",
-      "description": "A collage of tour highlights for the Kunming-Chongqing tour with USD price.",
-      "imageUrl": "https://i.ibb.co/k2kJWV9M/18.png",
-      "imageHint": "china tour collage usd"
     }
   ]
 }
