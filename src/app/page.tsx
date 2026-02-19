@@ -127,7 +127,7 @@ const servicesData = {
       },
       {
         icon: <Car className="w-7 h-7 text-white" />,
-        title: 'سيارة مرشد سياحي',
+        title: 'سيارة مرشدสياحي',
         description: 'استكشف بمركبة خاصة.',
         color: 'from-amber-500 to-orange-500 shadow-amber-500/20',
       },
@@ -203,7 +203,7 @@ const strengthsData = {
         { number: '03', title: 'Authentic Local Experience', description: 'We are experts in Laos, with local knowledge and networks to let you experience the true culture.' },
         { number: '04', title: 'Customizable Tour Packages', description: 'Design your trip according to your needs, including duration, budget, and travel style.' },
         { number: '05', title: 'Safety and Comfort', description: 'We take care of all travel and booking arrangements, allowing you to travel with peace of mind.' },
-        { number: '06', title: 'Professional CustomerService', description: 'We answer questions and provide advice promptly, with care throughout your journey.' }
+        { number: '06', title: 'Professional Customer Service', description: 'We answer questions and provide advice promptly, with care throughout your journey.' }
     ],
     th: [
         { number: '01', title: 'ทีมงานมุสลิมที่เข้าใจความต้องการ', description: 'เราดูแลโดยทีมงานมุสลิมที่เข้าใจการท่องเที่ยวแบบฮาลาลอย่างแท้จริง' },
@@ -306,7 +306,7 @@ const pageContentData = {
         aboutTitle: 'حول لاو هاغ ترافيل',
         aboutText: 'لاو هاغ ترافيل هي شريكك الموثوق به لرحلات لا تنسى في لاوس. نحن متخصصون في صياغة تجارب سفر شخصية ، مع التركيز بشكل خاص على الخدمات الصديقة للحلال. تضمن خبرتنا المحلية والتزامنا بالجودة مغامرة سلسة وأصيلة.',
         visionTitle: 'رؤيتنا',
-        visionText: '"استكشاف لاوس لا يقتصر فقط على رؤية المعالم الجميلة ؛ إنه يتعلق بخلق ذكريات لا تُنسى تدوم مدى الحياة ، والتواصل مع السكان المحليين ، والانغماس في التجارب الثقافية الغنية بالطريقة الحلال."',
+        visionText: '"استكشاف لاوس لا يقتصر فقط على رؤية المعالم الجميلة ؛ إنه يتعلق بخلق ذكريات لا تُنسى تدوم ماه الحياة ، والتواصل مع السكان المحليين ، والانغماس في التجارب الثقافية الغنية بالطريقة الحلال."',
         servicesTitle: 'خدماتنا',
         halalTitle: 'باقاتنا السياحية الحلال',
         halalText: 'سافر براحة بال. تم تصميم باقاتنا السياحية الحلال لتلبية احتياجاتك ، بما في ذلك وجبات الطعام الحلال المعتمدة ، ومرافق الصلاة ، وأماكن الإقامة الصديقة للمسلمين.',
@@ -392,10 +392,12 @@ export default function Home() {
   const featuredPackages = allPackagesData
     .filter(pkg => featuredPackagesIds.includes(pkg.id))
     .map(pkg => {
-      const image = pkg.images ? (pkg.images[lang] ?? (['ar', 'cn'].includes(lang) ? pkg.images.en : undefined) ?? pkg.images.th ?? pkg.images.default) : undefined;
+      const images = pkg.images as any;
+      const translation = (pkg.translations as any)[lang] || pkg.translations.en;
+      const image = images ? (images[lang] ?? (['ar', 'cn'].includes(lang) ? images.en : undefined) ?? images.th ?? images.default) : undefined;
       return {
         ...pkg,
-        ...(pkg.translations[lang] || pkg.translations.en),
+        ...translation,
         displayImage: image,
       }
     });

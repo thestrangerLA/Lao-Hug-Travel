@@ -18,10 +18,12 @@ export default function PackagesPage() {
   };
   
   const allPackages = allPackagesData.map(pkg => {
-      const image = pkg.images ? (pkg.images[lang] ?? (['ar', 'cn'].includes(lang) ? pkg.images.en : undefined) ?? pkg.images.th ?? pkg.images.default) : undefined;
+      const images = pkg.images as any;
+      const translation = (pkg.translations as any)[lang] || pkg.translations.en;
+      const image = images ? (images[lang] ?? (['ar', 'cn'].includes(lang) ? images.en : undefined) ?? images.th ?? images.default) : undefined;
       return {
         ...pkg,
-        ...(pkg.translations[lang] || pkg.translations.en),
+        ...translation,
         displayImage: image,
       }
   });
